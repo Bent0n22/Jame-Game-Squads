@@ -76,3 +76,5 @@ animation = &"Walk"
 autoplay = "Idle"
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=1880418544]
+position_smoothing_enabled = true
+position_smoothing_speed = 10.0
