@@ -17,14 +17,16 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-EventController="*res://EventController.gd"
-GameController="*res://GameController.gd"
-SaveController="*res://SaveController.gd"
+EventController="*res://Autoloads/EventController.gd"
+GameController="*res://Autoloads/GameController.gd"
+SaveController="*res://Autoloads/SaveController.gd"
 
 [display]
 
+window/size/viewport_width=320
+window/size/viewport_height=180
+window/size/borderless=true
 window/stretch/mode="canvas_items"
-window/stretch/aspect="expand"
 
 [input]
 
