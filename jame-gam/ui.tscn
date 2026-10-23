@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://btj4h3g23u4c7"]
+[gd_scene load_steps=3 format=3 uid="uid://btj4h3g23u4c7"]
 
 [ext_resource type="Script" uid="uid://cgotc1e2omin2" path="res://ui.gd" id="1_fyqef"]
 [ext_resource type="Texture2D" uid="uid://d1l7on5nkt4kj" path="res://Sprites/xplaceholderstargazing.png" id="2_m6e0p"]

@@ -1,99 +1,30 @@
-[gd_scene format=3 uid="uid://p58y02pwx2gq"]
+[gd_scene load_steps=5 format=3 uid="uid://p58y02pwx2gq"]
 
 [ext_resource type="Script" uid="uid://48g65g8fyhuk" path="res://character_body_2d.gd" id="1_0e48y"]
-[ext_resource type="Texture2D" uid="uid://2sblgrs3mdg1" path="res://Sprites/Sprite-0005.png" id="2_0hol4"]
 [ext_resource type="Texture2D" uid="uid://b68mqqlmk6vs0" path="res://Sprites/Sprite-0001.png" id="2_epypp"]
-[ext_resource type="Texture2D" uid="uid://dog5u22cveo26" path="res://Sprites/LittleGuyWalk-Sheet.png" id="4_q6r6c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_epypp"]
 size = Vector2(9, 14)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_kdubu"]
-atlas = ExtResource("2_0hol4")
-region = Rect2(0, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_d21ai"]
-atlas = ExtResource("2_0hol4")
-region = Rect2(16, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_rj586"]
-atlas = ExtResource("2_epypp")
-region = Rect2(0, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_4d7sh"]
-atlas = ExtResource("4_q6r6c")
-region = Rect2(0, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ir8iy"]
-atlas = ExtResource("4_q6r6c")
-region = Rect2(16, 0, 16, 16)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_oiiii"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_kdubu")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_d21ai")
-}],
-"loop": 1,
-"name": &"Idle",
-"speed": 3.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_rj586")
-}],
-"loop": 1,
-"name": &"Jump",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_4d7sh")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ir8iy")
-}],
-"loop": 1,
-"name": &"Walk",
-"speed": 5.0
-}]
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0e48y"]
 size = Vector2(901, 20)
 
-[node name="Node2D" type="Node2D" unique_id=300657184]
+[node name="Node2D" type="Node2D"]
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1357704986]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 script = ExtResource("1_0e48y")
 
-<<<<<<< HEAD
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 position = Vector2(-0.5, 1)
 shape = SubResource("RectangleShape2D_epypp")
-=======
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1236734703]
-shape = SubResource("CircleShape2D_7vadr")
 
-[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=893787678]
->>>>>>> 6e62a7dac0ed73d9046845ed1da7f442d8ff0d07
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=1575149928]
-sprite_frames = SubResource("SpriteFrames_oiiii")
-animation = &"Jump"
-autoplay = "Idle"
-
-<<<<<<< HEAD
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
 texture = ExtResource("2_epypp")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-=======
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1187435000]
->>>>>>> 6e62a7dac0ed73d9046845ed1da7f442d8ff0d07
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=2089506763]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(0, 275)
 shape = SubResource("RectangleShape2D_0e48y")
