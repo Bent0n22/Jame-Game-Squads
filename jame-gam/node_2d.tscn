@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://b4n2rlhsa862q" path="res://Assets/Sprites/LittleGuyWalk-Sheet.png" id="4_q6r6c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_epypp"]
-size = Vector2(9, 14)
+size = Vector2(11, 14)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kdubu"]
 atlas = ExtResource("2_0hol4")
@@ -70,14 +70,14 @@ size = Vector2(901, 20)
 script = ExtResource("1_0e48y")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=188208629]
-position = Vector2(-0.5, 1)
+position = Vector2(0.5, 1)
 shape = SubResource("RectangleShape2D_epypp")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=190396322]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=1212077977]
 sprite_frames = SubResource("SpriteFrames_oiiii")
-animation = &"Idle"
+animation = &"Walk"
 autoplay = "Idle"
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1811550324]
