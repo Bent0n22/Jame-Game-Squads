@@ -1,12 +1,18 @@
 [gd_scene format=3 uid="uid://b15g74hdkoult"]
 
-[ext_resource type="PackedScene" uid="uid://p58y02pwx2gq" path="res://node_2d.tscn" id="1_bx4p7"]
 [ext_resource type="PackedScene" uid="uid://btj4h3g23u4c7" path="res://ui.tscn" id="2_kekqg"]
 
-[node name="Sandbox Scene" type="Node2D" unique_id=1604498604]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bx4p7"]
+size = Vector2(901, 20)
 
-[node name="Node2D" parent="." unique_id=277513929 instance=ExtResource("1_bx4p7")]
+[node name="Sandbox Scene" type="Node2D" unique_id=1604498604]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1638755620]
 
 [node name="UI" parent="CanvasLayer" unique_id=725529654 instance=ExtResource("2_kekqg")]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=724471525]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1305413069]
+position = Vector2(0, 264)
+shape = SubResource("RectangleShape2D_bx4p7")
