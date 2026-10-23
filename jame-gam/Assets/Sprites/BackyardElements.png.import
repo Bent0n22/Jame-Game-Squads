@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://2sblgrs3mdg1"
-path="res://.godot/imported/Sprite-0005.png-446e38f50049b0d4388e316868ce53cd.ctex"
+uid="uid://bivfaangqkn6o"
+path="res://.godot/imported/BackyardElements.png-a4d1ee06d1017c21e635331d6dec78a3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Sprite-0005.png"
-dest_files=["res://.godot/imported/Sprite-0005.png-446e38f50049b0d4388e316868ce53cd.ctex"]
+source_file="res://Assets/Sprites/BackyardElements.png"
+dest_files=["res://.godot/imported/BackyardElements.png-a4d1ee06d1017c21e635331d6dec78a3.ctex"]
 
 [params]
 

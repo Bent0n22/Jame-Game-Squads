@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dog5u22cveo26"
-path="res://.godot/imported/LittleGuyWalk-Sheet.png-fa31e85b75ef0d3063c4d24d356aa630.ctex"
+uid="uid://bmnfq3d2sht4t"
+path="res://.godot/imported/LittleGuy.png-cbb51a2c4806b889c9ca2fdbef76ce7c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/LittleGuyWalk-Sheet.png"
-dest_files=["res://.godot/imported/LittleGuyWalk-Sheet.png-fa31e85b75ef0d3063c4d24d356aa630.ctex"]
+source_file="res://Assets/Sprites/LittleGuy.png"
+dest_files=["res://.godot/imported/LittleGuy.png-cbb51a2c4806b889c9ca2fdbef76ce7c.ctex"]
 
 [params]
 

@@ -1,9 +1,10 @@
 [gd_scene format=3 uid="uid://p58y02pwx2gq"]
 
 [ext_resource type="Script" uid="uid://48g65g8fyhuk" path="res://character_body_2d.gd" id="1_0e48y"]
-[ext_resource type="Texture2D" uid="uid://2sblgrs3mdg1" path="res://Sprites/Sprite-0005.png" id="2_0hol4"]
-[ext_resource type="Texture2D" uid="uid://b68mqqlmk6vs0" path="res://Sprites/Sprite-0001.png" id="2_epypp"]
-[ext_resource type="Texture2D" uid="uid://dog5u22cveo26" path="res://Sprites/LittleGuyWalk-Sheet.png" id="4_q6r6c"]
+[ext_resource type="Texture2D" uid="uid://2sblgrs3mdg1" path="res://Assets/Sprites/Sprite-0005.png" id="2_0hol4"]
+[ext_resource type="Texture2D" uid="uid://b68mqqlmk6vs0" path="res://Assets/Sprites/Sprite-0001.png" id="2_epypp"]
+[ext_resource type="Texture2D" uid="uid://dog5u22cveo26" path="res://Assets/Sprites/LittleGuyWalk-Sheet.png" id="4_q6r6c"]
+[ext_resource type="FontFile" uid="uid://c3tnvn67qt3n2" path="res://Assets/Font/augiepixel.ttf" id="5_q6r6c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_epypp"]
 size = Vector2(9, 14)
@@ -97,3 +98,11 @@ texture = ExtResource("2_epypp")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=2089506763]
 position = Vector2(0, 275)
 shape = SubResource("RectangleShape2D_0e48y")
+
+[node name="Label" type="Label" parent="." unique_id=1638577911]
+offset_left = 3.0
+offset_top = 237.0
+offset_right = 137.0
+offset_bottom = 260.0
+theme_override_fonts/font = ExtResource("5_q6r6c")
+text = "reach for the stars"
