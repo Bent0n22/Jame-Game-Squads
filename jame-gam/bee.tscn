@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://k6lg8gwt8gdl"]
+
+[ext_resource type="Script" uid="uid://dg682obo5n1lk" path="res://bee.gd" id="1_xww1r"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tb2w5"]
+
+[sub_resource type="Animation" id="Animation_xww1r"]
+resource_name = "BeeFunc"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_v5qog"]
+_data = {
+&"BeeFunc": SubResource("Animation_xww1r")
+}
+
+[node name="Bee" type="AnimatableBody2D" unique_id=1323551105]
+script = ExtResource("1_xww1r")
+PositionStart = Vector2(50, 0)
+PositionEnd = Vector2(11, 150)
+Speed = Vector2(1, 1)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=88627660]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=667511123]
+shape = SubResource("CircleShape2D_tb2w5")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1850683406]
+libraries/ = SubResource("AnimationLibrary_v5qog")

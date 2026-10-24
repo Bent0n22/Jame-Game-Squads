@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://btj4h3g23u4c7"]
 
 [ext_resource type="Script" uid="uid://cgotc1e2omin2" path="res://ui.gd" id="1_fyqef"]
-[ext_resource type="Texture2D" uid="uid://d1l7on5nkt4kj" path="res://Assets/Sprites/xplaceholderstargazing.png" id="2_m6e0p"]
+[ext_resource type="Texture2D" uid="uid://dikslvr3b1bbj" path="res://Assets/Sprites/Exit Button/xbuttonidle3.png" id="2_nltto"]
+[ext_resource type="Texture2D" uid="uid://s6jn41qpwl2r" path="res://Assets/Sprites/Exit Button/xbuttonidle4.png" id="3_ibotj"]
+[ext_resource type="Texture2D" uid="uid://dwyrrd5xaqt5n" path="res://Assets/Sprites/Exit Button/xbuttonidle2.png" id="4_n5ude"]
 
-[node name="UI" type="Control"]
+[node name="UI" type="Control" unique_id=756997585]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -12,16 +14,14 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_fyqef")
 
-[node name="TextureButton" type="TextureButton" parent="."]
+[node name="TextureButton" type="TextureButton" parent="." unique_id=278138098]
 layout_mode = 0
 offset_left = 303.0
 offset_top = 1.0
 offset_right = 319.0
 offset_bottom = 17.0
-texture_normal = ExtResource("2_m6e0p")
-texture_pressed = ExtResource("2_m6e0p")
-texture_hover = ExtResource("2_m6e0p")
-texture_disabled = ExtResource("2_m6e0p")
-texture_focused = ExtResource("2_m6e0p")
+texture_normal = ExtResource("2_nltto")
+texture_pressed = ExtResource("3_ibotj")
+texture_hover = ExtResource("4_n5ude")
 
 [connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
