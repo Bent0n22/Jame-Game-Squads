@@ -80,6 +80,9 @@ size = Vector2(23, 87.5)
 
 [node name="level_ending" type="Node2D" unique_id=1193487933]
 
+[node name="UI" parent="." unique_id=756997585 instance=ExtResource("4_fuwk3")]
+metadata/_edit_use_anchors_ = true
+
 [node name="StarBackground" type="Sprite2D" parent="." unique_id=1941992241]
 position = Vector2(144, -32)
 texture = ExtResource("2_082j5")
@@ -94,11 +97,6 @@ offset_right = 326.0
 offset_bottom = 185.0
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
-
-[node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=2052699827]
-
-[node name="UI" parent="CanvasLayer2" unique_id=756997585 instance=ExtResource("4_fuwk3")]
-metadata/_edit_use_anchors_ = true
 
 [node name="Pole" type="Sprite2D" parent="." unique_id=1951083991]
 position = Vector2(288, -78)
@@ -117,7 +115,7 @@ position = Vector2(0, 7)
 shape = SubResource("CapsuleShape2D_evjyw")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=905016852]
-position = Vector2(0, 7)
+position = Vector2(0, 8)
 sprite_frames = SubResource("SpriteFrames_s1xjb")
 animation = &"walk"
 
@@ -140,5 +138,10 @@ visible = false
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer3" unique_id=838624807]
 position = Vector2(160, 90)
 texture = ExtResource("9_pcm1h")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=330045972]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1770510168]
+polygon = PackedVector2Array(-48, 26.5, 337, -69.75, 337, 100, -48, 100)
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
