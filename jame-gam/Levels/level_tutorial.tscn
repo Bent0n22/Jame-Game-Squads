@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dd14ghtcw62c0" path="res://Assets/Sprites/Tiles_w_pipe.png" id="1_jou4l"]
 [ext_resource type="PackedScene" uid="uid://p58y02pwx2gq" path="res://player.tscn" id="2_0xoxh"]
 [ext_resource type="Texture2D" uid="uid://camkg8myiw2l2" path="res://Assets/Sprites/REALTILES.png" id="2_6t0p6"]
-[ext_resource type="Script" uid="uid://de3m7mlo5drai" path="res://Fall.gd" id="4_lot66"]
+[ext_resource type="Script" uid="uid://de3m7mlo5drai" path="res://Scripts/fall.gd" id="4_lot66"]
 [ext_resource type="Texture2D" uid="uid://dehojgt5dyvkm" path="res://Assets/Sprites/LittleMa.png" id="5_wvjtv"]
 [ext_resource type="Texture2D" uid="uid://dlir0bohamqog" path="res://Assets/Sprites/text.png" id="6_sv282"]
 
