@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://btj4h3g23u4c7" path="res://ui.tscn" id="2_kekqg"]
 [ext_resource type="PackedScene" uid="uid://dmj7vrkiqjob0" path="res://lever.tscn" id="3_kekqg"]
 [ext_resource type="PackedScene" uid="uid://d7pu6wuxuddx" path="res://changing_object.tscn" id="4_gqnfj"]
+[ext_resource type="Texture2D" uid="uid://dj0kp72itmvco" path="res://Assets/Sprites/flowery.png" id="5_q0kuf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tb2w5"]
 size = Vector2(157, 20)
@@ -32,3 +33,7 @@ position = Vector2(87, 44)
 [node name="Changing Object2" parent="." unique_id=2013929230 instance=ExtResource("4_gqnfj")]
 position = Vector2(116, 44)
 baseDecision = true
+
+[node name="Flowery" type="Sprite2D" parent="." unique_id=1178244649]
+position = Vector2(51, 30)
+texture = ExtResource("5_q0kuf")

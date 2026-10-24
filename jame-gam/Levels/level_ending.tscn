@@ -1,17 +1,17 @@
 [gd_scene format=4 uid="uid://clly7k0w787ye"]
 
-[ext_resource type="Script" uid="uid://be3n1f8npeku" path="res://endingplayer.gd" id="1_n24ps"]
-[ext_resource type="Texture2D" uid="uid://drqso8ilmx4qj" path="res://Assets/Sprites/star background.png" id="2_082j5"]
-[ext_resource type="Texture2D" uid="uid://b4n2rlhsa862q" path="res://Assets/Sprites/LittleGuyWalk-Sheet.png" id="2_fuwk3"]
-[ext_resource type="Script" uid="uid://b70svut8s22b6" path="res://canvas_layer.gd" id="2_nmtfb"]
-[ext_resource type="Texture2D" uid="uid://nq0ugl14uoqh" path="res://Assets/Sprites/pole.png" id="3_3s6nn"]
-[ext_resource type="Texture2D" uid="uid://br660qykcdkew" path="res://Assets/Sprites/Roof.png" id="3_nmtfb"]
-[ext_resource type="PackedScene" uid="uid://btj4h3g23u4c7" path="res://ui.tscn" id="4_fuwk3"]
-[ext_resource type="Script" uid="uid://bybnfmoxo3qty" path="res://ending.gd" id="8_tpbwa"]
-[ext_resource type="Texture2D" uid="uid://pogjuycq3j6q" path="res://Assets/Sprites/endingplaceholder.png" id="9_pcm1h"]
+[ext_resource type="Texture2D" uid="uid://drqso8ilmx4qj" path="res://Assets/Sprites/star background.png" id="1_br5fe"]
+[ext_resource type="Script" uid="uid://b70svut8s22b6" path="res://Scripts/canvas_layer.gd" id="2_br5fe"]
+[ext_resource type="Texture2D" uid="uid://nq0ugl14uoqh" path="res://Assets/Sprites/pole.png" id="3_v8fvw"]
+[ext_resource type="Texture2D" uid="uid://br660qykcdkew" path="res://Assets/Sprites/Roof.png" id="4_gyfd2"]
+[ext_resource type="Script" uid="uid://be3n1f8npeku" path="res://Scripts/endingplayer.gd" id="5_ullyh"]
+[ext_resource type="Texture2D" uid="uid://b4n2rlhsa862q" path="res://Assets/Sprites/LittleGuyWalk-Sheet.png" id="6_iihw5"]
+[ext_resource type="Script" uid="uid://bybnfmoxo3qty" path="res://Scripts/ending.gd" id="7_br5fe"]
+[ext_resource type="Texture2D" uid="uid://pogjuycq3j6q" path="res://Assets/Sprites/endingplaceholder.png" id="8_w115y"]
+[ext_resource type="PackedScene" uid="uid://btj4h3g23u4c7" path="res://ui.tscn" id="9_nr7vr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tpbwa"]
-texture = ExtResource("3_nmtfb")
+texture = ExtResource("4_gyfd2")
 0:2/0 = 0
 0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 8, -8, 8, -8, 8, -8, 8)
 1:2/0 = 0
@@ -46,11 +46,11 @@ radius = 2.0
 height = 16.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3s6nn"]
-atlas = ExtResource("2_fuwk3")
+atlas = ExtResource("6_iihw5")
 region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_082j5"]
-atlas = ExtResource("2_fuwk3")
+atlas = ExtResource("6_iihw5")
 region = Rect2(16, 0, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_s1xjb"]
@@ -82,10 +82,10 @@ size = Vector2(23, 87.5)
 
 [node name="StarBackground" type="Sprite2D" parent="." unique_id=1941992241]
 position = Vector2(144, -32)
-texture = ExtResource("2_082j5")
+texture = ExtResource("1_br5fe")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2038123888]
-script = ExtResource("2_nmtfb")
+script = ExtResource("2_br5fe")
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=931428417]
 offset_left = -4.0
@@ -97,7 +97,7 @@ color = Color(0, 0, 0, 1)
 
 [node name="Pole" type="Sprite2D" parent="." unique_id=1951083991]
 position = Vector2(288, -78)
-texture = ExtResource("3_3s6nn")
+texture = ExtResource("3_v8fvw")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=972726560]
 tile_map_data = PackedByteArray("AAAAAAEAAAAAAAIAAAABAAEAAAABAAIAAAACAAEAAAACAAIAAAADAAEAAAADAAIAAAAAAAIAAAAAAAMAAAABAAIAAAABAAMAAAACAAIAAAACAAMAAAADAAIAAAADAAMAAAAEAAAAAAAAAAIAAAAFAAAAAAABAAIAAAAGAAAAAAACAAIAAAAHAAAAAAADAAIAAAAHAAEAAAADAAMAAAAGAAEAAAACAAMAAAAFAAEAAAABAAMAAAAEAAEAAAAAAAMAAAAAAAAAAAAAAAEAAAABAAAAAAABAAEAAAACAAAAAAACAAEAAAADAAAAAAADAAEAAAAHAP//AAADAAEAAAAGAP//AAACAAEAAAAFAP//AAABAAEAAAAEAP//AAAAAAEAAAAEAAIAAAADAAIAAAD//wEAAAADAAEAAAD+/wEAAAACAAEAAAD9/wEAAAABAAEAAAD//wIAAAADAAIAAAD+/wIAAAACAAIAAAD9/wIAAAABAAIAAAAIAP7/AAAAAAEAAAAIAP//AAAAAAIAAAAIAAAAAAAAAAMAAAAJAP7/AAABAAEAAAAJAP//AAABAAIAAAAJAAAAAAABAAMAAAAKAP7/AAACAAEAAAAKAP//AAACAAIAAAAKAAAAAAACAAMAAAALAP7/AAADAAEAAAALAP//AAADAAIAAAALAAAAAAADAAMAAAAMAP3/AAAAAAEAAAAMAP7/AAAAAAIAAAAMAP//AAAAAAMAAAANAP3/AAABAAEAAAANAP7/AAABAAIAAAANAP//AAABAAMAAAAOAP3/AAACAAEAAAAOAP7/AAACAAIAAAAOAP//AAACAAMAAAAPAP3/AAADAAEAAAAPAP7/AAADAAIAAAAPAP//AAADAAMAAAAQAPz/AAAAAAEAAAAQAP3/AAAAAAIAAAARAPz/AAABAAEAAAARAP3/AAABAAIAAAASAPz/AAACAAEAAAASAP3/AAACAAIAAAATAPz/AAADAAEAAAATAP3/AAADAAIAAAAQAP7/AAAAAAMAAAARAP7/AAABAAMAAAAUAPv/AAAAAAEAAAAUAPz/AAAAAAIAAAAUAP3/AAAAAAMAAAA=")
@@ -105,7 +105,7 @@ tile_set = SubResource("TileSet_7vadr")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=326016398]
 collision_layer = 3
-script = ExtResource("1_n24ps")
+script = ExtResource("5_ullyh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=58607791]
 position = Vector2(0, 7)
@@ -123,7 +123,7 @@ zoom = Vector2(4, 4)
 [node name="Area2D" type="Area2D" parent="." unique_id=829892715]
 position = Vector2(289, -58)
 collision_mask = 2
-script = ExtResource("8_tpbwa")
+script = ExtResource("7_br5fe")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1096326168]
 position = Vector2(-12.5, -2.25)
@@ -134,13 +134,13 @@ visible = false
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer3" unique_id=838624807]
 position = Vector2(160, 90)
-texture = ExtResource("9_pcm1h")
+texture = ExtResource("8_w115y")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=330045972]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1770510168]
 polygon = PackedVector2Array(-48, 26.5, 337, -69.75, 337, 100, -48, 100)
 
-[node name="UI" parent="." unique_id=756997585 instance=ExtResource("4_fuwk3")]
+[node name="UI" parent="." unique_id=756997585 instance=ExtResource("9_nr7vr")]
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
