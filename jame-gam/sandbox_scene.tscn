@@ -28,3 +28,7 @@ position = Vector2(51, 30)
 
 [node name="Changing Object" parent="." unique_id=1677729763 instance=ExtResource("4_gqnfj")]
 position = Vector2(87, 44)
+
+[node name="Changing Object2" parent="." unique_id=2013929230 instance=ExtResource("4_gqnfj")]
+position = Vector2(116, 44)
+baseDecision = true

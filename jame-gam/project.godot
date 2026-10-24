@@ -24,6 +24,7 @@ config/icon="res://icon.svg"
 EventController="*res://Autoloads/EventController.gd"
 GameController="*res://Autoloads/GameController.gd"
 SaveController="*res://Autoloads/SaveController.gd"
+DialogManager="*uid://by05rp22xav3h"
 
 [display]
 
