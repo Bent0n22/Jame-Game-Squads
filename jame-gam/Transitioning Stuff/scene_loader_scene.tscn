@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://btbm0ukseyajx"]
+
+[ext_resource type="Script" uid="uid://dbolfy35q0otn" path="res://Transitioning Stuff/scene_loader_scene.gd" id="1_yq4sf"]
+
+[sub_resource type="Animation" id="Animation_yq4sf"]
+resource_name = "FadeToBlack"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_q4ny3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ksh6t"]
+_data = {
+&"FadeToBlack": SubResource("Animation_yq4sf"),
+&"RESET": SubResource("Animation_q4ny3")
+}
+
+[node name="Scene Loader Scene" type="Node2D" unique_id=873124418]
+script = ExtResource("1_yq4sf")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=60318234]
+libraries/ = SubResource("AnimationLibrary_ksh6t")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1885118346]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1860689194]
+offset_right = 320.0
+offset_bottom = 180.0
+color = Color(0, 0, 0, 1)
