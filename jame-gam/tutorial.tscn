@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://dlwnlaf7hscui"]
 
-[ext_resource type="PackedScene" uid="uid://p58y02pwx2gq" path="res://node_2d.tscn" id="1_7n6eb"]
+[ext_resource type="PackedScene" uid="uid://p58y02pwx2gq" path="res://player.tscn" id="1_7n6eb"]
 [ext_resource type="Texture2D" uid="uid://dd14ghtcw62c0" path="res://Assets/Sprites/Tiles_w_pipe.png" id="1_yb1ct"]
 [ext_resource type="PackedScene" uid="uid://b15g74hdkoult" path="res://sandbox_scene.tscn" id="3_ehuit"]
 

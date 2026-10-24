@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b2rwumb5jlrgc"
-path="res://.godot/imported/BackyardElements.png-a4d1ee06d1017c21e635331d6dec78a3.ctex"
+uid="uid://bwkejto1e4s14"
+path="res://.godot/imported/Backyard Tileset.png-ad39fa3c77d6e7cae06ea5c44ed20ea7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/BackyardElements.png"
-dest_files=["res://.godot/imported/BackyardElements.png-a4d1ee06d1017c21e635331d6dec78a3.ctex"]
+source_file="res://Assets/Sprites/Backyard Tileset.png"
+dest_files=["res://.godot/imported/Backyard Tileset.png-ad39fa3c77d6e7cae06ea5c44ed20ea7.ctex"]
 
 [params]
 
