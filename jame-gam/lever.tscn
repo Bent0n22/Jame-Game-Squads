@@ -11,7 +11,7 @@ script = ExtResource("1_0ohsc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1904916992]
 shape = SubResource("RectangleShape2D_tb2w5")
-debug_color = Color(0.27838695, 0.50058097, 1, 0.41960785)
+debug_color = Color(0.31061327, 0.6004526, 0.5211831, 0.41960785)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://d7pu6wuxuddx" path="res://changing_object.tscn" id="4_gqnfj"]
 [ext_resource type="Texture2D" uid="uid://dj0kp72itmvco" path="res://Assets/Sprites/flowery.png" id="5_q0kuf"]
 [ext_resource type="PackedScene" uid="uid://dhtfrjqnb5th6" path="res://Transitioning Stuff/fixed_trans_trigger.tscn" id="6_lfhyt"]
+[ext_resource type="Script" uid="uid://xistfwq3bgqp" path="res://estrana.gd" id="7_x7uc3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tb2w5"]
 size = Vector2(157, 20)
@@ -42,3 +43,7 @@ texture = ExtResource("5_q0kuf")
 [node name="fixed_trans_trigger" parent="." unique_id=1411800246 instance=ExtResource("6_lfhyt")]
 position = Vector2(-70, 28)
 file_to = "res://Levels/level_tutorial.tscn"
+
+[node name="Estrana" parent="." unique_id=2107904517 instance=ExtResource("3_kekqg")]
+position = Vector2(-39, 28)
+script = ExtResource("7_x7uc3")
