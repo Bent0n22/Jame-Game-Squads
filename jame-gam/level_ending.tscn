@@ -1,0 +1,144 @@
+[gd_scene format=4 uid="uid://clly7k0w787ye"]
+
+[ext_resource type="Script" uid="uid://be3n1f8npeku" path="res://endingplayer.gd" id="1_n24ps"]
+[ext_resource type="Texture2D" uid="uid://drqso8ilmx4qj" path="res://Assets/Sprites/star background.png" id="2_082j5"]
+[ext_resource type="Texture2D" uid="uid://b4n2rlhsa862q" path="res://Assets/Sprites/LittleGuyWalk-Sheet.png" id="2_fuwk3"]
+[ext_resource type="Script" uid="uid://b70svut8s22b6" path="res://canvas_layer.gd" id="2_nmtfb"]
+[ext_resource type="Texture2D" uid="uid://nq0ugl14uoqh" path="res://Assets/Sprites/pole.png" id="3_3s6nn"]
+[ext_resource type="Texture2D" uid="uid://br660qykcdkew" path="res://Assets/Sprites/Roof.png" id="3_nmtfb"]
+[ext_resource type="PackedScene" uid="uid://btj4h3g23u4c7" path="res://ui.tscn" id="4_fuwk3"]
+[ext_resource type="Script" uid="uid://bybnfmoxo3qty" path="res://ending.gd" id="8_tpbwa"]
+[ext_resource type="Texture2D" uid="uid://pogjuycq3j6q" path="res://Assets/Sprites/endingplaceholder.png" id="9_pcm1h"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tpbwa"]
+texture = ExtResource("3_nmtfb")
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:2/0 = 0
+3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:3/0 = 0
+0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:3/0 = 0
+1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:3/0 = 0
+2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:3/0 = 0
+3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 8, 8, 2.8427153, 8, 8, -8, 8)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 2.9442415, 8, -1.2183065, 8, 8, -8, 8)
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -1.1167803, 8, -3.9594965, 8, 8, -8, 8)
+3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -3.8832245, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSet" id="TileSet_7vadr"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_tpbwa")
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_evjyw"]
+radius = 2.0
+height = 16.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3s6nn"]
+atlas = ExtResource("2_fuwk3")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_082j5"]
+atlas = ExtResource("2_fuwk3")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s1xjb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3s6nn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_082j5")
+}],
+"loop": 1,
+"name": &"still",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3s6nn")
+}],
+"loop": 1,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7vadr"]
+size = Vector2(23, 87.5)
+
+[node name="level_ending" type="Node2D" unique_id=1193487933]
+
+[node name="StarBackground" type="Sprite2D" parent="." unique_id=1941992241]
+position = Vector2(144, -32)
+texture = ExtResource("2_082j5")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2038123888]
+script = ExtResource("2_nmtfb")
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=931428417]
+offset_left = -4.0
+offset_top = -5.0
+offset_right = 326.0
+offset_bottom = 185.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=2052699827]
+
+[node name="UI" parent="CanvasLayer2" unique_id=756997585 instance=ExtResource("4_fuwk3")]
+metadata/_edit_use_anchors_ = true
+
+[node name="Pole" type="Sprite2D" parent="." unique_id=1951083991]
+position = Vector2(288, -78)
+texture = ExtResource("3_3s6nn")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=972726560]
+tile_map_data = PackedByteArray("AAAAAAEAAAAAAAIAAAABAAEAAAABAAIAAAACAAEAAAACAAIAAAADAAEAAAADAAIAAAAAAAIAAAAAAAMAAAABAAIAAAABAAMAAAACAAIAAAACAAMAAAADAAIAAAADAAMAAAAEAAAAAAAAAAIAAAAFAAAAAAABAAIAAAAGAAAAAAACAAIAAAAHAAAAAAADAAIAAAAHAAEAAAADAAMAAAAGAAEAAAACAAMAAAAFAAEAAAABAAMAAAAEAAEAAAAAAAMAAAAAAAAAAAAAAAEAAAABAAAAAAABAAEAAAACAAAAAAACAAEAAAADAAAAAAADAAEAAAAHAP//AAADAAEAAAAGAP//AAACAAEAAAAFAP//AAABAAEAAAAEAP//AAAAAAEAAAAEAAIAAAADAAIAAAD//wEAAAADAAEAAAD+/wEAAAACAAEAAAD9/wEAAAABAAEAAAD//wIAAAADAAIAAAD+/wIAAAACAAIAAAD9/wIAAAABAAIAAAAIAP7/AAAAAAEAAAAIAP//AAAAAAIAAAAIAAAAAAAAAAMAAAAJAP7/AAABAAEAAAAJAP//AAABAAIAAAAJAAAAAAABAAMAAAAKAP7/AAACAAEAAAAKAP//AAACAAIAAAAKAAAAAAACAAMAAAALAP7/AAADAAEAAAALAP//AAADAAIAAAALAAAAAAADAAMAAAAMAP3/AAAAAAEAAAAMAP7/AAAAAAIAAAAMAP//AAAAAAMAAAANAP3/AAABAAEAAAANAP7/AAABAAIAAAANAP//AAABAAMAAAAOAP3/AAACAAEAAAAOAP7/AAACAAIAAAAOAP//AAACAAMAAAAPAP3/AAADAAEAAAAPAP7/AAADAAIAAAAPAP//AAADAAMAAAAQAPz/AAAAAAEAAAAQAP3/AAAAAAIAAAARAPz/AAABAAEAAAARAP3/AAABAAIAAAASAPz/AAACAAEAAAASAP3/AAACAAIAAAATAPz/AAADAAEAAAATAP3/AAADAAIAAAAQAP7/AAAAAAMAAAARAP7/AAABAAMAAAAUAPv/AAAAAAEAAAAUAPz/AAAAAAIAAAAUAP3/AAAAAAMAAAA=")
+tile_set = SubResource("TileSet_7vadr")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=326016398]
+collision_layer = 3
+script = ExtResource("1_n24ps")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=58607791]
+position = Vector2(0, 7)
+shape = SubResource("CapsuleShape2D_evjyw")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=905016852]
+position = Vector2(0, 7)
+sprite_frames = SubResource("SpriteFrames_s1xjb")
+animation = &"walk"
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=450325727]
+position = Vector2(16, 0)
+zoom = Vector2(4, 4)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=829892715]
+position = Vector2(289, -58)
+collision_mask = 2
+script = ExtResource("8_tpbwa")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1096326168]
+position = Vector2(-12.5, -2.25)
+shape = SubResource("RectangleShape2D_7vadr")
+
+[node name="CanvasLayer3" type="CanvasLayer" parent="." unique_id=1653316105]
+visible = false
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer3" unique_id=838624807]
+position = Vector2(160, 90)
+texture = ExtResource("9_pcm1h")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
