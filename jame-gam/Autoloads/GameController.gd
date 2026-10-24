@@ -1,5 +1,13 @@
 extends Node
 
+var leverStatus = false
+
+func switchLever():
+	if leverStatus:
+		leverStatus = false
+	else:
+		leverStatus = true
+
 func wait(time_in_seconds) -> void:
 	await get_tree().create_timer(time_in_seconds).timeout
 
