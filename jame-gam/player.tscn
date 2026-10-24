@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://p58y02pwx2gq"]
 
-[ext_resource type="Script" uid="uid://48g65g8fyhuk" path="res://character_body_2d.gd" id="1_0e48y"]
+[ext_resource type="Script" uid="uid://48g65g8fyhuk" path="res://Scripts/character_body_2d.gd" id="1_0e48y"]
 [ext_resource type="Texture2D" uid="uid://3n1j5bsa005q" path="res://Assets/Sprites/Sprite-0005.png" id="2_0hol4"]
 [ext_resource type="Texture2D" uid="uid://b68mqqlmk6vs0" path="res://Assets/Sprites/Sprite-0001.png" id="2_epypp"]
 [ext_resource type="Texture2D" uid="uid://b4n2rlhsa862q" path="res://Assets/Sprites/LittleGuyWalk-Sheet.png" id="4_q6r6c"]
