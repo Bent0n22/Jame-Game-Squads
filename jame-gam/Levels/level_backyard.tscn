@@ -202,7 +202,7 @@ tile_map_data = PackedByteArray("AAD5////AAACAAMAAAD6////AAADAAMAAAD6/wAAAAAAAAE
 tile_set = SubResource("TileSet_s1xjb")
 
 [node name="Player" parent="." unique_id=1870273184 instance=ExtResource("4_jnmhu")]
-position = Vector2(-90, -4)
+position = Vector2(-90, 7)
 
 [node name="RISE" type="AnimatableBody2D" parent="." unique_id=2053158939]
 
