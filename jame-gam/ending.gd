@@ -4,6 +4,5 @@ extends Area2D
 
 
 
-func _on_body_entered(body: Node2D) -> void:
-	print("hello world")
+func _on_body_entered(_body: Node2D) -> void:
 	canvas_layer.visible = true
