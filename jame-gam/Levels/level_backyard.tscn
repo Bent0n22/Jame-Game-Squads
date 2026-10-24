@@ -1,0 +1,220 @@
+[gd_scene format=4 uid="uid://bt1fc0eqvmp8f"]
+
+[ext_resource type="PackedScene" uid="uid://b15g74hdkoult" path="res://sandbox_scene.tscn" id="1_6au05"]
+[ext_resource type="Texture2D" uid="uid://b5dr65vmfrex" path="res://Assets/Sprites/Beautiful Twilight Background Very High Effort Very Good.png" id="2_2jcde"]
+[ext_resource type="Texture2D" uid="uid://bwkejto1e4s14" path="res://Assets/Sprites/Backyard Tileset.png" id="3_jsn4h"]
+[ext_resource type="PackedScene" uid="uid://p58y02pwx2gq" path="res://player.tscn" id="4_jnmhu"]
+[ext_resource type="Texture2D" uid="uid://bxeg1lwc6esan" path="res://Assets/Sprites/bee-sheet.png" id="5_qu76y"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_66f1p"]
+texture = ExtResource("3_jsn4h")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:1/animation_columns = 4
+4:1/animation_mode = 1
+4:1/animation_frame_0/duration = 1.0
+4:1/animation_frame_1/duration = 1.0
+4:1/animation_frame_2/duration = 1.0
+4:1/animation_frame_3/duration = 1.0
+4:1/0 = 0
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:2/0 = 0
+3:2/0 = 0
+5:3/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+0:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+3:5/0 = 0
+2:5/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+7:2/0 = 0
+4:2/0 = 0
+4:3/0 = 0
+0:6/0 = 0
+0:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:6/0 = 0
+1:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:6/0 = 0
+2:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:0/animation_columns = 4
+4:0/animation_mode = 1
+4:0/animation_frame_0/duration = 1.0
+4:0/animation_frame_1/duration = 1.0
+4:0/animation_frame_2/duration = 1.0
+4:0/animation_frame_3/duration = 1.0
+4:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_7vadr"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_66f1p")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bg12k"]
+texture = ExtResource("3_jsn4h")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+7:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_s1xjb"]
+sources/0 = SubResource("TileSetAtlasSource_bg12k")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_evjyw"]
+size = Vector2(32, 5)
+
+[sub_resource type="Animation" id="Animation_e24ce"]
+resource_name = "Bee"
+loop_mode = 2
+
+[sub_resource type="Animation" id="Animation_66f1p"]
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-96, 23)]
+}
+
+[sub_resource type="Animation" id="Animation_bg12k"]
+resource_name = "Sewer Exit"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-96, 23), Vector2(-96, -13.5)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_e24ce"]
+_data = {
+&"Bee": SubResource("Animation_e24ce"),
+&"RESET": SubResource("Animation_66f1p"),
+&"Sewer Exit": SubResource("Animation_bg12k")
+}
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e24ce"]
+atlas = ExtResource("5_qu76y")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_epph5"]
+atlas = ExtResource("5_qu76y")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_abjck"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e24ce")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_epph5")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="backyard level" type="Node2D" unique_id=2059810988]
+
+[node name="Sandbox Scene" parent="." unique_id=1604498604 instance=ExtResource("1_6au05")]
+position = Vector2(-87, -126)
+
+[node name="BeautifulTwilightBackgroundVeryHighEffortVeryGood" type="Sprite2D" parent="." unique_id=186637594]
+position = Vector2(48, -70)
+texture = ExtResource("2_2jcde")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1538334644]
+tile_map_data = PackedByteArray("AAD8/wAAAAAAAAEAAAD9/wAAAAAAAAAAAAD+/wAAAAAAAAEAAAD//wAAAAAAAAEAAAAAAAAAAAAAAAEAAAABAAAAAAAAAAAAAAACAAAAAAAAAAEAAAADAAAAAAAAAAEAAAD8/wEAAAAAAAIAAAD9/wEAAAAAAAIAAAD+/wEAAAAAAAIAAAD//wEAAAAAAAIAAAAAAAEAAAAAAAIAAAABAAEAAAAAAAIAAAACAAEAAAAAAAIAAAADAAEAAAAAAAIAAAADAP//AAABAAEAAAACAP//AAABAAIAAAABAP//AAABAAEAAAAAAP//AAABAAAAAAD/////AAABAAEAAAD+////AAABAAIAAAD9////AAABAAEAAAD8////AAABAAEAAAD7////AAABAAIAAAD7/wAAAAAAAAAAAAD7/wEAAAAAAAIAAAD5////AAAAAAMAAAD6////AAABAAMAAAABAP7/AAAEAAEAAAD+//7/AAAEAAEAAAADAP7/AAAEAAAAAAAEAAEAAAAAAAIAAAAFAAEAAAAAAAIAAAAGAAEAAAAAAAIAAAAHAAEAAAAAAAIAAAAIAAEAAAAAAAIAAAAJAAEAAAAAAAIAAAAJAAAAAAABAAYAAAAIAAAAAAABAAYAAAAHAAAAAAAAAAYAAAAEAAAAAAAAAAEAAAAFAAAAAAAAAAAAAAAGAAAAAAAAAAAAAAAGAP//AAABAAIAAAAHAP//AAABAAIAAAAIAP//AAABAAEAAAAJAP//AAABAAIAAAAKAP//AAABAAIAAAAFAP//AAABAAEAAAAEAP//AAABAAIAAAAHAP7/AAAFAAMAAAAJAP7/AAAEAAMAAAAJAP3/AAAEAAIAAAAFAP7/AAAHAAMAAAAFAP3/AAAHAAIAAAAEAP7/AAAGAAMAAAAAAP7/AAACAAIAAAAKAAEAAAAAAAIAAAAKAAAAAAABAAYAAAALAAAAAAAAAAIAAAAMAAAAAAAAAAIAAAAIAAIAAAADAAAAAAAHAAIAAAADAAAAAAALAP//AAABAAIAAAAMAP//AAABAAIAAAD6/wEAAAAAAAIAAAD5/wEAAAAAAAIAAAD4////AAABAAIAAAD4/wAAAAAAAAEAAAD4/wEAAAAAAAIAAAANAPz/AAAAAAAAAAAOAPz/AAAAAAAAAAAPAPz/AAAAAAAAAAAQAPz/AAAAAAAAAAARAPz/AAAAAAAAAAAVAPn/AAAAAAAAAAAWAPn/AAAAAAAAAAAXAPn/AAAAAAAAAAAYAPn/AAAAAAAAAAAZAPn/AAAAAAAAAAAaAPn/AAAAAAAAAAAfAPj/AAAAAAAAAAAkAPb/AAAAAAAAAAAoAPf/AAAAAAAAAAAGAAIAAAADAAAAAAAFAAIAAAADAAAAAAAEAAIAAAADAAAAAAADAAIAAAADAAAAAAACAAIAAAADAAAAAAABAAIAAAADAAAAAAAAAAIAAAADAAAAAAD//wIAAAADAAAAAAD+/wIAAAADAAAAAAD9/wIAAAADAAAAAAD8/wIAAAADAAAAAAD7/wIAAAADAAAAAAD6/wIAAAADAAAAAAD5/wIAAAADAAAAAAD4/wIAAAADAAAAAAAJAAIAAAADAAAAAAALAAEAAAADAAEAAAAMAAEAAAADAAAAAAAKAAIAAAADAAEAAAANAP3/AAAAAAIAAAAOAP3/AAAAAAIAAAAPAP3/AAAAAAIAAAAQAP3/AAAAAAIAAAARAP3/AAAAAAIAAAAVAPr/AAAAAAIAAAAWAPr/AAAAAAIAAAAXAPr/AAAAAAIAAAAYAPr/AAAAAAIAAAAZAPr/AAAAAAIAAAAaAPr/AAAAAAIAAAANAP//AAABAAIAAAAOAP//AAABAAIAAAAPAP//AAABAAIAAAAQAP//AAABAAIAAAARAP//AAABAAIAAAASAP//AAABAAIAAAATAP//AAABAAIAAAAUAP//AAABAAIAAAAVAP//AAABAAIAAAAWAP//AAABAAIAAAAXAP//AAABAAIAAAAYAP//AAABAAIAAAAaAP//AAAAAAAAAAAbAP//AAAAAAAAAAAcAP//AAAAAAAAAAAdAP//AAAAAAAAAAAeAP//AAAAAAAAAAAfAP//AAAAAAAAAAAgAP//AAAAAAAAAAAhAP//AAAAAAAAAAAiAP//AAAAAAAAAAAjAP//AAAAAAAAAAAkAP//AAAAAAAAAAAlAP//AAAAAAAAAAAmAP//AAAAAAAAAAAnAP//AAAAAAAAAAAaAP7/AAABAAIAAAAbAP7/AAABAAIAAAAcAP7/AAABAAIAAAAdAP7/AAABAAIAAAAeAP7/AAABAAIAAAAfAP7/AAABAAIAAAAgAP7/AAABAAIAAAAhAP7/AAABAAIAAAAiAP7/AAABAAIAAAAjAP7/AAABAAIAAAAkAP7/AAABAAIAAAAlAP7/AAABAAIAAAAmAP7/AAABAAIAAAAnAP7/AAABAAIAAAAZAP//AAABAAIAAAAdAPz/AAAAAAQAAAAeAPz/AAABAAQAAAAfAPz/AAACAAQAAAAgAPz/AAADAAQAAAAgAP3/AAADAAUAAAAfAP3/AAACAAUAAAAeAP3/AAABAAUAAAAdAP3/AAAAAAUAAAAVAP7/AAAAAAUAAAAWAP3/AAABAAQAAAAXAP7/AAACAAUAAAAYAP3/AAADAAQAAAAYAP7/AAADAAUAAAAXAP3/AAACAAQAAAAVAP3/AAAAAAQAAAAWAP7/AAABAAUAAAA=")
+tile_set = SubResource("TileSet_7vadr")
+
+[node name="Foreground Tilemap" type="TileMapLayer" parent="." unique_id=1436855467]
+z_index = 4
+tile_map_data = PackedByteArray("AAD5////AAACAAMAAAD6////AAADAAMAAAD6/wAAAAAAAAEAAAD5/wAAAAAAAAAAAAA=")
+tile_set = SubResource("TileSet_s1xjb")
+
+[node name="Player" parent="." unique_id=1870273184 instance=ExtResource("4_jnmhu")]
+position = Vector2(-90, -4)
+
+[node name="RISE" type="AnimatableBody2D" parent="." unique_id=2053158939]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RISE" unique_id=1272885744]
+position = Vector2(-96, 23)
+shape = SubResource("RectangleShape2D_evjyw")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="RISE/CollisionShape2D" unique_id=1676034985]
+libraries/ = SubResource("AnimationLibrary_e24ce")
+autoplay = &"Sewer Exit"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=458550334]
+position = Vector2(228, -89)
+sprite_frames = SubResource("SpriteFrames_abjck")
+autoplay = "default"

@@ -71,6 +71,7 @@ position = Vector2(0.5, 1)
 shape = SubResource("RectangleShape2D_epypp")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=1212077977]
+z_index = 2
 sprite_frames = SubResource("SpriteFrames_oiiii")
 animation = &"Walk"
 autoplay = "Idle"

@@ -1,0 +1,75 @@
+[gd_scene format=4 uid="uid://x1shs31kqh2m"]
+
+[ext_resource type="PackedScene" uid="uid://p58y02pwx2gq" path="res://player.tscn" id="1_aqufg"]
+[ext_resource type="Texture2D" uid="uid://dd14ghtcw62c0" path="res://Assets/Sprites/Tiles_w_pipe.png" id="1_ic1cm"]
+[ext_resource type="PackedScene" uid="uid://b15g74hdkoult" path="res://sandbox_scene.tscn" id="3_vlg1b"]
+[ext_resource type="Texture2D" uid="uid://c3n8qe07teobl" path="res://Assets/Sprites/Fly.png" id="4_hjci1"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vlg1b"]
+texture = ExtResource("1_ic1cm")
+6:1/0 = 0
+6:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+10:1/0 = 0
+4:2/animation_columns = 2
+4:2/animation_frame_0/duration = 1.0
+4:2/animation_frame_1/duration = 1.0
+4:2/0 = 0
+6:2/0 = 0
+6:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:2/0 = 0
+7:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:2/0 = 0
+8:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+9:2/0 = 0
+9:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 2.8777409, -8, 2.8777409)
+10:2/0 = 0
+4:3/animation_columns = 2
+4:3/animation_frame_0/duration = 1.0
+4:3/animation_frame_1/duration = 1.0
+4:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_7vadr"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_vlg1b")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7cgqi"]
+atlas = ExtResource("4_hjci1")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bxyv7"]
+atlas = ExtResource("4_hjci1")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7vadr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7cgqi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bxyv7")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="sewers level" type="Node2D" unique_id=1043215759]
+
+[node name="Player" parent="." unique_id=1870273184 instance=ExtResource("1_aqufg")]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1379756022]
+tile_map_data = PackedByteArray("AAD//wEAAAAHAAIAAAAAAAEAAAAHAAIAAAABAAEAAAAHAAIAAAACAAEAAAAHAAIAAAADAAEAAAAHAAIAAAAEAAEAAAAHAAIAAAAFAAEAAAAHAAIAAAAGAAEAAAAHAAIAAAAHAAEAAAAHAAIAAAAIAAEAAAAHAAIAAAAJAAEAAAAEAAIAAAAKAAEAAAAEAAIAAAALAAEAAAAEAAIAAAAMAAEAAAAEAAIAAAANAAEAAAAEAAIAAAAJAAIAAAAEAAMAAAAKAAIAAAAEAAMAAAALAAIAAAAEAAMAAAAMAAIAAAAEAAMAAAANAAIAAAAEAAMAAAAIAAIAAAAHAAIAAAAHAAIAAAAHAAIAAAAGAAIAAAAHAAIAAAAFAAIAAAAHAAIAAAAEAAIAAAAHAAIAAAADAAIAAAAHAAIAAAACAAIAAAAHAAIAAAABAAIAAAAHAAIAAAAAAAIAAAAHAAIAAAD//wIAAAAHAAIAAAD//wMAAAAHAAIAAAAAAAMAAAAHAAIAAAABAAMAAAAHAAIAAAACAAMAAAAHAAIAAAADAAMAAAAHAAIAAAAEAAMAAAAHAAIAAAAFAAMAAAAHAAIAAAAGAAMAAAAHAAIAAAAHAAMAAAAHAAIAAAAIAAMAAAAHAAIAAAAJAAMAAAAEAAMAAAAKAAMAAAAEAAMAAAALAAMAAAAEAAMAAAAMAAMAAAAEAAMAAAANAAMAAAAEAAMAAAAOAAMAAAAHAAIAAAAOAAIAAAAHAAIAAAAOAAEAAAAHAAIAAAD//wAAAAAGAAMAAAAAAAAAAAAGAAMAAAABAAAAAAAGAAMAAAACAAAAAAAGAAMAAAADAAAAAAAGAAMAAAAEAAAAAAAGAAMAAAAFAAAAAAAGAAMAAAAGAAAAAAAGAAMAAAAHAAAAAAAGAAMAAAAIAAAAAAAGAAMAAAAJAAAAAAAGAAMAAAAKAAAAAAAGAAMAAAALAAAAAAAGAAMAAAAMAAAAAAAGAAMAAAANAAAAAAAGAAMAAAAOAAAAAAAGAAMAAAAOAP//AAAGAAMAAAANAP//AAAGAAMAAAAMAP//AAAGAAMAAAALAP//AAAGAAMAAAAKAP//AAAGAAMAAAAJAP//AAAGAAMAAAAIAP//AAAGAAMAAAAHAP//AAAGAAMAAAAGAP//AAAGAAMAAAAFAP//AAAGAAMAAAAEAP//AAAGAAMAAAADAP//AAAGAAMAAAACAP//AAAGAAMAAAABAP//AAAGAAMAAAAAAP//AAAGAAMAAAD/////AAAGAAMAAAD///7/AAAGAAMAAAAAAP7/AAAGAAMAAAABAP7/AAAGAAMAAAACAP7/AAAGAAMAAAADAP7/AAAGAAMAAAAEAP7/AAAGAAMAAAAFAP7/AAAGAAMAAAAGAP7/AAAGAAMAAAAHAP7/AAAGAAMAAAAIAP7/AAAGAAMAAAAJAP7/AAAGAAMAAAAKAP7/AAAGAAMAAAALAP7/AAAGAAMAAAAMAP7/AAAGAAMAAAANAP7/AAAGAAMAAAAOAP7/AAAGAAMAAAAOAP3/AAAGAAMAAAANAP3/AAAGAAMAAAAMAP3/AAAGAAMAAAALAP3/AAAGAAMAAAAKAP3/AAAGAAMAAAAJAP3/AAAGAAMAAAAIAP3/AAAGAAMAAAAHAP3/AAAGAAMAAAAGAP3/AAAGAAMAAAAFAP3/AAAGAAMAAAAEAP3/AAAGAAMAAAADAP3/AAAGAAMAAAACAP3/AAAGAAMAAAABAP3/AAAGAAMAAAAAAP3/AAAGAAMAAAD///3/AAAGAAMAAAA=")
+tile_set = SubResource("TileSet_7vadr")
+
+[node name="Sandbox Scene" parent="." unique_id=1604498604 instance=ExtResource("3_vlg1b")]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=327009154]
+position = Vector2(259, -28)
+sprite_frames = SubResource("SpriteFrames_7vadr")
+autoplay = "default"
