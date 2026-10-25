@@ -12,6 +12,7 @@
 [ext_resource type="Script" uid="uid://ej5fkjga25q5" path="res://Levels/camera_2d.gd" id="8_jltnf"]
 [ext_resource type="PackedScene" uid="uid://bkubcpkvd3sv5" path="res://killzone.tscn" id="10_a77xb"]
 [ext_resource type="PackedScene" uid="uid://c8q1s3cdm7b0s" path="res://trans_trigger_on_interact.tscn" id="12_2ua47"]
+[ext_resource type="AudioStream" uid="uid://dutgu61kvpm6r" path="res://Assets/Audio/atlasaudio-tense-594858.mp3" id="13_b5q0m"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f01tw"]
 texture = ExtResource("4_x2iaj")
@@ -186,3 +187,6 @@ position = Vector2(160, -538)
 file_to = "res://Levels/level_ending.tscn"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1315915006]
+stream = ExtResource("13_b5q0m")
+volume_db = -9.905
+autoplay = true
