@@ -25,8 +25,9 @@ func OnTrigger(key):
 
 
 func move_block(is_forwards):
+	
 	if is_forwards:
-		$Path/Follow/RigidBody2D/AnimatedSprite2D.scale = Vector2(1,1)
+		$AnimatableBody2D/AnimatedSprite2D.scale = Vector2(1,1)
 		anim.play("move_along_path", -1, 1/time_to_complete_path, false)
 		can_trigger = false
 		await anim.animation_finished
@@ -38,7 +39,7 @@ func move_block(is_forwards):
 			else:
 				move_block(false)
 	else:
-		$Path/Follow/RigidBody2D/AnimatedSprite2D.scale = Vector2(-1,1)
+		$AnimatableBody2D/AnimatedSprite2D.scale = Vector2(-1,1)
 		anim.play("move_along_path", -1, -1/time_to_complete_path, true)
 		can_trigger = false
 		await anim.animation_finished
@@ -49,5 +50,6 @@ func move_block(is_forwards):
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	
+	$AnimatableBody2D.position = path_follower.position
+	print($AnimatableBody2D.position)
 	pass

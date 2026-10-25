@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://csm153i2sdvst" path="res://Scripts/lever.gd" id="4_x7uc3"]
 [ext_resource type="Texture2D" uid="uid://dj0kp72itmvco" path="res://Assets/Sprites/flowery.png" id="5_q0kuf"]
 [ext_resource type="Script" uid="uid://bwkyxktrqs0rk" path="res://Transitioning Stuff/fixed_trans_trigger.gd" id="7_x7uc3"]
+[ext_resource type="PackedScene" uid="uid://k6lg8gwt8gdl" path="res://bee.tscn" id="8_t0axc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tb2w5"]
 size = Vector2(157, 20)
@@ -56,5 +57,8 @@ debug_color = Color(0, 0.65055966, 0.103819765, 0.41960785)
 
 [node name="Estrana" parent="." unique_id=2107904517 instance=ExtResource("3_kekqg")]
 position = Vector2(-39, 28)
+
+[node name="Bee" parent="." unique_id=299744515 instance=ExtResource("8_t0axc")]
+position = Vector2(-76, -43)
 
 [connection signal="body_entered" from="fixed_trans_trigger/Area2D" to="fixed_trans_trigger" method="_on_area_2d_body_entered"]
