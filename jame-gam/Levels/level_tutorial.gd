@@ -33,3 +33,15 @@ func _process(delta: float) -> void:
 					child.texture = grate3
 				grate6:
 					child.texture = grate5
+
+const lines: Array[String] = [
+	"WHERE DO YOU THINK YOU ARE GOING MISTER",
+	"YOU KNOW IT IS RUDE TO LEAVE YOUR DEAR GRANDMAMA HANGING",
+	"I SEE HOW IT IS >:("
+]
+@onready var sfx = preload("res://text_box/speech_sfx.wav")
+func _on_area_2d_2_body_entered(body: Node2D) -> void:
+	if body.name == "CharacterBody2D":
+		DialogManager.start_dialog(Vector2(510, -8), lines, sfx)
+		$Area2D2.queue_free()
+	pass # Replace with function body.
