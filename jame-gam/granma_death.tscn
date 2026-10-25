@@ -25,7 +25,7 @@ region = Rect2(0, 0, 16, 16)
 atlas = ExtResource("2_v7adp")
 region = Rect2(16, 0, 16, 16)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_7vadr"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_0m7x0"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -54,7 +54,7 @@ animations = [{
 }]
 
 [node name="Granma Death" type="AnimatedSprite2D" unique_id=1566164553]
-sprite_frames = SubResource("SpriteFrames_7vadr")
+sprite_frames = SubResource("SpriteFrames_0m7x0")
 animation = &"death"
 autoplay = "default"
 

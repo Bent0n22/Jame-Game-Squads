@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://ledai6yc5x1c" path="res://Assets/Sprites/Menu Buttons/Play Button5.png" id="5_kk3ma"]
 [ext_resource type="Texture2D" uid="uid://bf8vj3mm0inhm" path="res://Assets/Sprites/Menu Buttons/Play Button4.png" id="6_ecwwl"]
 [ext_resource type="Texture2D" uid="uid://dt2vms04o3dr2" path="res://Assets/Sprites/Menu Buttons/Play Button6.png" id="7_kk3ma"]
+[ext_resource type="AudioStream" uid="uid://3nr8tghlkks6" path="res://Assets/Audio/11 K.K. Glider_ Bumblebee.mp3" id="9_nrnbx"]
 
 [node name="Menu" type="Control" unique_id=470638115]
 layout_mode = 3
@@ -43,6 +44,11 @@ offset_bottom = 138.0
 texture_normal = ExtResource("2_4hy44")
 texture_pressed = ExtResource("6_ecwwl")
 texture_hover = ExtResource("7_kk3ma")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=818988344]
+stream = ExtResource("9_nrnbx")
+volume_db = -8.241
+autoplay = true
 
 [connection signal="pressed" from="CanvasLayer/Play Game" to="." method="_on_play_game_pressed"]
 [connection signal="pressed" from="CanvasLayer/Exit Game" to="." method="_on_exit_game_pressed"]

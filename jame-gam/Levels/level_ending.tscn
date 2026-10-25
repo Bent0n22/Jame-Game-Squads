@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://b4n2rlhsa862q" path="res://Assets/Sprites/LittleGuyWalk-Sheet.png" id="6_iihw5"]
 [ext_resource type="PackedScene" uid="uid://c8q1s3cdm7b0s" path="res://trans_trigger_on_interact.tscn" id="8_hm481"]
 [ext_resource type="PackedScene" uid="uid://btj4h3g23u4c7" path="res://ui.tscn" id="9_nr7vr"]
+[ext_resource type="AudioStream" uid="uid://b6rx7t12h0vg6" path="res://Assets/Audio/u_s8g68hg8n6-cricket-on-a-summer-night-_-cricket-sound-341501.mp3" id="10_g4ix3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tpbwa"]
 texture = ExtResource("4_gyfd2")
@@ -140,3 +141,6 @@ position = Vector2(271, -63)
 file_to = "res://credits_and_end_card.tscn"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1444178346]
+stream = ExtResource("10_g4ix3")
+volume_db = -9.123
+autoplay = true

@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://dnpkxqnustbkd" path="res://Assets/Sprites/Sewer Grates/SewerGrate6.png" id="11_41vca"]
 [ext_resource type="Texture2D" uid="uid://bgdbogfmkhwpg" path="res://Assets/Sprites/Sewer Grates/SewerGrate4.png" id="12_3vdbj"]
 [ext_resource type="PackedScene" uid="uid://bkubcpkvd3sv5" path="res://killzone.tscn" id="13_8cmjj"]
+[ext_resource type="AudioStream" uid="uid://dvfc2ey6a4aj0" path="res://Assets/Audio/24 3am _ Towball's Crossing.mp3" id="13_brrmp"]
 [ext_resource type="AudioStream" uid="uid://bgettadowioep" path="res://Assets/Sprites/Audio/splash.mp3" id="14_1ak8b"]
 [ext_resource type="PackedScene" uid="uid://c8q1s3cdm7b0s" path="res://trans_trigger_on_interact.tscn" id="18_lp2uq"]
 [ext_resource type="Texture2D" uid="uid://v1xcvr7xbmsd" path="res://Assets/Sprites/Pipe.png" id="19_gktoi"]
@@ -317,6 +318,11 @@ debug_color = Color(0.99667317, 0, 0.19106522, 0.41960785)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="killzone" unique_id=1300846782]
 stream = ExtResource("14_1ak8b")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=40961686]
+stream = ExtResource("13_brrmp")
+volume_db = -8.0
+autoplay = true
 
 [node name="trans_trigger_on_interact" parent="." unique_id=1204718714 instance=ExtResource("18_lp2uq")]
 position = Vector2(264, -574)
