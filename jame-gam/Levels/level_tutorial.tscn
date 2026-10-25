@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://btj4h3g23u4c7" path="res://ui.tscn" id="1_0xoxh"]
 [ext_resource type="Texture2D" uid="uid://dd14ghtcw62c0" path="res://Assets/Sprites/Tiles_w_pipe.png" id="1_jou4l"]
+[ext_resource type="Script" uid="uid://dsvtbmjpo7f1g" path="res://Levels/level_tutorial.gd" id="1_v8nge"]
 [ext_resource type="PackedScene" uid="uid://p58y02pwx2gq" path="res://player.tscn" id="2_0xoxh"]
 [ext_resource type="Texture2D" uid="uid://camkg8myiw2l2" path="res://Assets/Sprites/REALTILES.png" id="2_6t0p6"]
 [ext_resource type="Script" uid="uid://de3m7mlo5drai" path="res://Scripts/fall.gd" id="4_lot66"]
@@ -14,6 +15,12 @@
 [ext_resource type="PackedScene" uid="uid://d7pu6wuxuddx" path="res://changing_object.tscn" id="10_wvjtv"]
 [ext_resource type="Script" uid="uid://bwkyxktrqs0rk" path="res://Transitioning Stuff/fixed_trans_trigger.gd" id="11_sv282"]
 [ext_resource type="Texture2D" uid="uid://d3e01odq6prde" path="res://Assets/Sprites/little.png" id="12_sqm16"]
+[ext_resource type="Texture2D" uid="uid://cq12fsm55y1wh" path="res://Assets/Sprites/Sewer Grates/SewerGrate2.png" id="16_7fru2"]
+[ext_resource type="Texture2D" uid="uid://dnpkxqnustbkd" path="res://Assets/Sprites/Sewer Grates/SewerGrate6.png" id="17_86f68"]
+[ext_resource type="Texture2D" uid="uid://bgdbogfmkhwpg" path="res://Assets/Sprites/Sewer Grates/SewerGrate4.png" id="18_6yb3y"]
+[ext_resource type="Texture2D" uid="uid://cwvnqwua2inl5" path="res://Assets/Sprites/Grate Standing/GrateSpriteStanding2.png" id="19_4dx6i"]
+[ext_resource type="Texture2D" uid="uid://r3d16frdm0bf" path="res://Assets/Sprites/Grate Standing/GrateSpriteStanding1.png" id="20_2rdke"]
+[ext_resource type="Texture2D" uid="uid://cg6syantu0kje" path="res://Assets/Sprites/Grate Standing/GrateSpriteStanding3.png" id="21_kf7vc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sv282"]
 texture = ExtResource("2_6t0p6")
@@ -564,6 +571,7 @@ animations = [{
 size = Vector2(20, 160)
 
 [node name="tutorial level" type="Node2D" unique_id=1820815763]
+script = ExtResource("1_v8nge")
 
 [node name="UI" parent="." unique_id=756997585 instance=ExtResource("1_0xoxh")]
 
@@ -631,6 +639,34 @@ debug_color = Color(0, 0.65055966, 0.103819765, 0.41960785)
 [node name="Little" type="Sprite2D" parent="fixed_trans_trigger" unique_id=769798462]
 position = Vector2(-906, 506)
 texture = ExtResource("12_sqm16")
+
+[node name="Grate" type="Node2D" parent="." unique_id=1125258400]
+
+[node name="SewerGrate2" type="Sprite2D" parent="Grate" unique_id=217725655]
+position = Vector2(131, -206)
+texture = ExtResource("16_7fru2")
+
+[node name="SewerGrate6" type="Sprite2D" parent="Grate" unique_id=421566705]
+position = Vector2(144, -206)
+texture = ExtResource("17_86f68")
+
+[node name="SewerGrate4" type="Sprite2D" parent="Grate" unique_id=429940623]
+position = Vector2(155, -206)
+texture = ExtResource("18_6yb3y")
+
+[node name="Standing" type="Node2D" parent="." unique_id=758158196]
+
+[node name="GrateSpriteStanding2" type="Sprite2D" parent="Standing" unique_id=251411464]
+position = Vector2(129, -217)
+texture = ExtResource("19_4dx6i")
+
+[node name="GrateSpriteStanding1" type="Sprite2D" parent="Standing" unique_id=459316908]
+position = Vector2(141, -217)
+texture = ExtResource("20_2rdke")
+
+[node name="GrateSpriteStanding3" type="Sprite2D" parent="Standing" unique_id=2094000305]
+position = Vector2(157, -217)
+texture = ExtResource("21_kf7vc")
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_entered" from="fixed_trans_trigger/Area2D" to="fixed_trans_trigger" method="_on_area_2d_body_entered"]
