@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://df62qj4pd0p8n" path="res://Assets/Sprites/Menu Buttons/Play Button2.png" id="2_4hy44"]
 [ext_resource type="Texture2D" uid="uid://dxu3ajnjbusvo" path="res://Assets/Sprites/TitlePlaceholder.png" id="2_ytr4m"]
 [ext_resource type="Texture2D" uid="uid://c7k5cs1g7h33i" path="res://Assets/Sprites/Menu Buttons/Play Button3.png" id="3_ytr4m"]
+[ext_resource type="Texture2D" uid="uid://ledai6yc5x1c" path="res://Assets/Sprites/Menu Buttons/Play Button5.png" id="5_kk3ma"]
 [ext_resource type="Texture2D" uid="uid://bf8vj3mm0inhm" path="res://Assets/Sprites/Menu Buttons/Play Button4.png" id="6_ecwwl"]
 [ext_resource type="Texture2D" uid="uid://dt2vms04o3dr2" path="res://Assets/Sprites/Menu Buttons/Play Button6.png" id="7_kk3ma"]
 
@@ -31,8 +32,8 @@ offset_top = 77.0
 offset_right = 187.0
 offset_bottom = 109.0
 texture_normal = ExtResource("1_mae5d")
-texture_pressed = ExtResource("2_4hy44")
-texture_hover = ExtResource("3_ytr4m")
+texture_pressed = ExtResource("3_ytr4m")
+texture_hover = ExtResource("5_kk3ma")
 
 [node name="Exit Game" type="TextureButton" parent="CanvasLayer" unique_id=1316716114]
 offset_left = 123.0
