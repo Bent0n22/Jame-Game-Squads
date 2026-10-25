@@ -204,9 +204,6 @@ position = Vector2(-360, -56)
 [node name="lever3" parent="levers" unique_id=1094701916 instance=ExtResource("3_7h2xq")]
 position = Vector2(280, -296)
 
-[node name="lever4" parent="levers" unique_id=1913137535 instance=ExtResource("3_7h2xq")]
-position = Vector2(120, 8)
-
 [node name="Changing Objects A" type="Node" parent="." unique_id=1986667793]
 
 [node name="Changing Object" parent="Changing Objects A" unique_id=1677729763 instance=ExtResource("6_jrfrv")]

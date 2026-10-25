@@ -1,5 +1,6 @@
 extends Node2D
 
+
 var grate1 = preload("res://Assets/Sprites/Sewer Grates/SewerGrate1.png")
 var grate2 = preload("res://Assets/Sprites/Sewer Grates/SewerGrate2.png")
 var grate3 = preload("res://Assets/Sprites/Sewer Grates/SewerGrate3.png")
@@ -9,6 +10,7 @@ var grate6 = preload("res://Assets/Sprites/Sewer Grates/SewerGrate6.png")
 
 func _ready() -> void:
 	GameController.tempVars.room = "res://Levels/level_sewers.tscn"
+	GameController.leverStatus = false
 
 func _process(delta: float) -> void:
 	if GameController.leverStatus:
