@@ -259,10 +259,6 @@ baseDecision = true
 [node name="Changing Object8" parent="Changing Objects B" unique_id=1618027317 instance=ExtResource("6_jrfrv")]
 position = Vector2(312, -105)
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Changing Objects B/Changing Object8" unique_id=419194556]
-position = Vector2(-312, 105)
-stream = ExtResource("14_1ak8b")
-
 [node name="Changing Object12" parent="Changing Objects B" unique_id=721715674 instance=ExtResource("6_jrfrv")]
 position = Vector2(424, -297)
 

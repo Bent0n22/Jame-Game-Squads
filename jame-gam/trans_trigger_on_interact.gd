@@ -23,16 +23,37 @@ func _on_area_2d_body_exited(body: Node2D) -> void:
 var lines: Array[String] = [
 	"You must have 2 keys to open the grate"
 ]
-func _process(delta: float) -> void:
-	
-	if player_in_range:
-		if Input.is_action_just_pressed("Interact"):
-			if backyardkeys:
-				if GameController.key_count >= 2:
-					GameController.tempVars.temp_pos = pos_to
-					SceneLoaderScene.transition_to_scene(file_to)
-				else:
-					DialogManager.start_dialog(Vector2(1900, -66), lines, sfx)
-			else:
+
+var can_talk = true
+
+func _on_dialog_finished():
+	can_talk = false
+	GameController.talking = false
+	await get_tree().process_frame 
+	can_talk = true
+
+func _unhandled_input(event):
+	if Input.is_action_just_pressed("Interact") && player_in_range && can_talk:
+		if backyardkeys:
+			if GameController.key_count >= 2:
 				GameController.tempVars.temp_pos = pos_to
 				SceneLoaderScene.transition_to_scene(file_to)
+			else:
+				DialogManager.start_dialog(Vector2(1900, -66), lines, sfx)
+		else:
+			GameController.tempVars.temp_pos = pos_to
+			SceneLoaderScene.transition_to_scene(file_to)
+
+#func _process(delta: float) -> void:
+	#
+	#if player_in_range:
+		#if Input.is_action_just_pressed("Interact") && can_talk:
+			#if backyardkeys:
+				#if GameController.key_count >= 2:
+					#GameController.tempVars.temp_pos = pos_to
+					#SceneLoaderScene.transition_to_scene(file_to)
+				#else:
+					#DialogManager.start_dialog(Vector2(1900, -66), lines, sfx)
+			#else:
+				#GameController.tempVars.temp_pos = pos_to
+				#SceneLoaderScene.transition_to_scene(file_to)
