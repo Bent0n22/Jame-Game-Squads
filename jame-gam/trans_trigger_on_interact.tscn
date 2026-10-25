@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://bc6lnev6mo2mr" path="res://trans_trigger_on_interact.gd" id="1_ui6ec"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7vadr"]
-radius = 9.0
 
 [node name="trans_trigger_on_interact" type="Node2D" unique_id=1204718714]
 script = ExtResource("1_ui6ec")
