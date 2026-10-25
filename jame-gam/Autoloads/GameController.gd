@@ -1,5 +1,6 @@
 extends Node
 
+var talking = false
 var leverStatus = false
 
 func switchLever():

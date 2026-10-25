@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://tr2eo1yt04el" path="res://menu.gd" id="1_4hy44"]
 [ext_resource type="Texture2D" uid="uid://cxo0s8tjk05df" path="res://Assets/Sprites/Menu Buttons/Play Button1.png" id="1_mae5d"]
 [ext_resource type="Texture2D" uid="uid://df62qj4pd0p8n" path="res://Assets/Sprites/Menu Buttons/Play Button2.png" id="2_4hy44"]
+[ext_resource type="Texture2D" uid="uid://dxu3ajnjbusvo" path="res://Assets/Sprites/TitlePlaceholder.png" id="2_ytr4m"]
 [ext_resource type="Texture2D" uid="uid://c7k5cs1g7h33i" path="res://Assets/Sprites/Menu Buttons/Play Button3.png" id="3_ytr4m"]
 
 [node name="Menu" type="Control" unique_id=470638115]
@@ -14,13 +15,19 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_4hy44")
 
+[node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=178890033]
+
+[node name="TitlePlaceholder" type="Sprite2D" parent="CanvasLayer2" unique_id=328909446]
+position = Vector2(160, 90)
+texture = ExtResource("2_ytr4m")
+
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=117266955]
 
 [node name="Play Game" type="TextureButton" parent="CanvasLayer" unique_id=760700457]
-offset_left = 124.0
-offset_top = 26.0
-offset_right = 188.0
-offset_bottom = 58.0
+offset_left = 123.0
+offset_top = 77.0
+offset_right = 187.0
+offset_bottom = 109.0
 texture_normal = ExtResource("1_mae5d")
 texture_pressed = ExtResource("2_4hy44")
 texture_hover = ExtResource("3_ytr4m")

@@ -28,10 +28,12 @@ var can_talk = true
 
 func _on_dialog_finished():
 	can_talk = false
+	GameController.talking = false
 	# Wait one frame (or a tiny fraction of a second) so the current press is ignored
 	await get_tree().process_frame 
 	can_talk = true
 
 func _unhandled_input(event):
+	GameController.talking = true
 	if event.is_action_pressed("Interact") and player_in_range and can_talk:
 		DialogManager.start_dialog(global_position, linesagain, sfx)
