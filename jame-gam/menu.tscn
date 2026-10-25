@@ -27,18 +27,18 @@ texture = ExtResource("2_kk3ma")
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=117266955]
 
 [node name="Play Game" type="TextureButton" parent="CanvasLayer" unique_id=760700457]
-offset_left = 123.0
+offset_left = 128.0
 offset_top = 77.0
-offset_right = 187.0
+offset_right = 192.0
 offset_bottom = 109.0
 texture_normal = ExtResource("1_mae5d")
 texture_pressed = ExtResource("3_ytr4m")
 texture_hover = ExtResource("5_kk3ma")
 
 [node name="Exit Game" type="TextureButton" parent="CanvasLayer" unique_id=1316716114]
-offset_left = 123.0
+offset_left = 127.0
 offset_top = 98.0
-offset_right = 187.0
+offset_right = 191.0
 offset_bottom = 138.0
 texture_normal = ExtResource("2_4hy44")
 texture_pressed = ExtResource("6_ecwwl")
