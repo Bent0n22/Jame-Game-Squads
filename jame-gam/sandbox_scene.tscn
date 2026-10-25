@@ -5,14 +5,82 @@
 [ext_resource type="PackedScene" uid="uid://dmj7vrkiqjob0" path="res://lever.tscn" id="3_kekqg"]
 [ext_resource type="PackedScene" uid="uid://d7pu6wuxuddx" path="res://changing_object.tscn" id="4_gqnfj"]
 [ext_resource type="Texture2D" uid="uid://dj0kp72itmvco" path="res://Assets/Sprites/flowery.png" id="5_q0kuf"]
+[ext_resource type="Script" uid="uid://cmwrsnavnfc4m" path="res://bee.gd" id="6_y6xub"]
+[ext_resource type="Texture2D" uid="uid://bxeg1lwc6esan" path="res://Assets/Sprites/bee-sheet.png" id="7_haolt"]
 [ext_resource type="Script" uid="uid://bwkyxktrqs0rk" path="res://Transitioning Stuff/fixed_trans_trigger.gd" id="7_x7uc3"]
-[ext_resource type="PackedScene" uid="uid://k6lg8gwt8gdl" path="res://bee.tscn" id="8_t0axc"]
 [ext_resource type="PackedScene" uid="uid://bi8ngsfl1xft5" path="res://estrana_diaglogue.tscn" id="8_y6xub"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tb2w5"]
 size = Vector2(157, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t0axc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tsa2i"]
+size = Vector2(11.140144, 6.684086)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q8d8k"]
+atlas = ExtResource("7_haolt")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hoj8b"]
+atlas = ExtResource("7_haolt")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hoj8b"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q8d8k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hoj8b")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Curve2D" id="Curve2D_3qn2e"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 175.37, 0, 0, 0, 0, 0, 175, 77, 0, 0, 0, 0, -200, 77)
+}
+point_count = 4
+
+[sub_resource type="Animation" id="Animation_v5qog"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_xww1r"]
+resource_name = "move_along_path"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_v5qog"]
+_data = {
+&"RESET": SubResource("Animation_v5qog"),
+&"move_along_path": SubResource("Animation_xww1r")
+}
 
 [node name="Sandbox Scene" type="Node2D" unique_id=1604498604]
 
@@ -51,8 +119,31 @@ file_to = "res://Levels/level_tutorial.tscn"
 shape = SubResource("RectangleShape2D_t0axc")
 debug_color = Color(0, 0.65055966, 0.103819765, 0.41960785)
 
-[node name="Bee" parent="." unique_id=299744515 instance=ExtResource("8_t0axc")]
+[node name="Bee" type="Node2D" parent="." unique_id=299744515]
 position = Vector2(-76, -43)
+script = ExtResource("6_y6xub")
+time_to_complete_path = 2.0
+rotates = true
+
+[node name="AnimatableBody2D" type="AnimatableBody2D" parent="Bee" unique_id=51600981]
+rotation = 0.56337744
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bee/AnimatableBody2D" unique_id=1480868625]
+position = Vector2(-0.520319, 0.8295946)
+shape = SubResource("RectangleShape2D_tsa2i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Bee/AnimatableBody2D" unique_id=986786680]
+sprite_frames = SubResource("SpriteFrames_hoj8b")
+autoplay = "default"
+
+[node name="Path" type="Path2D" parent="Bee" unique_id=496989683]
+curve = SubResource("Curve2D_3qn2e")
+
+[node name="Follow" type="PathFollow2D" parent="Bee/Path" unique_id=1661702296]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Bee" unique_id=1884343722]
+root_node = NodePath("../Path/Follow")
+libraries/ = SubResource("AnimationLibrary_v5qog")
 
 [node name="lever" parent="." unique_id=1764940399 instance=ExtResource("3_kekqg")]
 position = Vector2(51, 31)
