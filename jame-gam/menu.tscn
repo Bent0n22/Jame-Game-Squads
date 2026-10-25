@@ -4,11 +4,13 @@
 [ext_resource type="Texture2D" uid="uid://cxo0s8tjk05df" path="res://Assets/Sprites/Menu Buttons/Play Button1.png" id="1_mae5d"]
 [ext_resource type="Texture2D" uid="uid://df62qj4pd0p8n" path="res://Assets/Sprites/Menu Buttons/Play Button2.png" id="2_4hy44"]
 [ext_resource type="Texture2D" uid="uid://ba0tji80446ir" path="res://Assets/Sprites/Title.png" id="2_kk3ma"]
+[ext_resource type="Texture2D" uid="uid://c4yv5ey61jn5o" path="res://Assets/Sprites/StarDrawing.png" id="3_iqepy"]
 [ext_resource type="Texture2D" uid="uid://c7k5cs1g7h33i" path="res://Assets/Sprites/Menu Buttons/Play Button3.png" id="3_ytr4m"]
 [ext_resource type="Texture2D" uid="uid://ledai6yc5x1c" path="res://Assets/Sprites/Menu Buttons/Play Button5.png" id="5_kk3ma"]
 [ext_resource type="Texture2D" uid="uid://bf8vj3mm0inhm" path="res://Assets/Sprites/Menu Buttons/Play Button4.png" id="6_ecwwl"]
 [ext_resource type="Texture2D" uid="uid://dt2vms04o3dr2" path="res://Assets/Sprites/Menu Buttons/Play Button6.png" id="7_kk3ma"]
 [ext_resource type="AudioStream" uid="uid://3nr8tghlkks6" path="res://Assets/Audio/11 K.K. Glider_ Bumblebee.mp3" id="9_nrnbx"]
+[ext_resource type="AudioStream" uid="uid://dll0ie1jthj6k" path="res://Assets/Audio/coin.wav" id="11_h1wq0"]
 
 [node name="Menu" type="Control" unique_id=470638115]
 layout_mode = 3
@@ -24,6 +26,23 @@ script = ExtResource("1_4hy44")
 [node name="Title" type="Sprite2D" parent="CanvasLayer2" unique_id=2132448114]
 position = Vector2(160, 90)
 texture = ExtResource("2_kk3ma")
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer2" unique_id=792251152]
+offset_left = 301.0
+offset_top = 161.0
+offset_right = 341.0
+offset_bottom = 201.0
+texture_normal = ExtResource("3_iqepy")
+texture_pressed = ExtResource("3_iqepy")
+texture_hover = ExtResource("3_iqepy")
+texture_disabled = ExtResource("3_iqepy")
+texture_focused = ExtResource("3_iqepy")
+
+[node name="TextureButton2" type="TextureButton" parent="CanvasLayer2" unique_id=1428939544]
+offset_left = 243.0
+offset_top = 29.0
+offset_right = 252.0
+offset_bottom = 38.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=117266955]
 
@@ -50,5 +69,11 @@ stream = ExtResource("9_nrnbx")
 volume_db = -8.241
 autoplay = true
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=883001992]
+stream = ExtResource("11_h1wq0")
+volume_db = -7.26
+
+[connection signal="pressed" from="CanvasLayer2/TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="CanvasLayer2/TextureButton2" to="." method="_on_texture_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/Play Game" to="." method="_on_play_game_pressed"]
 [connection signal="pressed" from="CanvasLayer/Exit Game" to="." method="_on_exit_game_pressed"]

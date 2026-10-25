@@ -41,5 +41,6 @@ func _process(delta: float) -> void:
 
 
 func _on_button_pressed() -> void:
+	GameController.game_won = true
 	SceneLoaderScene.transition_to_scene("res://menu.tscn")
 	pass # Replace with function body.
