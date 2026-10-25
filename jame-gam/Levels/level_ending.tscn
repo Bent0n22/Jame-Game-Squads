@@ -6,8 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://br660qykcdkew" path="res://Assets/Sprites/Roof.png" id="4_gyfd2"]
 [ext_resource type="Script" uid="uid://be3n1f8npeku" path="res://Scripts/endingplayer.gd" id="5_ullyh"]
 [ext_resource type="Texture2D" uid="uid://b4n2rlhsa862q" path="res://Assets/Sprites/LittleGuyWalk-Sheet.png" id="6_iihw5"]
-[ext_resource type="Script" uid="uid://bybnfmoxo3qty" path="res://Scripts/ending.gd" id="7_br5fe"]
-[ext_resource type="Texture2D" uid="uid://pogjuycq3j6q" path="res://Assets/Sprites/endingplaceholder.png" id="8_w115y"]
+[ext_resource type="PackedScene" uid="uid://c8q1s3cdm7b0s" path="res://trans_trigger_on_interact.tscn" id="8_hm481"]
 [ext_resource type="PackedScene" uid="uid://btj4h3g23u4c7" path="res://ui.tscn" id="9_nr7vr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tpbwa"]
@@ -75,8 +74,8 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7vadr"]
-size = Vector2(23, 87.5)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s1xjb"]
+size = Vector2(20, 43)
 
 [node name="level_ending" type="Node2D" unique_id=1193487933]
 
@@ -96,7 +95,7 @@ mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
 [node name="Pole" type="Sprite2D" parent="." unique_id=1951083991]
-position = Vector2(288, -78)
+position = Vector2(284, -78)
 texture = ExtResource("3_v8fvw")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=972726560]
@@ -120,22 +119,6 @@ animation = &"walk"
 position = Vector2(16, 0)
 zoom = Vector2(4, 4)
 
-[node name="Area2D" type="Area2D" parent="." unique_id=829892715]
-position = Vector2(289, -58)
-collision_mask = 2
-script = ExtResource("7_br5fe")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1096326168]
-position = Vector2(-12.5, -2.25)
-shape = SubResource("RectangleShape2D_7vadr")
-
-[node name="CanvasLayer3" type="CanvasLayer" parent="." unique_id=1653316105]
-visible = false
-
-[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer3" unique_id=838624807]
-position = Vector2(160, 90)
-texture = ExtResource("8_w115y")
-
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=330045972]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1770510168]
@@ -143,4 +126,13 @@ polygon = PackedVector2Array(-48, 26.5, 337, -69.75, 337, 100, -48, 100)
 
 [node name="UI" parent="." unique_id=756997585 instance=ExtResource("9_nr7vr")]
 
-[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=523744646]
+position = Vector2(283, -73.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=889362843]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_s1xjb")
+
+[node name="trans_trigger_on_interact" parent="." unique_id=1204718714 instance=ExtResource("8_hm481")]
+position = Vector2(271, -63)
+file_to = "res://credits_and_end_card.tscn"

@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://bxeg1lwc6esan" path="res://Assets/Sprites/bee-sheet.png" id="7_haolt"]
 [ext_resource type="Script" uid="uid://bwkyxktrqs0rk" path="res://Transitioning Stuff/fixed_trans_trigger.gd" id="7_x7uc3"]
 [ext_resource type="PackedScene" uid="uid://bi8ngsfl1xft5" path="res://estrana_diaglogue.tscn" id="8_y6xub"]
+[ext_resource type="PackedScene" uid="uid://c8q1s3cdm7b0s" path="res://trans_trigger_on_interact.tscn" id="10_haolt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tb2w5"]
 size = Vector2(157, 20)
@@ -151,5 +152,8 @@ position = Vector2(51, 31)
 [node name="Estrana" parent="." unique_id=1948836131 instance=ExtResource("8_y6xub")]
 position = Vector2(-45, 28)
 linesagain = Array[String](["OMG HI IM SUCH A BIG FAN", "NOW GO REACH FOR THE STARS", "BITCH", "\";3\""])
+
+[node name="trans_trigger_on_interact" parent="." unique_id=1204718714 instance=ExtResource("10_haolt")]
+position = Vector2(8, 29)
 
 [connection signal="body_entered" from="fixed_trans_trigger/Area2D" to="fixed_trans_trigger" method="_on_area_2d_body_entered"]

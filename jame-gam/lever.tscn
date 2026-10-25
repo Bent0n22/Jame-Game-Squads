@@ -1,9 +1,14 @@
 [gd_scene format=3 uid="uid://dmj7vrkiqjob0"]
 
 [ext_resource type="Script" uid="uid://c485nhacl7a58" path="res://lever.gd" id="1_0ohsc"]
+[ext_resource type="FontFile" uid="uid://b5ei6ytoqn6c0" path="res://Assets/Fonts/augiepixel.ttf" id="2_1btnt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tb2w5"]
 size = Vector2(16, 16)
+
+[sub_resource type="LabelSettings" id="LabelSettings_7uavd"]
+font = ExtResource("2_1btnt")
+font_size = 12
 
 [node name="lever" type="Node2D" unique_id=1764940399]
 script = ExtResource("1_0ohsc")
@@ -15,6 +20,15 @@ shape = SubResource("RectangleShape2D_tb2w5")
 debug_color = Color(0.31061327, 0.6004526, 0.5211831, 0.41960785)
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=1570692552]
+
+[node name="Label" type="Label" parent="Area2D" unique_id=92528187]
+visible = false
+offset_left = -21.0
+offset_top = -15.0
+offset_right = 21.0
+offset_bottom = -2.0
+text = "Interact"
+label_settings = SubResource("LabelSettings_7uavd")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

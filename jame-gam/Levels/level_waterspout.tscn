@@ -122,7 +122,11 @@ position = Vector2(27.5, 5)
 shape = SubResource("RectangleShape2D_7vadr")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D/CollisionShape2D" unique_id=1739221761]
-position = Vector2(-27.5, -5)
+position = Vector2(5.5, 0)
+zoom = Vector2(1.8, 1.8)
+limit_left = 18
+limit_right = 180
+limit_bottom = 18
 script = ExtResource("8_jltnf")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=1024071860]

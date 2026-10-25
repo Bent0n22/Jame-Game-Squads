@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b68mqqlmk6vs0"
-path="res://.godot/imported/Sprite-0001.png-7647bf9f8b536d839277d4b64aee9852.ctex"
+uid="uid://b1sjif3kvpbv0"
+path="res://.godot/imported/stargazingexit6.png-cb94713933194bf1f888dd00bf9d28ce.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprite-0001.png"
-dest_files=["res://.godot/imported/Sprite-0001.png-7647bf9f8b536d839277d4b64aee9852.ctex"]
+source_file="res://Assets/Sprites/Little Guy/stargazingexit6.png"
+dest_files=["res://.godot/imported/stargazingexit6.png-cb94713933194bf1f888dd00bf9d28ce.ctex"]
 
 [params]
 
