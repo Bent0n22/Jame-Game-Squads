@@ -10,6 +10,7 @@ var player_in_range = false
 #	"ok goodbye"
 #]
 
+
 @onready var sfx = preload("res://text_box/speech_sfx.wav")
 @onready var label: Label = $Area2D/CollisionShape2D/Label
 
@@ -31,6 +32,9 @@ func _on_area_2d_body_exited(body: Node2D) -> void:
 var can_talk = true
 
 func _on_dialog_finished():
+	
+	
+	
 	can_talk = false
 	GameController.talking = false
 	# Wait one frame (or a tiny fraction of a second) so the current press is ignored
