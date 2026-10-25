@@ -2,6 +2,8 @@ extends MarginContainer
 
 @onready var label: Label = $MarginContainer/Label
 @onready var timer: Timer = $LetterDisplayTimer
+@onready var audio_player: AudioStreamPlayer = $AudioStreamPlayer
+@onready var next_indicator = $NinePatchRect/Control2/NextIndicator
 
 const MAX_WIDTH = 256
 
@@ -14,9 +16,13 @@ var punctuation_time = 0.2
 
 signal finished_displaying()
 
-func display_text(text_to_display: String):
+func _ready():
+	scale = Vector2.ZERO
+
+func display_text(text_to_display: String, speech_sfx: AudioStream):
 	text = text_to_display
 	label.text = text_to_display
+	audio_player.stream = speech_sfx
 	
 	await resized
 	custom_minimum_size.x = min(size.x, MAX_WIDTH)
@@ -31,6 +37,14 @@ func display_text(text_to_display: String):
 	global_position.y -= size.y + 24
 	
 	label.text = ""
+	
+	pivot_offset = Vector2(size.x / 2, size.y)
+	
+	var tween = get_tree().create_tween()
+	tween.tween_property(
+		self, "scale", Vector2(1, 1), 0.15
+	).set_trans(Tween.TRANS_BACK)
+	
 	_display_letter()
 	
 func _display_letter():
@@ -39,6 +53,7 @@ func _display_letter():
 	
 	if letter_index >= text.length():
 		finished_displaying.emit()
+		next_indicator.visible = true
 		return
 	
 	match text[letter_index]:
@@ -48,6 +63,15 @@ func _display_letter():
 			timer.start(space_time)
 		_:
 			timer.start(letter_time)
+			
+			var new_audio_player = audio_player.duplicate()
+			new_audio_player.pitch_scale += randf_range(-0.1, 0.1)
+			if text[letter_index] in ["a", "e", "i", "o", "u"]:
+				new_audio_player.pitch_scale += 0.2
+			get_tree().root.add_child(new_audio_player)
+			new_audio_player.play()
+			await  new_audio_player.finished
+			new_audio_player.queue_free()
 	
 
 

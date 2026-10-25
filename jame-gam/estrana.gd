@@ -8,6 +8,8 @@ const lines: Array[String] = [
 	"mk go play"
 ]
 
+@onready var speech_sound = preload("res://text_box/speech_sfx.wav")
+
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	print(body.name)
 	if body.name == "CharacterBody2D":
@@ -22,4 +24,4 @@ func _on_area_2d_body_exited(body: Node2D) -> void:
 func _process(delta: float) -> void:
 	if player_in_range:
 		if Input.is_action_just_pressed("Interact"):
-			DialogManager.start_dialog(global_position, lines)
+			DialogManager.start_dialog(global_position, lines, speech_sound)

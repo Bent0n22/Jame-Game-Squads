@@ -9,6 +9,10 @@ const DOWN_CONST = 2.25
 var down_multi = false
 
 func _physics_process(delta: float) -> void:
+	
+	if DialogManager.is_dialog_active:
+		return
+	
 	# Add the gravity.
 	if not is_on_floor():
 		if Input.is_action_just_pressed("Down"):
