@@ -419,6 +419,66 @@ texture = ExtResource("8_8cmjj")
 position = Vector2(148, -238)
 texture = ExtResource("9_1ak8b")
 
+[node name="SewerGrate34" type="Sprite2D" parent="ActiveStarts" unique_id=786390141]
+position = Vector2(-532, -78)
+texture = ExtResource("10_2ql15")
+
+[node name="SewerGrate35" type="Sprite2D" parent="ActiveStarts" unique_id=715831842]
+position = Vector2(-508, -78)
+texture = ExtResource("12_3vdbj")
+
+[node name="SewerGrate36" type="Sprite2D" parent="ActiveStarts" unique_id=473584926]
+position = Vector2(-518, -78)
+texture = ExtResource("11_41vca")
+
+[node name="SewerGrate37" type="Sprite2D" parent="ActiveStarts" unique_id=2108684729]
+position = Vector2(-484, -126)
+texture = ExtResource("10_2ql15")
+
+[node name="SewerGrate38" type="Sprite2D" parent="ActiveStarts" unique_id=1042866719]
+position = Vector2(-460, -126)
+texture = ExtResource("12_3vdbj")
+
+[node name="SewerGrate39" type="Sprite2D" parent="ActiveStarts" unique_id=1251148361]
+position = Vector2(-470, -126)
+texture = ExtResource("11_41vca")
+
+[node name="SewerGrate40" type="Sprite2D" parent="ActiveStarts" unique_id=164762256]
+position = Vector2(-532, -174)
+texture = ExtResource("10_2ql15")
+
+[node name="SewerGrate41" type="Sprite2D" parent="ActiveStarts" unique_id=232282293]
+position = Vector2(-508, -174)
+texture = ExtResource("12_3vdbj")
+
+[node name="SewerGrate42" type="Sprite2D" parent="ActiveStarts" unique_id=1444393541]
+position = Vector2(-521, -174)
+texture = ExtResource("11_41vca")
+
+[node name="SewerGrate43" type="Sprite2D" parent="ActiveStarts" unique_id=840141394]
+position = Vector2(-484, -222)
+texture = ExtResource("10_2ql15")
+
+[node name="SewerGrate44" type="Sprite2D" parent="ActiveStarts" unique_id=1427461377]
+position = Vector2(-472, -222)
+texture = ExtResource("11_41vca")
+
+[node name="SewerGrate45" type="Sprite2D" parent="ActiveStarts" unique_id=1506996609]
+position = Vector2(-460, -222)
+texture = ExtResource("12_3vdbj")
+
+[node name="SewerGrate46" type="Sprite2D" parent="ActiveStarts" unique_id=270775132]
+position = Vector2(-532, -270)
+texture = ExtResource("10_2ql15")
+
+[node name="SewerGrate47" type="Sprite2D" parent="ActiveStarts" unique_id=182927390]
+position = Vector2(-519, -270)
+texture = ExtResource("11_41vca")
+
+[node name="SewerGrate48" type="Sprite2D" parent="ActiveStarts" unique_id=38098542]
+position = Vector2(-508, -270)
+texture = ExtResource("12_3vdbj")
+
 [node name="InactiveStarts" type="Node2D" parent="." unique_id=2140776464]
 
 [node name="SewerGrate2" type="Sprite2D" parent="InactiveStarts" unique_id=470608218]
@@ -512,66 +572,6 @@ texture = ExtResource("12_3vdbj")
 [node name="SewerGrate33" type="Sprite2D" parent="InactiveStarts" unique_id=1642896092]
 position = Vector2(442, -494)
 texture = ExtResource("11_41vca")
-
-[node name="SewerGrate34" type="Sprite2D" parent="InactiveStarts" unique_id=786390141]
-position = Vector2(-532, -78)
-texture = ExtResource("10_2ql15")
-
-[node name="SewerGrate35" type="Sprite2D" parent="InactiveStarts" unique_id=715831842]
-position = Vector2(-508, -78)
-texture = ExtResource("12_3vdbj")
-
-[node name="SewerGrate36" type="Sprite2D" parent="InactiveStarts" unique_id=473584926]
-position = Vector2(-518, -78)
-texture = ExtResource("11_41vca")
-
-[node name="SewerGrate37" type="Sprite2D" parent="InactiveStarts" unique_id=2108684729]
-position = Vector2(-484, -126)
-texture = ExtResource("10_2ql15")
-
-[node name="SewerGrate38" type="Sprite2D" parent="InactiveStarts" unique_id=1042866719]
-position = Vector2(-460, -126)
-texture = ExtResource("12_3vdbj")
-
-[node name="SewerGrate39" type="Sprite2D" parent="InactiveStarts" unique_id=1251148361]
-position = Vector2(-470, -126)
-texture = ExtResource("11_41vca")
-
-[node name="SewerGrate40" type="Sprite2D" parent="InactiveStarts" unique_id=164762256]
-position = Vector2(-532, -174)
-texture = ExtResource("10_2ql15")
-
-[node name="SewerGrate41" type="Sprite2D" parent="InactiveStarts" unique_id=232282293]
-position = Vector2(-508, -174)
-texture = ExtResource("12_3vdbj")
-
-[node name="SewerGrate42" type="Sprite2D" parent="InactiveStarts" unique_id=1444393541]
-position = Vector2(-521, -174)
-texture = ExtResource("11_41vca")
-
-[node name="SewerGrate43" type="Sprite2D" parent="InactiveStarts" unique_id=840141394]
-position = Vector2(-484, -222)
-texture = ExtResource("10_2ql15")
-
-[node name="SewerGrate44" type="Sprite2D" parent="InactiveStarts" unique_id=1427461377]
-position = Vector2(-472, -222)
-texture = ExtResource("11_41vca")
-
-[node name="SewerGrate45" type="Sprite2D" parent="InactiveStarts" unique_id=1506996609]
-position = Vector2(-460, -222)
-texture = ExtResource("12_3vdbj")
-
-[node name="SewerGrate46" type="Sprite2D" parent="InactiveStarts" unique_id=270775132]
-position = Vector2(-532, -270)
-texture = ExtResource("10_2ql15")
-
-[node name="SewerGrate47" type="Sprite2D" parent="InactiveStarts" unique_id=182927390]
-position = Vector2(-519, -270)
-texture = ExtResource("11_41vca")
-
-[node name="SewerGrate48" type="Sprite2D" parent="InactiveStarts" unique_id=38098542]
-position = Vector2(-508, -270)
-texture = ExtResource("12_3vdbj")
 
 [node name="GrateSpriteStanding2" type="Sprite2D" parent="InactiveStarts" unique_id=765725134]
 position = Vector2(-486, -233)
@@ -723,6 +723,42 @@ texture = ExtResource("23_2ddu0")
 position = Vector2(138, -249)
 texture = ExtResource("23_2ddu0")
 
+[node name="GrateSpriteStanding20" type="Sprite2D" parent="BlueGrates" unique_id=1841949119]
+position = Vector2(-520, -89)
+texture = ExtResource("23_2ddu0")
+
+[node name="GrateSpriteStanding21" type="Sprite2D" parent="BlueGrates" unique_id=1290908611]
+position = Vector2(-506, -89)
+texture = ExtResource("22_brrmp")
+
+[node name="GrateSpriteStanding22" type="Sprite2D" parent="BlueGrates" unique_id=2091336864]
+position = Vector2(-534, -89)
+texture = ExtResource("21_5drew")
+
+[node name="GrateSpriteStanding23" type="Sprite2D" parent="BlueGrates" unique_id=715933058]
+position = Vector2(-486, -137)
+texture = ExtResource("21_5drew")
+
+[node name="GrateSpriteStanding24" type="Sprite2D" parent="BlueGrates" unique_id=2100970512]
+position = Vector2(-470, -137)
+texture = ExtResource("23_2ddu0")
+
+[node name="GrateSpriteStanding25" type="Sprite2D" parent="BlueGrates" unique_id=1966077206]
+position = Vector2(-458, -137)
+texture = ExtResource("22_brrmp")
+
+[node name="GrateSpriteStanding26" type="Sprite2D" parent="BlueGrates" unique_id=456753560]
+position = Vector2(-506, -185)
+texture = ExtResource("22_brrmp")
+
+[node name="GrateSpriteStanding27" type="Sprite2D" parent="BlueGrates" unique_id=449404885]
+position = Vector2(-522, -185)
+texture = ExtResource("23_2ddu0")
+
+[node name="GrateSpriteStanding28" type="Sprite2D" parent="BlueGrates" unique_id=1622195791]
+position = Vector2(-534, -185)
+texture = ExtResource("21_5drew")
+
 [node name="GrateSpriteStanding19" type="Sprite2D" parent="BlueGrates" unique_id=2053843215]
 position = Vector2(150, -249)
 texture = ExtResource("22_brrmp")
@@ -768,39 +804,3 @@ texture = ExtResource("23_2ddu0")
 [node name="GrateSpriteStanding10" type="Sprite2D" parent="GreyGrates" unique_id=263412335]
 position = Vector2(230, -121)
 texture = ExtResource("22_brrmp")
-
-[node name="GrateSpriteStanding11" type="Sprite2D" parent="GreyGrates" unique_id=1841949119]
-position = Vector2(-520, -89)
-texture = ExtResource("23_2ddu0")
-
-[node name="GrateSpriteStanding12" type="Sprite2D" parent="GreyGrates" unique_id=1290908611]
-position = Vector2(-506, -89)
-texture = ExtResource("22_brrmp")
-
-[node name="GrateSpriteStanding13" type="Sprite2D" parent="GreyGrates" unique_id=2091336864]
-position = Vector2(-534, -89)
-texture = ExtResource("21_5drew")
-
-[node name="GrateSpriteStanding14" type="Sprite2D" parent="GreyGrates" unique_id=715933058]
-position = Vector2(-486, -137)
-texture = ExtResource("21_5drew")
-
-[node name="GrateSpriteStanding15" type="Sprite2D" parent="GreyGrates" unique_id=2100970512]
-position = Vector2(-470, -137)
-texture = ExtResource("23_2ddu0")
-
-[node name="GrateSpriteStanding16" type="Sprite2D" parent="GreyGrates" unique_id=1966077206]
-position = Vector2(-458, -137)
-texture = ExtResource("22_brrmp")
-
-[node name="GrateSpriteStanding17" type="Sprite2D" parent="GreyGrates" unique_id=456753560]
-position = Vector2(-506, -185)
-texture = ExtResource("22_brrmp")
-
-[node name="GrateSpriteStanding18" type="Sprite2D" parent="GreyGrates" unique_id=449404885]
-position = Vector2(-522, -185)
-texture = ExtResource("23_2ddu0")
-
-[node name="GrateSpriteStanding19" type="Sprite2D" parent="GreyGrates" unique_id=1622195791]
-position = Vector2(-534, -185)
-texture = ExtResource("21_5drew")
