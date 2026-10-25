@@ -614,12 +614,13 @@ autoplay = "default"
 
 [node name="Estrana_L" parent="." unique_id=1948836131 instance=ExtResource("8_6t0p6")]
 position = Vector2(424, 22)
-linesagain = Array[String](["NAJM!", "So good to see you", "Especially when I'm in such poor health", "I'm suprised I can see at all!", "Pause for laugh", "\"...\"", "Next time I see you will be my last"])
+linesagain = Array[String](["NAJM!", "So good to see you", "Especially when I'm in such poor health", "I'm suprised I can see at all!", "Head down this way and meet me in my house."])
 custompos = Vector2(424, 25)
 
 [node name="Estrana" parent="." unique_id=1080372266 instance=ExtResource("8_6t0p6")]
+visible = false
 position = Vector2(498, -362)
-linesagain = Array[String](["Welp... this is the end", "I guess I'll fucking keel over now", "Go reach for the stars or something asshole", "I'll just be here", "Rotting away", "\">:(\"", "ok byebye now get going", "Grammama needs a drink"])
+linesagain = Array[String](["You made it!", "I was so excited for you to come over,", "my dear grandchild.", "I want to tell you something important.", "The world above is vast and incredible.", "There are so many things to see, ", "I want you to do what I couldn't.", "Go...", "Go to the surface and reach for the stars!"])
 custompos = Vector2(535, -360)
 
 [node name="lever" parent="." unique_id=1764940399 instance=ExtResource("9_lot66")]

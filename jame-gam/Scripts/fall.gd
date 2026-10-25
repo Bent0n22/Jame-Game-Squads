@@ -1,14 +1,14 @@
 extends Area2D
 
 const lines: Array[String] = [
-	"Dumbass",
-	"You failed at the only obstacle in the entire area",
-	"And here I thought I was the one who was going to fall down the stairs first",
-	"I mean I already have a broken hip and I would've made that jump"
+	"Sweetie",
+	"You fell, dont hurt yourself",
+	"Now get back up and try again!"
+	
 ]
 @onready var sfx = preload("res://text_box/speech_sfx.wav")
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.name == "CharacterBody2D":
-		DialogManager.start_dialog(Vector2(400, 10), lines, sfx)
+		DialogManager.start_dialog(Vector2(424, 25), lines, sfx)
 #replace her boring tutorial text with something similar
