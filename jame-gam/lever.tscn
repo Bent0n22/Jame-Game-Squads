@@ -4,7 +4,7 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tb2w5"]
 
-[node name="Estrana" type="Node2D" unique_id=1764940399]
+[node name="lever" type="Node2D" unique_id=1764940399]
 script = ExtResource("1_0ohsc")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=567506548]

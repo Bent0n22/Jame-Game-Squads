@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://csm153i2sdvst" path="res://Scripts/lever.gd" id="4_x7uc3"]
 [ext_resource type="Texture2D" uid="uid://dj0kp72itmvco" path="res://Assets/Sprites/flowery.png" id="5_q0kuf"]
 [ext_resource type="PackedScene" uid="uid://dhtfrjqnb5th6" path="res://Transitioning Stuff/fixed_trans_trigger.tscn" id="6_lfhyt"]
+[ext_resource type="PackedScene" uid="uid://c8q1s3cdm7b0s" path="res://trans_trigger_on_interact.tscn" id="8_t0axc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tb2w5"]
 size = Vector2(157, 20)
@@ -47,3 +48,6 @@ file_to = "res://Levels/level_tutorial.tscn"
 
 [node name="Estrana" parent="." unique_id=2107904517 instance=ExtResource("3_kekqg")]
 position = Vector2(-39, 28)
+
+[node name="trans_trigger_on_interact" parent="." unique_id=1204718714 instance=ExtResource("8_t0axc")]
+position = Vector2(25, 29)
