@@ -1,6 +1,7 @@
 extends Node2D
 
 @onready var sprite = $Area2D/Sprite2D
+@onready var label: Label = $Area2D/Label
 
 var player_in_range = false
 var texture_a = preload("res://Assets/Sprites/SwitchA.png")
@@ -15,11 +16,13 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.name == "CharacterBody2D":
 		player_in_range = true
 		print("Enter")
+		label.visible = true
 
 func _on_area_2d_body_exited(body: Node2D) -> void:
 	if body.name == "CharacterBody2D":
 		player_in_range = false
 		print("Exit")
+		label.visible = false
 
 func _process(delta: float) -> void:
 	if player_in_range:
