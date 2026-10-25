@@ -10,9 +10,10 @@
 [ext_resource type="Script" uid="uid://bwkyxktrqs0rk" path="res://Transitioning Stuff/fixed_trans_trigger.gd" id="7_x7uc3"]
 [ext_resource type="PackedScene" uid="uid://bi8ngsfl1xft5" path="res://estrana_diaglogue.tscn" id="8_y6xub"]
 [ext_resource type="PackedScene" uid="uid://c8q1s3cdm7b0s" path="res://trans_trigger_on_interact.tscn" id="10_haolt"]
+[ext_resource type="PackedScene" uid="uid://cnbclwqtfom2l" path="res://granma_death.tscn" id="11_3qn2e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tb2w5"]
-size = Vector2(157, 20)
+size = Vector2(371.5, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t0axc"]
 
@@ -88,7 +89,7 @@ _data = {
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=724471525]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=827551555]
-position = Vector2(-7, 51)
+position = Vector2(-114.25, 51)
 shape = SubResource("RectangleShape2D_tb2w5")
 
 [node name="Player" parent="." unique_id=1870273184 instance=ExtResource("1_bx4p7")]
@@ -117,6 +118,7 @@ file_to = "res://Levels/level_tutorial.tscn"
 [node name="Area2D" type="Area2D" parent="fixed_trans_trigger" unique_id=385840519]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="fixed_trans_trigger/Area2D" unique_id=1844411533]
+position = Vector2(8, -28)
 shape = SubResource("RectangleShape2D_t0axc")
 debug_color = Color(0, 0.65055966, 0.103819765, 0.41960785)
 
@@ -150,10 +152,13 @@ libraries/ = SubResource("AnimationLibrary_v5qog")
 position = Vector2(51, 31)
 
 [node name="Estrana" parent="." unique_id=1948836131 instance=ExtResource("8_y6xub")]
-position = Vector2(-45, 28)
+position = Vector2(-232, 30)
 linesagain = Array[String](["OMG HI IM SUCH A BIG FAN", "NOW GO REACH FOR THE STARS", "BITCH", "\";3\""])
 
 [node name="trans_trigger_on_interact" parent="." unique_id=1204718714 instance=ExtResource("10_haolt")]
 position = Vector2(8, 29)
+
+[node name="Granma Death" parent="." unique_id=1566164553 instance=ExtResource("11_3qn2e")]
+position = Vector2(-109, 33)
 
 [connection signal="body_entered" from="fixed_trans_trigger/Area2D" to="fixed_trans_trigger" method="_on_area_2d_body_entered"]

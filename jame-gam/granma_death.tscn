@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://cnbclwqtfom2l"]
+
+[ext_resource type="Texture2D" uid="uid://cunynritrev2" path="res://Assets/Sprites/LittleMaDeath.png" id="1_c4f4p"]
+[ext_resource type="Texture2D" uid="uid://dehojgt5dyvkm" path="res://Assets/Sprites/LittleMa.png" id="2_v7adp"]
+[ext_resource type="PackedScene" uid="uid://bi8ngsfl1xft5" path="res://estrana_diaglogue.tscn" id="3_wjxnl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v3x7y"]
+atlas = ExtResource("1_c4f4p")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tbqhb"]
+atlas = ExtResource("1_c4f4p")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l7bjx"]
+atlas = ExtResource("1_c4f4p")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7lanf"]
+atlas = ExtResource("2_v7adp")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wgh1r"]
+atlas = ExtResource("2_v7adp")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7vadr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v3x7y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tbqhb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l7bjx")
+}],
+"loop": 0,
+"name": &"death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7lanf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wgh1r")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 1.0
+}]
+
+[node name="Granma Death" type="AnimatedSprite2D" unique_id=1566164553]
+sprite_frames = SubResource("SpriteFrames_7vadr")
+animation = &"death"
+autoplay = "default"
+
+[node name="Estrana" parent="." unique_id=1948836131 instance=ExtResource("3_wjxnl")]
+position = Vector2(0, -2)
+linesagain = Array[String](["reach for the stars", "i'm dying"])
