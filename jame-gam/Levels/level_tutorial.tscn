@@ -15,12 +15,16 @@
 [ext_resource type="PackedScene" uid="uid://d7pu6wuxuddx" path="res://changing_object.tscn" id="10_wvjtv"]
 [ext_resource type="Script" uid="uid://bwkyxktrqs0rk" path="res://Transitioning Stuff/fixed_trans_trigger.gd" id="11_sv282"]
 [ext_resource type="Texture2D" uid="uid://d3e01odq6prde" path="res://Assets/Sprites/little.png" id="12_sqm16"]
+<<<<<<< Updated upstream
 [ext_resource type="Texture2D" uid="uid://cq12fsm55y1wh" path="res://Assets/Sprites/Sewer Grates/SewerGrate2.png" id="16_7fru2"]
 [ext_resource type="Texture2D" uid="uid://dnpkxqnustbkd" path="res://Assets/Sprites/Sewer Grates/SewerGrate6.png" id="17_86f68"]
 [ext_resource type="Texture2D" uid="uid://bgdbogfmkhwpg" path="res://Assets/Sprites/Sewer Grates/SewerGrate4.png" id="18_6yb3y"]
 [ext_resource type="Texture2D" uid="uid://cwvnqwua2inl5" path="res://Assets/Sprites/Grate Standing/GrateSpriteStanding2.png" id="19_4dx6i"]
 [ext_resource type="Texture2D" uid="uid://r3d16frdm0bf" path="res://Assets/Sprites/Grate Standing/GrateSpriteStanding1.png" id="20_2rdke"]
 [ext_resource type="Texture2D" uid="uid://cg6syantu0kje" path="res://Assets/Sprites/Grate Standing/GrateSpriteStanding3.png" id="21_kf7vc"]
+=======
+[ext_resource type="Script" uid="uid://d1mg1joisq7w5" path="res://Levels/area_2d_2.gd" id="15_u6wkp"]
+>>>>>>> Stashed changes
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sv282"]
 texture = ExtResource("2_6t0p6")
@@ -570,6 +574,9 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sqm16"]
 size = Vector2(20, 160)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oiiii"]
+size = Vector2(112, 61)
+
 [node name="tutorial level" type="Node2D" unique_id=1820815763]
 script = ExtResource("1_v8nge")
 
@@ -640,6 +647,7 @@ debug_color = Color(0, 0.65055966, 0.103819765, 0.41960785)
 position = Vector2(-906, 506)
 texture = ExtResource("12_sqm16")
 
+<<<<<<< Updated upstream
 [node name="Grate" type="Node2D" parent="." unique_id=1125258400]
 
 [node name="SewerGrate2" type="Sprite2D" parent="Grate" unique_id=217725655]
@@ -667,6 +675,22 @@ texture = ExtResource("20_2rdke")
 [node name="GrateSpriteStanding3" type="Sprite2D" parent="Standing" unique_id=2094000305]
 position = Vector2(157, -217)
 texture = ExtResource("21_kf7vc")
+=======
+[node name="Grandmahouse" type="Area2D" parent="." unique_id=2146889446]
+script = ExtResource("15_u6wkp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Grandmahouse" unique_id=929570282]
+position = Vector2(504, -382.5)
+shape = SubResource("RectangleShape2D_oiiii")
+
+[node name="Can" type="Sprite2D" parent="Grandmahouse" unique_id=2130327217]
+position = Vector2(504, -416)
+texture = ExtResource("7_u6wkp")
+region_enabled = true
+region_rect = Rect2(16, 0, 112, 128)
+>>>>>>> Stashed changes
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_entered" from="fixed_trans_trigger/Area2D" to="fixed_trans_trigger" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Grandmahouse" to="Grandmahouse" method="_on_body_entered"]
+[connection signal="body_exited" from="Grandmahouse" to="Grandmahouse" method="_on_body_exited"]
