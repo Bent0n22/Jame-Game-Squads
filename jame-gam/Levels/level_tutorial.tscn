@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://dmj7vrkiqjob0" path="res://lever.tscn" id="9_lot66"]
 [ext_resource type="PackedScene" uid="uid://d7pu6wuxuddx" path="res://changing_object.tscn" id="10_wvjtv"]
 [ext_resource type="Script" uid="uid://bwkyxktrqs0rk" path="res://Transitioning Stuff/fixed_trans_trigger.gd" id="11_sv282"]
+[ext_resource type="Texture2D" uid="uid://d3e01odq6prde" path="res://Assets/Sprites/little.png" id="12_sqm16"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sv282"]
 texture = ExtResource("2_6t0p6")
@@ -494,6 +495,10 @@ file_to = "res://Levels/level_sewers.tscn"
 position = Vector2(0, -5)
 shape = SubResource("RectangleShape2D_sqm16")
 debug_color = Color(0, 0.65055966, 0.103819765, 0.41960785)
+
+[node name="Little" type="Sprite2D" parent="fixed_trans_trigger" unique_id=769798462]
+position = Vector2(-906, 506)
+texture = ExtResource("12_sqm16")
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_entered" from="fixed_trans_trigger/Area2D" to="fixed_trans_trigger" method="_on_area_2d_body_entered"]
