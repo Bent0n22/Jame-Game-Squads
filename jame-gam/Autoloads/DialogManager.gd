@@ -41,8 +41,10 @@ func _unhandled_input(event):
 		can_advance_line
 	):
 		text_box.queue_free()
+		
 		current_line_index += 1
 		if current_line_index >= dialog_lines.size():
+			print(current_line_index)
 			is_dialog_active = false
 			current_line_index = 0
 			return

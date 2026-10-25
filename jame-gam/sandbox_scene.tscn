@@ -6,11 +6,17 @@
 [ext_resource type="PackedScene" uid="uid://d7pu6wuxuddx" path="res://changing_object.tscn" id="4_gqnfj"]
 [ext_resource type="Script" uid="uid://csm153i2sdvst" path="res://Scripts/lever.gd" id="4_x7uc3"]
 [ext_resource type="Texture2D" uid="uid://dj0kp72itmvco" path="res://Assets/Sprites/flowery.png" id="5_q0kuf"]
+<<<<<<< HEAD
+[ext_resource type="Script" uid="uid://bwkyxktrqs0rk" path="res://Transitioning Stuff/fixed_trans_trigger.gd" id="7_x7uc3"]
+=======
 [ext_resource type="PackedScene" uid="uid://dhtfrjqnb5th6" path="res://Transitioning Stuff/fixed_trans_trigger.tscn" id="6_lfhyt"]
 [ext_resource type="PackedScene" uid="uid://c8q1s3cdm7b0s" path="res://trans_trigger_on_interact.tscn" id="8_t0axc"]
+>>>>>>> 1cf6e935c62548aa1e72121f9720afec238d4e8c
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tb2w5"]
 size = Vector2(157, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t0axc"]
 
 [node name="Sandbox Scene" type="Node2D" unique_id=1604498604]
 
@@ -42,12 +48,23 @@ baseDecision = true
 position = Vector2(51, 30)
 texture = ExtResource("5_q0kuf")
 
-[node name="fixed_trans_trigger" parent="." unique_id=1411800246 instance=ExtResource("6_lfhyt")]
+[node name="fixed_trans_trigger" type="Node2D" parent="." unique_id=1411800246]
 position = Vector2(-70, 28)
+script = ExtResource("7_x7uc3")
 file_to = "res://Levels/level_tutorial.tscn"
+
+[node name="Area2D" type="Area2D" parent="fixed_trans_trigger" unique_id=385840519]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fixed_trans_trigger/Area2D" unique_id=1844411533]
+shape = SubResource("RectangleShape2D_t0axc")
+debug_color = Color(0, 0.65055966, 0.103819765, 0.41960785)
 
 [node name="Estrana" parent="." unique_id=2107904517 instance=ExtResource("3_kekqg")]
 position = Vector2(-39, 28)
 
+<<<<<<< HEAD
+[connection signal="body_entered" from="fixed_trans_trigger/Area2D" to="fixed_trans_trigger" method="_on_area_2d_body_entered"]
+=======
 [node name="trans_trigger_on_interact" parent="." unique_id=1204718714 instance=ExtResource("8_t0axc")]
 position = Vector2(25, 29)
+>>>>>>> 1cf6e935c62548aa1e72121f9720afec238d4e8c

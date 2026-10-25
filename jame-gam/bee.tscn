@@ -1,27 +1,99 @@
 [gd_scene format=3 uid="uid://k6lg8gwt8gdl"]
 
-[ext_resource type="Script" uid="uid://dg682obo5n1lk" path="res://Scripts/bee.gd" id="1_xww1r"]
+[ext_resource type="Script" uid="uid://cmwrsnavnfc4m" path="res://bee.gd" id="1_xww1r"]
+[ext_resource type="Texture2D" uid="uid://bxeg1lwc6esan" path="res://Assets/Sprites/bee-sheet.png" id="2_v5qog"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_tb2w5"]
+[sub_resource type="Curve2D" id="Curve2D_v5qog"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, -14.015, 116.25, 175.37, 110.775)
+}
+point_count = 2
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tsa2i"]
+size = Vector2(11.140144, 6.684086)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q8d8k"]
+atlas = ExtResource("2_v5qog")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hoj8b"]
+atlas = ExtResource("2_v5qog")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hoj8b"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q8d8k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hoj8b")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_v5qog"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
 
 [sub_resource type="Animation" id="Animation_xww1r"]
-resource_name = "BeeFunc"
+resource_name = "move_along_path"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_v5qog"]
 _data = {
-&"BeeFunc": SubResource("Animation_xww1r")
+&"RESET": SubResource("Animation_v5qog"),
+&"move_along_path": SubResource("Animation_xww1r")
 }
 
-[node name="Bee" type="AnimatableBody2D" unique_id=1323551105]
+[node name="Bee" type="Node2D" unique_id=299744515]
 script = ExtResource("1_xww1r")
-PositionStart = Vector2(50, 0)
-PositionEnd = Vector2(11, 150)
-Speed = Vector2(1, 1)
+loop = true
+time_to_complete_path = 2.0
+rotates = true
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=88627660]
+[node name="Path" type="Path2D" parent="." unique_id=496989683]
+curve = SubResource("Curve2D_v5qog")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=667511123]
-shape = SubResource("CircleShape2D_tb2w5")
+[node name="Follow" type="PathFollow2D" parent="Path" unique_id=1661702296]
+rotation = 0.56337744
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1850683406]
+[node name="AnimatableBody2D" type="AnimatableBody2D" parent="Path/Follow" unique_id=51600981]
+
+[node name="RigidBody2D" type="RigidBody2D" parent="Path/Follow" unique_id=2095502972]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Path/Follow/RigidBody2D" unique_id=1480868625]
+position = Vector2(-0.520319, 0.8295946)
+shape = SubResource("RectangleShape2D_tsa2i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Path/Follow/RigidBody2D" unique_id=986786680]
+sprite_frames = SubResource("SpriteFrames_hoj8b")
+autoplay = "default"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1884343722]
+root_node = NodePath("../Path/Follow")
 libraries/ = SubResource("AnimationLibrary_v5qog")

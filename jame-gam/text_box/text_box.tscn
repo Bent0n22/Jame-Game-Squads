@@ -88,7 +88,7 @@ visible = false
 position = Vector2(1, 0)
 sprite_frames = SubResource("SpriteFrames_1lm5o")
 autoplay = "default"
-frame_progress = 0.31221858
+frame_progress = 0.1350393
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=202422150]
 layout_mode = 2
