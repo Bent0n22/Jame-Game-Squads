@@ -28,7 +28,6 @@ func _on_area_2d_body_exited(body: Node2D) -> void:
 	print(body.name)
 	label.visible = false
 
-
 var can_talk = true
 
 func _on_dialog_finished():
