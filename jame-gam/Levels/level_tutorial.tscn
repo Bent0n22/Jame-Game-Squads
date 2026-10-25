@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://dsvtbmjpo7f1g" path="res://Levels/level_tutorial.gd" id="1_v8nge"]
 [ext_resource type="PackedScene" uid="uid://p58y02pwx2gq" path="res://player.tscn" id="2_0xoxh"]
 [ext_resource type="Texture2D" uid="uid://camkg8myiw2l2" path="res://Assets/Sprites/REALTILES.png" id="2_6t0p6"]
+[ext_resource type="PackedScene" uid="uid://cnbclwqtfom2l" path="res://granma_death.tscn" id="3_4dx6i"]
 [ext_resource type="Script" uid="uid://de3m7mlo5drai" path="res://Scripts/fall.gd" id="4_lot66"]
 [ext_resource type="Texture2D" uid="uid://v1xcvr7xbmsd" path="res://Assets/Sprites/Pipe.png" id="4_wvjtv"]
 [ext_resource type="Texture2D" uid="uid://mprt4mgkw6yp" path="res://Assets/Sprites/insidehouse.png" id="5_ppjyf"]
@@ -619,11 +620,6 @@ position = Vector2(424, 24)
 sprite_frames = SubResource("SpriteFrames_7vadr")
 autoplay = "default"
 
-[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="." unique_id=1810371665]
-position = Vector2(535, -360)
-sprite_frames = SubResource("SpriteFrames_7vadr")
-autoplay = "default"
-
 [node name="Estrana_L" type="Node2D" parent="." unique_id=1948836131]
 position = Vector2(424, 22)
 script = ExtResource("11_6yb3y")
@@ -703,6 +699,9 @@ texture = ExtResource("21_kf7vc")
 
 [node name="Can" type="Area2D" parent="." unique_id=771033426]
 script = ExtResource("22_7fru2")
+
+[node name="Granma Death" parent="Can" unique_id=1566164553 instance=ExtResource("3_4dx6i")]
+position = Vector2(512, -360)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Can" unique_id=1296218594]
 position = Vector2(504, -385)
