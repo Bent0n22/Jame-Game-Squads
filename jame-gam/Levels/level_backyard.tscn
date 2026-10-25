@@ -427,3 +427,5 @@ layer = -13
 offset_right = 320.0
 offset_bottom = 180.0
 color = Color(0.25490198, 0.3647059, 0.6, 1)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=764890642]

@@ -262,6 +262,10 @@ baseDecision = true
 [node name="Changing Object8" parent="Changing Objects B" unique_id=1618027317 instance=ExtResource("6_jrfrv")]
 position = Vector2(312, -105)
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Changing Objects B/Changing Object8" unique_id=419194556]
+position = Vector2(-312, 105)
+stream = ExtResource("14_1ak8b")
+
 [node name="Changing Object12" parent="Changing Objects B" unique_id=721715674 instance=ExtResource("6_jrfrv")]
 position = Vector2(424, -297)
 
@@ -317,9 +321,6 @@ debug_color = Color(0.99796623, 0, 0.16443339, 0.41960785)
 position = Vector2(824, -301)
 shape = SubResource("RectangleShape2D_sdq4m")
 debug_color = Color(0.99667317, 0, 0.19106522, 0.41960785)
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="killzone" unique_id=419194556]
-stream = ExtResource("14_1ak8b")
 
 [node name="trans_trigger_on_interact" parent="." unique_id=1204718714 instance=ExtResource("18_lp2uq")]
 position = Vector2(264, -574)
@@ -804,3 +805,5 @@ texture = ExtResource("23_2ddu0")
 [node name="GrateSpriteStanding10" type="Sprite2D" parent="GreyGrates" unique_id=263412335]
 position = Vector2(230, -121)
 texture = ExtResource("22_brrmp")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1526854344]

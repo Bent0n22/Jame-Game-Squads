@@ -180,3 +180,5 @@ stream = ExtResource("11_a77xb")
 [node name="trans_trigger_on_interact" parent="." unique_id=1204718714 instance=ExtResource("12_2ua47")]
 position = Vector2(160, -538)
 file_to = "res://Levels/level_ending.tscn"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1315915006]
