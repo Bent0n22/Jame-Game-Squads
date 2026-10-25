@@ -22,7 +22,6 @@ func wait_for_interact():
 		swfi = false
 		swfiii = true
 
-var swfv = false
 
 func wait_for_end():
 	if Input.is_action_just_pressed("Interact"):
@@ -30,18 +29,16 @@ func wait_for_end():
 		Z.visible = false
 		await anim.animation_finished
 		swfiii = false
-		swfv = true
 
-func wait_for_cred():
-	if Input.is_action_just_pressed("Interact"):
-		SceneLoaderScene.transition_to_scene("res://menu.tscn")
-		Z.visible = false
 
 func _process(delta: float) -> void:
 	if swfi:
 		wait_for_interact()
 	if swfiii:
 		wait_for_end()
-	if swfv:
-		wait_for_cred()
 	pass
+
+
+func _on_button_pressed() -> void:
+	SceneLoaderScene.transition_to_scene("res://menu.tscn")
+	pass # Replace with function body.

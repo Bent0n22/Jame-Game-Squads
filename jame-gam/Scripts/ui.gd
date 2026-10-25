@@ -2,4 +2,4 @@ extends Control
 
 
 func _on_texture_button_pressed() -> void:
-	get_tree().quit()
+	SceneLoaderScene.transition_to_scene("res://menu.tscn")

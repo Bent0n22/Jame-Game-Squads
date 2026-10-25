@@ -46,8 +46,10 @@ script = ExtResource("1_yq4sf")
 libraries/ = SubResource("AnimationLibrary_ksh6t")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1885118346]
+layer = 10
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1860689194]
 offset_right = 320.0
 offset_bottom = 180.0
+mouse_filter = 2
 color = Color(0, 0, 0, 1)

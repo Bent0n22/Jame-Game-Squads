@@ -237,10 +237,19 @@ Finn J.
 Paul L."
 
 [node name="Z" type="AnimatedSprite2D" parent="CanvasLayer/Credits" unique_id=1113252666]
+visible = false
 position = Vector2(309, 169)
 sprite_frames = SubResource("SpriteFrames_v8ptl")
 autoplay = "default"
 frame_progress = 0.03681439
+
+[node name="Button" type="Button" parent="CanvasLayer/Credits" unique_id=1084326873]
+offset_left = 194.0
+offset_top = 86.0
+offset_right = 242.0
+offset_bottom = 110.0
+theme_override_fonts/font = ExtResource("12_jtwne")
+text = "Menu"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=782999637]
 sprite_frames = SubResource("SpriteFrames_tb2w5")
@@ -254,3 +263,5 @@ position = Vector2(0, 180)
 stream = ExtResource("13_54x8p")
 volume_db = -8.0
 autoplay = true
+
+[connection signal="pressed" from="CanvasLayer/Credits/Button" to="." method="_on_button_pressed"]
