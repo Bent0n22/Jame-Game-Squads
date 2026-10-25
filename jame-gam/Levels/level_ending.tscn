@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://clly7k0w787ye"]
 
 [ext_resource type="Texture2D" uid="uid://drqso8ilmx4qj" path="res://Assets/Sprites/star background.png" id="1_br5fe"]
+[ext_resource type="Script" uid="uid://dl48ppgxkp38q" path="res://Levels/level_ending.gd" id="1_g4ix3"]
 [ext_resource type="Script" uid="uid://b70svut8s22b6" path="res://Scripts/canvas_layer.gd" id="2_br5fe"]
 [ext_resource type="Texture2D" uid="uid://nq0ugl14uoqh" path="res://Assets/Sprites/pole.png" id="3_v8fvw"]
 [ext_resource type="Texture2D" uid="uid://br660qykcdkew" path="res://Assets/Sprites/Roof.png" id="4_gyfd2"]
@@ -78,6 +79,7 @@ animations = [{
 size = Vector2(20, 43)
 
 [node name="level_ending" type="Node2D" unique_id=1193487933]
+script = ExtResource("1_g4ix3")
 
 [node name="StarBackground" type="Sprite2D" parent="." unique_id=1941992241]
 position = Vector2(144, -32)
@@ -136,3 +138,5 @@ shape = SubResource("RectangleShape2D_s1xjb")
 [node name="trans_trigger_on_interact" parent="." unique_id=1204718714 instance=ExtResource("8_hm481")]
 position = Vector2(271, -63)
 file_to = "res://credits_and_end_card.tscn"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1444178346]

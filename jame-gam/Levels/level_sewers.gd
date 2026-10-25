@@ -7,6 +7,9 @@ var grate4 = preload("res://Assets/Sprites/Sewer Grates/SewerGrate4.png")
 var grate5 = preload("res://Assets/Sprites/Sewer Grates/SewerGrate5.png")
 var grate6 = preload("res://Assets/Sprites/Sewer Grates/SewerGrate6.png")
 
+func _ready() -> void:
+	GameController.tempVars.room = "res://Levels/level_sewers.tscn"
+
 func _process(delta: float) -> void:
 	if GameController.leverStatus:
 		$GreyGrates.visible = true

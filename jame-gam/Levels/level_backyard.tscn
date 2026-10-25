@@ -1,5 +1,6 @@
 [gd_scene format=4 uid="uid://bt1fc0eqvmp8f"]
 
+[ext_resource type="Script" uid="uid://bmybkngptilm6" path="res://Levels/level_backyard.gd" id="1_8a1dn"]
 [ext_resource type="Texture2D" uid="uid://b5dr65vmfrex" path="res://Assets/Sprites/Beautiful Twilight Background Very High Effort Very Good.png" id="2_2jcde"]
 [ext_resource type="Texture2D" uid="uid://bwkejto1e4s14" path="res://Assets/Sprites/Backyard Tileset.png" id="3_jsn4h"]
 [ext_resource type="Texture2D" uid="uid://bxeg1lwc6esan" path="res://Assets/Sprites/bee-sheet.png" id="5_qu76y"]
@@ -343,6 +344,7 @@ animations = [{
 }]
 
 [node name="backyard level" type="Node2D" unique_id=2059810988]
+script = ExtResource("1_8a1dn")
 
 [node name="BeautifulTwilightBackgroundVeryHighEffortVeryGood" type="Sprite2D" parent="." unique_id=186637594]
 position = Vector2(320, -116)

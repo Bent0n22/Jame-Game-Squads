@@ -6,6 +6,7 @@ var swfiii = false
 @onready var Z = $CanvasLayer/Z
 
 func _ready() -> void:
+	GameController.tempVars.room = "res://Levels/level_tutorial.tscn"
 	Z.visible = false
 	await GameController.wait(1.5)
 	anim.play("Play End Scene")

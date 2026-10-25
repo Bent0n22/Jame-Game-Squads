@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://c0slwkpcbpsm6"]
 
 [ext_resource type="PackedScene" uid="uid://btj4h3g23u4c7" path="res://ui.tscn" id="1_2yfjy"]
+[ext_resource type="Script" uid="uid://dvbyqwtdpmafn" path="res://Levels/level_waterspout.gd" id="1_b5q0m"]
 [ext_resource type="Script" uid="uid://460vine6dtqo" path="res://Levels/water.gd" id="3_f01tw"]
 [ext_resource type="Texture2D" uid="uid://46kq3fcxtpm8" path="res://Assets/Sprites/water_spout_tiles.png" id="4_x2iaj"]
 [ext_resource type="Texture2D" uid="uid://3n1j5bsa005q" path="res://Assets/Sprites/Sprite-0005.png" id="6_jltnf"]
@@ -109,6 +110,7 @@ animations = [{
 size = Vector2(160, 24)
 
 [node name="LevelWaterspout" type="Node2D" unique_id=204834342]
+script = ExtResource("1_b5q0m")
 
 [node name="UI" parent="." unique_id=756997585 instance=ExtResource("1_2yfjy")]
 

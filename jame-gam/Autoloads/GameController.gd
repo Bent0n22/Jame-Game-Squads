@@ -13,10 +13,10 @@ func wait(time_in_seconds) -> void:
 	await get_tree().create_timer(time_in_seconds).timeout
 
 var persistant = {
-	location = ""
+	
 }
 var tempVars = {
-	
+	room = "res://Levels/level_tutorial.tscn"
 }
 
 func save():
