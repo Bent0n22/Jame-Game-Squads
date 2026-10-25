@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://tr2eo1yt04el" path="res://menu.gd" id="1_4hy44"]
 [ext_resource type="Texture2D" uid="uid://cxo0s8tjk05df" path="res://Assets/Sprites/Menu Buttons/Play Button1.png" id="1_mae5d"]
 [ext_resource type="Texture2D" uid="uid://df62qj4pd0p8n" path="res://Assets/Sprites/Menu Buttons/Play Button2.png" id="2_4hy44"]
-[ext_resource type="Texture2D" uid="uid://dxu3ajnjbusvo" path="res://Assets/Sprites/TitlePlaceholder.png" id="2_ytr4m"]
+[ext_resource type="Texture2D" uid="uid://ba0tji80446ir" path="res://Assets/Sprites/Title.png" id="2_kk3ma"]
 [ext_resource type="Texture2D" uid="uid://c7k5cs1g7h33i" path="res://Assets/Sprites/Menu Buttons/Play Button3.png" id="3_ytr4m"]
 [ext_resource type="Texture2D" uid="uid://ledai6yc5x1c" path="res://Assets/Sprites/Menu Buttons/Play Button5.png" id="5_kk3ma"]
 [ext_resource type="Texture2D" uid="uid://bf8vj3mm0inhm" path="res://Assets/Sprites/Menu Buttons/Play Button4.png" id="6_ecwwl"]
@@ -20,9 +20,9 @@ script = ExtResource("1_4hy44")
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=178890033]
 
-[node name="TitlePlaceholder" type="Sprite2D" parent="CanvasLayer2" unique_id=328909446]
+[node name="Title" type="Sprite2D" parent="CanvasLayer2" unique_id=2132448114]
 position = Vector2(160, 90)
-texture = ExtResource("2_ytr4m")
+texture = ExtResource("2_kk3ma")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=117266955]
 
