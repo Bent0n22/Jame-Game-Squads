@@ -401,6 +401,7 @@ tile_set = SubResource("TileSet_disds")
 [node name="trans_trigger_on_interact" parent="." unique_id=1204718714 instance=ExtResource("7_jsn4h")]
 position = Vector2(1900, -66)
 file_to = "res://Levels/level_waterspout.tscn"
+backyardkeys = true
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=833950505]
 position = Vector2(-89, 6)
