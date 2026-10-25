@@ -86,13 +86,13 @@ autoplay = "default"
 [node name="UI" parent="." unique_id=756997585 instance=ExtResource("4_pyhhk")]
 
 [node name="lever" parent="." unique_id=1764940399 instance=ExtResource("3_7h2xq")]
-position = Vector2(464, -90)
+position = Vector2(464, -88)
 
 [node name="lever2" parent="." unique_id=1438021074 instance=ExtResource("3_7h2xq")]
-position = Vector2(-360, -58)
+position = Vector2(-360, -56)
 
 [node name="lever3" parent="." unique_id=1094701916 instance=ExtResource("3_7h2xq")]
-position = Vector2(280, -298)
+position = Vector2(280, -296)
 
 [node name="Changing Objects A" type="Node" parent="." unique_id=1986667793]
 

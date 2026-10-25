@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://c485nhacl7a58" path="res://lever.gd" id="1_0ohsc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tb2w5"]
+size = Vector2(16, 16)
 
 [node name="lever" type="Node2D" unique_id=1764940399]
 script = ExtResource("1_0ohsc")
@@ -12,6 +13,8 @@ script = ExtResource("1_0ohsc")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1904916992]
 shape = SubResource("RectangleShape2D_tb2w5")
 debug_color = Color(0.31061327, 0.6004526, 0.5211831, 0.41960785)
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=1570692552]
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
