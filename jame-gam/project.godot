@@ -14,10 +14,10 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 
 [application]
 
-config/name="Jame-Gam"
+config/name="Stargazing"
 run/main_scene="uid://chgbkb8phfgtp"
 config/features=PackedStringArray("4.7", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="uid://dsder82fdbir0"
 
 [audio]
 
