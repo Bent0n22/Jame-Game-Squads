@@ -29,10 +29,13 @@ func wait_for_end():
 		anim.play("Credits")
 		Z.visible = false
 		await anim.animation_finished
+		swfiii = false
 		swfv = true
 
 func wait_for_cred():
-	SceneLoaderScene.transition_to_scene("res://menu.tscn")
+	if Input.is_action_just_pressed("Interact"):
+		SceneLoaderScene.transition_to_scene("res://menu.tscn")
+		Z.visible = false
 
 func _process(delta: float) -> void:
 	if swfi:
