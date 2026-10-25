@@ -25,7 +25,6 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		print("Enter")
 		label.visible = true
 func _process(delta: float) -> void:
-	print(DialogManager.is_dialog_active, had_dialogue, killed_granma)
 	if !DialogManager.is_dialog_active && had_dialogue == true && killed_granma == false:
 		granma_death.play("death")
 		self.queue_free()

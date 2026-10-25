@@ -26,6 +26,7 @@
 [ext_resource type="Script" uid="uid://by28brwq7vtic" path="res://Levels/can.gd" id="22_7fru2"]
 [ext_resource type="Texture2D" uid="uid://cunynritrev2" path="res://Assets/Sprites/LittleMaDeath.png" id="25_2rdke"]
 [ext_resource type="Script" uid="uid://ygnpg776cqgf" path="res://granma_death.gd" id="26_kf7vc"]
+[ext_resource type="AudioStream" uid="uid://dvfc2ey6a4aj0" path="res://Assets/Audio/24 3am _ Towball's Crossing.mp3" id="27_kf7vc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sv282"]
 texture = ExtResource("2_6t0p6")
@@ -771,6 +772,9 @@ region_enabled = true
 region_rect = Rect2(16, 0, 112, 128)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=958575022]
+stream = ExtResource("27_kf7vc")
+volume_db = -8.0
+autoplay = true
 
 [node name="Area2D2" type="Area2D" parent="." unique_id=196991008]
 
