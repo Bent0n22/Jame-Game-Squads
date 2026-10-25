@@ -9,5 +9,6 @@ const lines: Array[String] = [
 @onready var sfx = preload("res://text_box/speech_sfx.wav")
 
 func _on_body_entered(body: Node2D) -> void:
-	DialogManager.start_dialog(Vector2(400, 10), lines, sfx)
+	if body.name == "CharacterBody2D":
+		DialogManager.start_dialog(Vector2(400, 10), lines, sfx)
 #replace her boring tutorial text with something similar
