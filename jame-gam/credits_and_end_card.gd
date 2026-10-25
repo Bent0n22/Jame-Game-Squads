@@ -1,12 +1,44 @@
 extends Node2D
 
 @onready var anim = $AnimationPlayer
+var swfi = false
+var swfiii = false
+@onready var Z = $CanvasLayer/Z
 
 func _ready() -> void:
+	Z.visible = false
 	await GameController.wait(1.5)
 	anim.play("Play End Scene")
-	
+	await anim.animation_finished
+	Z.visible = true
+	swfi = true
+
+func wait_for_interact():
+	if Input.is_action_just_pressed("Interact"):
+		anim.play("Play End Scene to Stargazing")
+		Z.visible = false
+		await anim.animation_finished
+		Z.visible = true
+		swfi = false
+		swfiii = true
+
+var swfv = false
+
+func wait_for_end():
+	if Input.is_action_just_pressed("Interact"):
+		anim.play("Credits")
+		Z.visible = false
+		await anim.animation_finished
+		swfv = true
+
+func wait_for_cred():
+	SceneLoaderScene.transition_to_scene("res://menu.tscn")
 
 func _process(delta: float) -> void:
-	
+	if swfi:
+		wait_for_interact()
+	if swfiii:
+		wait_for_end()
+	if swfv:
+		wait_for_cred()
 	pass
