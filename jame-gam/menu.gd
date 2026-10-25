@@ -9,7 +9,7 @@ func _on_exit_game_pressed() -> void:
 	get_tree().quit()
 	pass # Replace with function body.
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if GameController.game_won:
 		$CanvasLayer2/TextureButton.visible = true
 		$CanvasLayer2/TextureButton.disabled = false

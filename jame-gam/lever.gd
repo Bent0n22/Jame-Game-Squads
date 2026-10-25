@@ -25,7 +25,7 @@ func _on_area_2d_body_exited(body: Node2D) -> void:
 		print("Exit")
 		label.visible = false
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if player_in_range:
 		if leverState == false:
 			if Input.is_action_just_pressed("Interact"):
