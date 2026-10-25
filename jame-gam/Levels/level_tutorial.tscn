@@ -13,7 +13,9 @@
 [ext_resource type="PackedScene" uid="uid://bi8ngsfl1xft5" path="res://estrana_diaglogue.tscn" id="8_6t0p6"]
 [ext_resource type="PackedScene" uid="uid://dmj7vrkiqjob0" path="res://lever.tscn" id="9_lot66"]
 [ext_resource type="PackedScene" uid="uid://d7pu6wuxuddx" path="res://changing_object.tscn" id="10_wvjtv"]
+[ext_resource type="Script" uid="uid://xistfwq3bgqp" path="res://estrana.gd" id="11_6yb3y"]
 [ext_resource type="Script" uid="uid://bwkyxktrqs0rk" path="res://Transitioning Stuff/fixed_trans_trigger.gd" id="11_sv282"]
+[ext_resource type="FontFile" uid="uid://b5ei6ytoqn6c0" path="res://Assets/Fonts/augiepixel.ttf" id="12_4dx6i"]
 [ext_resource type="Texture2D" uid="uid://d3e01odq6prde" path="res://Assets/Sprites/little.png" id="12_sqm16"]
 [ext_resource type="Texture2D" uid="uid://cq12fsm55y1wh" path="res://Assets/Sprites/Sewer Grates/SewerGrate2.png" id="16_7fru2"]
 [ext_resource type="Texture2D" uid="uid://dnpkxqnustbkd" path="res://Assets/Sprites/Sewer Grates/SewerGrate6.png" id="17_86f68"]
@@ -568,14 +570,21 @@ animations = [{
 "speed": 1.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ewmql"]
-size = Vector2(20, 113.5)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tb2w5"]
+size = Vector2(84, 20)
+
+[sub_resource type="LabelSettings" id="LabelSettings_0besk"]
+font = ExtResource("12_4dx6i")
+font_size = 12
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sqm16"]
 size = Vector2(20, 160)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oiiii"]
 size = Vector2(112, 66)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2rdke"]
+size = Vector2(20, 81)
 
 [node name="tutorial level" type="Node2D" unique_id=1820815763]
 script = ExtResource("1_v8nge")
@@ -615,17 +624,26 @@ position = Vector2(535, -360)
 sprite_frames = SubResource("SpriteFrames_7vadr")
 autoplay = "default"
 
-[node name="Estrana_L" parent="." unique_id=1948836131 instance=ExtResource("8_6t0p6")]
+[node name="Estrana_L" type="Node2D" parent="." unique_id=1948836131]
 position = Vector2(424, 22)
+script = ExtResource("11_6yb3y")
 linesagain = Array[String](["NAJM!", "So good to see you", "Especially when I'm in such poor health", "I'm suprised I can see at all!", "Head down this way and meet me in my house."])
 custompos = Vector2(424, 25)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Estrana_L" unique_id=1798955525]
-position = Vector2(1, -47)
+[node name="Area2D" type="Area2D" parent="Estrana_L" unique_id=2040033731]
 
-[node name="Talk to Grandma" type="CollisionShape2D" parent="Estrana_L/StaticBody2D" unique_id=2115206351]
-position = Vector2(25, 0)
-shape = SubResource("RectangleShape2D_ewmql")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Estrana_L/Area2D" unique_id=2057182541]
+shape = SubResource("RectangleShape2D_tb2w5")
+debug_color = Color(1, 0.47617447, 0.21435991, 0.41960785)
+
+[node name="Label" type="Label" parent="Estrana_L/Area2D/CollisionShape2D" unique_id=1240514989]
+visible = false
+offset_left = -21.0
+offset_top = -15.0
+offset_right = 21.0
+offset_bottom = -2.0
+text = "Interact"
+label_settings = SubResource("LabelSettings_0besk")
 
 [node name="Estrana" parent="." unique_id=1080372266 instance=ExtResource("8_6t0p6")]
 visible = false
@@ -698,7 +716,17 @@ region_rect = Rect2(16, 0, 112, 128)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=958575022]
 
+[node name="Area2D2" type="Area2D" parent="." unique_id=196991008]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=2122967513]
+position = Vector2(529, -8.5)
+shape = SubResource("RectangleShape2D_2rdke")
+
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="Estrana_L/Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Estrana_L/Area2D" to="Estrana_L" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Estrana_L/Area2D" to="Estrana_L" method="_on_area_2d_body_exited"]
 [connection signal="body_entered" from="fixed_trans_trigger/Area2D" to="fixed_trans_trigger" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Can" to="Can" method="_on_body_entered"]
 [connection signal="body_exited" from="Can" to="Can" method="_on_body_exited"]
+[connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_2_body_entered"]
