@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://de3m7mlo5drai" path="res://Scripts/fall.gd" id="4_lot66"]
 [ext_resource type="Texture2D" uid="uid://dehojgt5dyvkm" path="res://Assets/Sprites/LittleMa.png" id="5_wvjtv"]
 [ext_resource type="Texture2D" uid="uid://dlir0bohamqog" path="res://Assets/Sprites/text.png" id="6_sv282"]
+[ext_resource type="PackedScene" uid="uid://bi8ngsfl1xft5" path="res://estrana_diaglogue.tscn" id="8_6t0p6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ehuit"]
 texture = ExtResource("1_jou4l")
@@ -154,11 +155,6 @@ position = Vector2(424, 24)
 sprite_frames = SubResource("SpriteFrames_7vadr")
 autoplay = "default"
 
-[node name="Text" type="Sprite2D" parent="AnimatedSprite2D" unique_id=1054524069]
-position = Vector2(-60, -39.5)
-scale = Vector2(7.3749995, 1.9375)
-texture = ExtResource("6_sv282")
-
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="." unique_id=1810371665]
 position = Vector2(535, -360)
 sprite_frames = SubResource("SpriteFrames_7vadr")
@@ -168,5 +164,13 @@ autoplay = "default"
 position = Vector2(-60, -39.5)
 scale = Vector2(7.3749995, 1.9375)
 texture = ExtResource("6_sv282")
+
+[node name="Estrana_L" parent="." unique_id=1948836131 instance=ExtResource("8_6t0p6")]
+position = Vector2(390, 20)
+linesagain = Array[String](["NAJM!", "So good to see you", "Especially when I'm in such poor health", "I'm suprised I can see at all!", "Pause for laugh", "\"...\"", "Next time I see you will be my last"])
+
+[node name="Estrana" parent="." unique_id=1080372266 instance=ExtResource("8_6t0p6")]
+position = Vector2(495, -365)
+linesagain = Array[String](["Welp... this is the end", "I guess I'll fucking keel over now", "Go reach for the stars or something asshole", "I'll just be here", "Rotting away", "\">:(\"", "ok byebye now get going", "Grammama needs a drink"])
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
