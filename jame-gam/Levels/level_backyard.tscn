@@ -643,6 +643,7 @@ shape = SubResource("RectangleShape2D_tsa2i")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Bee4/AnimatableBody2D" unique_id=269093838]
 sprite_frames = SubResource("SpriteFrames_hoj8b")
 autoplay = "default"
+flip_h = true
 
 [node name="Path" type="Path2D" parent="Bee4" unique_id=961149422]
 scale = Vector2(1.0138707, 1)
