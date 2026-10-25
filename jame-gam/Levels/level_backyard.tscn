@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://b68mqqlmk6vs0" path="res://Assets/Sprites/Sprite-0001.png" id="10_515wt"]
 [ext_resource type="PackedScene" uid="uid://bi8ngsfl1xft5" path="res://estrana_diaglogue.tscn" id="11_uyoaw"]
 [ext_resource type="Texture2D" uid="uid://b4n2rlhsa862q" path="res://Assets/Sprites/LittleGuyWalk-Sheet.png" id="11_w0ger"]
+[ext_resource type="PackedScene" uid="uid://d1ry6o0iuxkof" path="res://key.tscn" id="13_515wt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_66f1p"]
 texture = ExtResource("3_jsn4h")
@@ -432,3 +433,6 @@ offset_bottom = 180.0
 color = Color(0.25490198, 0.3647059, 0.6, 1)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=764890642]
+
+[node name="Key" parent="." unique_id=1957883347 instance=ExtResource("13_515wt")]
+position = Vector2(586, -304)
