@@ -10,7 +10,36 @@ var grate6 = preload("res://Assets/Sprites/Sewer Grates/SewerGrate6.png")
 func _ready() -> void:
 	GameController.tempVars.room = "res://Levels/level_tutorial.tscn"
 
+
+
+const lines: Array[String] = [
+	"WHERE DO YOU THINK YOU ARE GOING MISTER",
+	"YOU KNOW IT IS RUDE TO LEAVE YOUR DEAR GRANDMAMA HANGING",
+	"I SEE HOW IT IS >:("
+]
+@onready var sfx = preload("res://text_box/speech_sfx.wav")
+func _on_area_2d_2_body_entered(body: Node2D) -> void:
+	if body.name == "CharacterBody2D":
+		DialogManager.start_dialog(Vector2(510, -8), lines, sfx)
+		$Area2D2.queue_free()
+	pass # Replace with function body.
+
+var range = false
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if body.name == "CharacterBody2D":
+		range = true
+	pass # Replace with function body.
+
+
+func _on_area_2d_body_exited(body: Node2D) -> void:
+	if body.name == "CharacterBody2D":
+		range = false
+	pass # Replace with function body.
+
 func _process(delta: float) -> void:
+	if range and $Area2D2 != null:
+		if Input.is_action_just_pressed("Interact"):
+			$Area2D2.queue_free()
 	if GameController.leverStatus:
 		$Standing.visible = true
 	if !GameController.leverStatus:
@@ -33,15 +62,3 @@ func _process(delta: float) -> void:
 					child.texture = grate3
 				grate6:
 					child.texture = grate5
-
-const lines: Array[String] = [
-	"WHERE DO YOU THINK YOU ARE GOING MISTER",
-	"YOU KNOW IT IS RUDE TO LEAVE YOUR DEAR GRANDMAMA HANGING",
-	"I SEE HOW IT IS >:("
-]
-@onready var sfx = preload("res://text_box/speech_sfx.wav")
-func _on_area_2d_2_body_entered(body: Node2D) -> void:
-	if body.name == "CharacterBody2D":
-		DialogManager.start_dialog(Vector2(510, -8), lines, sfx)
-		$Area2D2.queue_free()
-	pass # Replace with function body.

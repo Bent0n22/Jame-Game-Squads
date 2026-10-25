@@ -2,6 +2,7 @@ extends Node
 
 var talking = false
 var leverStatus = false
+var key_count = 0
 
 func switchLever():
 	if leverStatus:
