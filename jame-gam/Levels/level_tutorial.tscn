@@ -691,11 +691,6 @@ offset_bottom = -2.0
 text = "Interact"
 label_settings = SubResource("LabelSettings_0besk")
 
-[node name="Estrana" parent="." unique_id=1080372266 instance=ExtResource("8_6t0p6")]
-position = Vector2(377, -367)
-linesagain = Array[String](["You made it!", "I was so excited for you to come over,", "my dear grandchild.", "I want to tell you something important.", "The world above is vast and incredible.", "There are so many things to see, ", "I want you to do what I couldn't.", "Go...", "Go to the surface and reach for the stars!"])
-custompos = Vector2(535, -360)
-
 [node name="lever" parent="." unique_id=1764940399 instance=ExtResource("9_lot66")]
 position = Vector2(231, -216)
 
@@ -758,7 +753,7 @@ autoplay = "default"
 [node name="Estrana" parent="Can/Granma Death" unique_id=981226610 instance=ExtResource("8_6t0p6")]
 position = Vector2(0, -2)
 script = ExtResource("26_kf7vc")
-linesagain = Array[String](["reach for the stars", "i'm dying"])
+linesagain = Array[String](["You made it!", "I was so excited for you to come over,", "my dear grandchild.", "I want to tell you something important.", "The world above is vast and incredible.", "There are so many things to see, ", "I want you to do what I couldn't.", "Go...", "Go to the surface and reach for the stars!"])
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Can" unique_id=1296218594]
 position = Vector2(504, -385)
