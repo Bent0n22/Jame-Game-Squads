@@ -30,7 +30,7 @@ animations = [{
 
 [sub_resource type="Curve2D" id="Curve2D_v5qog"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, -14.015, 116.25, 175.37, 110.775)
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, -14.015, 116.25, 114.44183, 210.30469)
 }
 point_count = 2
 
