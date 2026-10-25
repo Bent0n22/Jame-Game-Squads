@@ -4,7 +4,7 @@
 [ext_resource type="FontFile" uid="uid://b5ei6ytoqn6c0" path="res://Assets/Fonts/augiepixel.ttf" id="2_aw6ia"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tb2w5"]
-size = Vector2(61.25, 20)
+size = Vector2(84, 20)
 
 [sub_resource type="LabelSettings" id="LabelSettings_0besk"]
 font = ExtResource("2_aw6ia")
@@ -16,7 +16,6 @@ script = ExtResource("1_vk8ke")
 [node name="Area2D" type="Area2D" parent="." unique_id=2040033731]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2057182541]
-position = Vector2(-15, 0)
 shape = SubResource("RectangleShape2D_tb2w5")
 debug_color = Color(1, 0.47617447, 0.21435991, 0.41960785)
 

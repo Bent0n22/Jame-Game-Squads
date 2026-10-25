@@ -468,7 +468,7 @@ sprite_frames = SubResource("SpriteFrames_7vadr")
 autoplay = "default"
 
 [node name="Estrana_L" parent="." unique_id=1948836131 instance=ExtResource("8_6t0p6")]
-position = Vector2(390, 20)
+position = Vector2(424, 22)
 linesagain = Array[String](["NAJM!", "So good to see you", "Especially when I'm in such poor health", "I'm suprised I can see at all!", "Pause for laugh", "\"...\"", "Next time I see you will be my last"])
 custompos = Vector2(424, 25)
 

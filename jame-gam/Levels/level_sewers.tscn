@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://bkubcpkvd3sv5" path="res://killzone.tscn" id="13_8cmjj"]
 [ext_resource type="AudioStream" uid="uid://bgettadowioep" path="res://Assets/Sprites/Audio/splash.mp3" id="14_1ak8b"]
 [ext_resource type="PackedScene" uid="uid://c8q1s3cdm7b0s" path="res://trans_trigger_on_interact.tscn" id="18_lp2uq"]
+[ext_resource type="Texture2D" uid="uid://v1xcvr7xbmsd" path="res://Assets/Sprites/Pipe.png" id="19_gktoi"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vlg1b"]
 texture = ExtResource("1_ic1cm")
@@ -128,6 +129,45 @@ size = Vector2(64, 42)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sdq4m"]
 size = Vector2(80, 26)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8whpk"]
+size = Vector2(18, 64)
+
+[sub_resource type="Animation" id="Animation_von8r"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-61, -16)]
+}
+
+[sub_resource type="Animation" id="Animation_whc7m"]
+resource_name = "pipe_exit"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-61, -16), Vector2(-33, -16)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bt226"]
+_data = {
+&"RESET": SubResource("Animation_von8r"),
+&"pipe_exit": SubResource("Animation_whc7m")
+}
+
 [node name="sewers level" type="Node2D" unique_id=1043215759]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1379756022]
@@ -139,6 +179,7 @@ tile_map_data = PackedByteArray("AAAQANz/AAAAAAAAAAAQANn/AAAAAAAAAAAQANf/AAAAAAA
 tile_set = SubResource("TileSet_tb2w5")
 
 [node name="Player" parent="." unique_id=1870273184 instance=ExtResource("1_aqufg")]
+position = Vector2(-36, 7)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=327009154]
 position = Vector2(259, -28)
@@ -310,3 +351,19 @@ stream = ExtResource("14_1ak8b")
 [node name="trans_trigger_on_interact" parent="." unique_id=1204718714 instance=ExtResource("18_lp2uq")]
 position = Vector2(264, -574)
 file_to = "res://Levels/level_backyard.tscn"
+
+[node name="Pipe" type="Sprite2D" parent="." unique_id=71875474]
+z_index = 3
+position = Vector2(-58.000004, -17)
+scale = Vector2(-0.375, -0.375)
+texture = ExtResource("19_gktoi")
+
+[node name="AnimatableBody2D" type="AnimatableBody2D" parent="." unique_id=1652723590]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatableBody2D" unique_id=467468461]
+position = Vector2(-61, -16)
+shape = SubResource("RectangleShape2D_8whpk")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody2D/CollisionShape2D" unique_id=306454027]
+libraries/ = SubResource("AnimationLibrary_bt226")
+autoplay = &"pipe_exit"
