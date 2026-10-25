@@ -10,7 +10,7 @@ var down_multi = false
 
 func _physics_process(delta: float) -> void:
 	
-	if DialogManager.is_dialog_active && is_on_floor():
+	if DialogManager.is_dialog_active:
 		animated_sprite_2d.play("Idle")
 		return
 	

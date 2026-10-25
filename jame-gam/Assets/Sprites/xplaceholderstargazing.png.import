@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d3e01odq6prde"
-path="res://.godot/imported/little.png-563746fe9d1bdb3cd032269f43b49305.ctex"
+uid="uid://d1l7on5nkt4kj"
+path="res://.godot/imported/xplaceholderstargazing.png-97965d73854887899c987c12624cc6ff.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/little.png"
-dest_files=["res://.godot/imported/little.png-563746fe9d1bdb3cd032269f43b49305.ctex"]
+source_file="res://Assets/Sprites/xplaceholderstargazing.png"
+dest_files=["res://.godot/imported/xplaceholderstargazing.png-97965d73854887899c987c12624cc6ff.ctex"]
 
 [params]
 

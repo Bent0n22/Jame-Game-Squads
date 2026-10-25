@@ -1,9 +1,7 @@
 extends Camera2D
 
-@export var randomStrength: float = 5.0
+@export var randomStrength: float = 30.0
 @export  var shakeFade: float = 5.0
-@onready var character_body_2d: LittleMan = $"../.."
-var was_in_air: bool = false
 
 var rng = RandomNumberGenerator.new()
 
@@ -18,14 +16,8 @@ func apply_shake():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	character_body_2d.move_and_slide()
-	if character_body_2d.is_on_floor():
-		if was_in_air:
-			_on_landed()
-			was_in_air = false
-	else:
-		was_in_air = true
-		
+	if Input.is_action_just_pressed("Jump"):
+		apply_shake()
 	if shake_strength > 0:
 		shake_strength = lerpf(shake_strength, 0, shakeFade * delta)
 		
@@ -33,6 +25,3 @@ func _process(delta: float) -> void:
 
 func randomOffset() -> Vector2:
 	return Vector2(rng.randf_range(-shake_strength, shake_strength), rng.randf_range(-shake_strength, shake_strength))
-
-func _on_landed() -> void:
-	apply_shake()
