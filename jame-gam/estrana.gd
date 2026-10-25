@@ -11,6 +11,7 @@ var player_in_range = false
 #]
 
 @onready var sfx = preload("res://text_box/speech_sfx.wav")
+@onready var label: Label = $Area2D/CollisionShape2D/Label
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	print(body.name + "ENTERED")
@@ -18,11 +19,13 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.name == "CharacterBody2D":
 		player_in_range = true
 		print("Enter")
+		label.visible = true
 
 func _on_area_2d_body_exited(body: Node2D) -> void:
 	if body.name == "CharacterBody2D":
 		player_in_range = false
 	print(body.name)
+	label.visible = false
 
 var can_talk = true
 
