@@ -4,9 +4,9 @@
 [ext_resource type="PackedScene" uid="uid://btj4h3g23u4c7" path="res://ui.tscn" id="2_kekqg"]
 [ext_resource type="PackedScene" uid="uid://dmj7vrkiqjob0" path="res://lever.tscn" id="3_kekqg"]
 [ext_resource type="PackedScene" uid="uid://d7pu6wuxuddx" path="res://changing_object.tscn" id="4_gqnfj"]
+[ext_resource type="Script" uid="uid://csm153i2sdvst" path="res://Scripts/lever.gd" id="4_x7uc3"]
 [ext_resource type="Texture2D" uid="uid://dj0kp72itmvco" path="res://Assets/Sprites/flowery.png" id="5_q0kuf"]
 [ext_resource type="PackedScene" uid="uid://dhtfrjqnb5th6" path="res://Transitioning Stuff/fixed_trans_trigger.tscn" id="6_lfhyt"]
-[ext_resource type="Script" uid="uid://xistfwq3bgqp" path="res://estrana.gd" id="7_x7uc3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tb2w5"]
 size = Vector2(157, 20)
@@ -28,6 +28,7 @@ position = Vector2(-1, -12)
 
 [node name="Lever" parent="." unique_id=1764940399 instance=ExtResource("3_kekqg")]
 position = Vector2(51, 30)
+script = ExtResource("4_x7uc3")
 
 [node name="Changing Object" parent="." unique_id=1677729763 instance=ExtResource("4_gqnfj")]
 position = Vector2(87, 44)
@@ -46,4 +47,3 @@ file_to = "res://Levels/level_tutorial.tscn"
 
 [node name="Estrana" parent="." unique_id=2107904517 instance=ExtResource("3_kekqg")]
 position = Vector2(-39, 28)
-script = ExtResource("7_x7uc3")

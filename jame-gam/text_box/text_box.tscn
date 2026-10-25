@@ -2,7 +2,45 @@
 
 [ext_resource type="Texture2D" uid="uid://dop5s1owqerrj" path="res://text_box/speech_bubble.png" id="1_atxd3"]
 [ext_resource type="Script" uid="uid://g0sm2o4a7n61" path="res://text_box/text_box.gd" id="1_js0o0"]
+[ext_resource type="Texture2D" uid="uid://df0fuyx76ipdn" path="res://text_box/tail.png" id="3_8g1qd"]
 [ext_resource type="FontFile" uid="uid://b5ei6ytoqn6c0" path="res://Assets/Fonts/augiepixel.ttf" id="3_urkk4"]
+[ext_resource type="Texture2D" uid="uid://jcj4kkcaf2rd" path="res://text_box/next_indicator.png" id="4_gukg6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mdvfv"]
+atlas = ExtResource("4_gukg6")
+region = Rect2(0, 0, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ylgt8"]
+atlas = ExtResource("4_gukg6")
+region = Rect2(12, 0, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xstfw"]
+atlas = ExtResource("4_gukg6")
+region = Rect2(24, 0, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_65p4n"]
+atlas = ExtResource("4_gukg6")
+region = Rect2(36, 0, 12, 12)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1lm5o"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mdvfv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ylgt8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xstfw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_65p4n")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 8.0
+}]
 
 [node name="TextBox" type="MarginContainer" unique_id=1650543415]
 script = ExtResource("1_js0o0")
@@ -15,6 +53,42 @@ patch_margin_left = 16
 patch_margin_top = 16
 patch_margin_right = 16
 patch_margin_bottom = 16
+
+[node name="Control" type="Control" parent="NinePatchRect" unique_id=1768504952]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -40.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="NinePatchRect/Control" unique_id=410887464]
+position = Vector2(19, 42)
+texture = ExtResource("3_8g1qd")
+
+[node name="Control2" type="Control" parent="NinePatchRect" unique_id=1635138001]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = -1.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="NextIndicator" type="AnimatedSprite2D" parent="NinePatchRect/Control2" unique_id=1311892501]
+visible = false
+position = Vector2(1, 0)
+sprite_frames = SubResource("SpriteFrames_1lm5o")
+autoplay = "default"
+frame_progress = 0.31221858
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=202422150]
 layout_mode = 2
@@ -31,5 +105,7 @@ vertical_alignment = 1
 
 [node name="LetterDisplayTimer" type="Timer" parent="." unique_id=996784639]
 one_shot = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1379873060]
 
 [connection signal="timeout" from="LetterDisplayTimer" to="." method="_on_letter_display_timer_timeout"]
