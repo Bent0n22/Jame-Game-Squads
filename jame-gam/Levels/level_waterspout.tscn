@@ -3,8 +3,11 @@
 [ext_resource type="PackedScene" uid="uid://btj4h3g23u4c7" path="res://ui.tscn" id="1_2yfjy"]
 [ext_resource type="Texture2D" uid="uid://dd14ghtcw62c0" path="res://Assets/Sprites/Tiles_w_pipe.png" id="2_x2iaj"]
 [ext_resource type="Texture2D" uid="uid://camkg8myiw2l2" path="res://Assets/Sprites/REALTILES.png" id="3_om16r"]
-[ext_resource type="PackedScene" uid="uid://p58y02pwx2gq" path="res://player.tscn" id="4_ps4e7"]
 [ext_resource type="Texture2D" uid="uid://46kq3fcxtpm8" path="res://Assets/Sprites/water_spout_tiles.png" id="4_x2iaj"]
+[ext_resource type="Texture2D" uid="uid://3n1j5bsa005q" path="res://Assets/Sprites/Sprite-0005.png" id="6_jltnf"]
+[ext_resource type="Script" uid="uid://48g65g8fyhuk" path="res://Scripts/character_body_2d.gd" id="6_om16r"]
+[ext_resource type="Texture2D" uid="uid://b68mqqlmk6vs0" path="res://Assets/Sprites/Sprite-0001.png" id="6_ps4e7"]
+[ext_resource type="Texture2D" uid="uid://b4n2rlhsa862q" path="res://Assets/Sprites/LittleGuyWalk-Sheet.png" id="8_gyrao"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jltnf"]
 texture = ExtResource("2_x2iaj")
@@ -108,6 +111,7 @@ texture = ExtResource("3_om16r")
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_om16r"]
 texture = ExtResource("4_x2iaj")
 0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:0/0 = 0
 2:1/0 = 0
 0:2/0 = 0
@@ -117,6 +121,62 @@ texture = ExtResource("4_x2iaj")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_a77xb")
 sources/1 = SubResource("TileSetAtlasSource_om16r")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7vadr"]
+size = Vector2(11, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kdubu"]
+atlas = ExtResource("6_jltnf")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d21ai"]
+atlas = ExtResource("6_jltnf")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rj586"]
+atlas = ExtResource("6_ps4e7")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4d7sh"]
+atlas = ExtResource("8_gyrao")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ir8iy"]
+atlas = ExtResource("8_gyrao")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f01tw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kdubu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d21ai")
+}],
+"loop": 1,
+"name": &"Idle",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rj586")
+}],
+"loop": 1,
+"name": &"Jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4d7sh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ir8iy")
+}],
+"loop": 1,
+"name": &"Walk",
+"speed": 5.0
+}]
 
 [node name="LevelWaterspout" type="Node2D" unique_id=204834342]
 
@@ -130,5 +190,18 @@ tile_set = SubResource("TileSet_f01tw")
 tile_map_data = PackedByteArray("AAAAAAMAAQAAAAAAAAABAAMAAQAAAAAAAAACAAMAAQAAAAAAAAADAAMAAQAAAAAAAAAEAAMAAQAAAAAAAAAFAAMAAQAAAAAAAAAAAAIAAQAAAAAAAAABAAIAAQAAAAAAAAACAAIAAQAAAAAAAAADAAIAAQAAAAAAAAAEAAIAAQAAAAAAAAAFAAIAAQAAAAAAAAA=")
 tile_set = SubResource("TileSet_2ua47")
 
-[node name="Player" parent="." unique_id=1870273184 instance=ExtResource("4_ps4e7")]
-position = Vector2(17, 22)
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=826305916]
+script = ExtResource("6_om16r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=577417303]
+position = Vector2(27.5, 5)
+shape = SubResource("RectangleShape2D_7vadr")
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D/CollisionShape2D" unique_id=596466239]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=1024071860]
+z_index = 2
+position = Vector2(27, 4)
+sprite_frames = SubResource("SpriteFrames_f01tw")
+animation = &"Idle"
+autoplay = "Idle"
