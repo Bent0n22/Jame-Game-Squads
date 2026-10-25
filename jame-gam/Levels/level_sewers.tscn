@@ -6,6 +6,12 @@
 [ext_resource type="Texture2D" uid="uid://c3n8qe07teobl" path="res://Assets/Sprites/Fly.png" id="4_hjci1"]
 [ext_resource type="PackedScene" uid="uid://btj4h3g23u4c7" path="res://ui.tscn" id="4_pyhhk"]
 [ext_resource type="PackedScene" uid="uid://d7pu6wuxuddx" path="res://changing_object.tscn" id="6_jrfrv"]
+[ext_resource type="Texture2D" uid="uid://doe0xd4mdcapc" path="res://Assets/Sprites/Sewer Grates/SewerGrate1.png" id="7_n3fyd"]
+[ext_resource type="Texture2D" uid="uid://dkhfhy5dj0sra" path="res://Assets/Sprites/Sewer Grates/SewerGrate5.png" id="8_8cmjj"]
+[ext_resource type="Texture2D" uid="uid://dwwbghf1mc67m" path="res://Assets/Sprites/Sewer Grates/SewerGrate3.png" id="9_1ak8b"]
+[ext_resource type="Texture2D" uid="uid://cq12fsm55y1wh" path="res://Assets/Sprites/Sewer Grates/SewerGrate2.png" id="10_2ql15"]
+[ext_resource type="Texture2D" uid="uid://dnpkxqnustbkd" path="res://Assets/Sprites/Sewer Grates/SewerGrate6.png" id="11_41vca"]
+[ext_resource type="Texture2D" uid="uid://bgdbogfmkhwpg" path="res://Assets/Sprites/Sewer Grates/SewerGrate4.png" id="12_3vdbj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vlg1b"]
 texture = ExtResource("1_ic1cm")
@@ -169,3 +175,35 @@ position = Vector2(216, -121)
 
 [node name="Changing Object11" parent="Changing Objects B" unique_id=1692927511 instance=ExtResource("6_jrfrv")]
 position = Vector2(184, -121)
+
+[node name="SewerGrate1" type="Sprite2D" parent="." unique_id=1799934767]
+position = Vector2(188, 2)
+texture = ExtResource("7_n3fyd")
+
+[node name="SewerGrate5" type="Sprite2D" parent="." unique_id=713937568]
+position = Vector2(201, 2)
+texture = ExtResource("8_8cmjj")
+
+[node name="SewerGrate3" type="Sprite2D" parent="." unique_id=898715151]
+position = Vector2(212, 2)
+texture = ExtResource("9_1ak8b")
+
+[node name="SewerGrate2" type="Sprite2D" parent="." unique_id=470608218]
+position = Vector2(172, -110)
+texture = ExtResource("10_2ql15")
+
+[node name="SewerGrate6" type="Sprite2D" parent="." unique_id=219156072]
+position = Vector2(188, -110)
+texture = ExtResource("11_41vca")
+
+[node name="SewerGrate7" type="Sprite2D" parent="." unique_id=1206991195]
+position = Vector2(204, -110)
+texture = ExtResource("11_41vca")
+
+[node name="SewerGrate8" type="Sprite2D" parent="." unique_id=1293724611]
+position = Vector2(220, -110)
+texture = ExtResource("11_41vca")
+
+[node name="SewerGrate4" type="Sprite2D" parent="." unique_id=1327832402]
+position = Vector2(228, -110)
+texture = ExtResource("12_3vdbj")
