@@ -1,9 +1,6 @@
 extends CharacterBody2D
 class_name LittleMan
 
-var was_in_air: bool = false
-@onready var camera_2d: Camera2D = $CollisionShape2D/Camera2D
-
 const SPEED = 200.0
 const JUMP_VELOCITY = -320.0
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
@@ -61,13 +58,3 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
-	if is_on_floor():
-		if was_in_air:
-			_on_landed()
-			was_in_air = false
-	else:
-		was_in_air = true
-
-
-func _on_landed() -> void:
-	camera_2d.apply_shake()
