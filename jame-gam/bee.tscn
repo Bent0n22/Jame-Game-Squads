@@ -81,6 +81,7 @@ rotation = -0.0013465881
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatableBody2D" unique_id=1480868625]
 position = Vector2(-0.50134563, 0.82959497)
 shape = SubResource("RectangleShape2D_tsa2i")
+one_way_collision = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="AnimatableBody2D" unique_id=986786680]
 sprite_frames = SubResource("SpriteFrames_hoj8b")
