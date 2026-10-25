@@ -2,6 +2,7 @@ extends Node2D
 
 @onready var sprite = $Area2D/Sprite2D
 @onready var label: Label = $Area2D/Label
+@onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
 
 var player_in_range = false
 var texture_a = preload("res://Assets/Sprites/SwitchA.png")
@@ -28,11 +29,13 @@ func _process(delta: float) -> void:
 	if player_in_range:
 		if leverState == false:
 			if Input.is_action_just_pressed("Interact"):
+				audio_stream_player_2d.play()
 				GameController.switchLever()
 				leverState = true
 				sprite.texture = texture_b
 		else:
 			if Input.is_action_just_pressed("Interact"):
+				audio_stream_player_2d.play()
 				GameController.switchLever()
 				leverState = false
 				sprite.texture = texture_a
