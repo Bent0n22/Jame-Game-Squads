@@ -7,6 +7,10 @@ const JUMP_VELOCITY = -335.0
 const GRAV_MULTI = 1.1
 const DOWN_CONST = 2.25
 var down_multi = false
+const coyote = 6
+var coyote_frames = 0
+const buffer = 6
+var buffer_frames = 0
 
 func _physics_process(delta: float) -> void:
 	
@@ -16,6 +20,8 @@ func _physics_process(delta: float) -> void:
 	
 	# Add the gravity.
 	if not is_on_floor():
+		if Input.is_action_just_pressed("Jump"):
+			buffer_frames = 6
 		if Input.is_action_just_pressed("Down"):
 			down_multi = true
 		if down_multi:
@@ -30,12 +36,19 @@ func _physics_process(delta: float) -> void:
 				velocity += get_gravity() * delta * GRAV_MULTI
 	#Animation player
 	if is_on_floor():
+		if buffer_frames > 0:
+			coyote_frames = 0
+			velocity.y = JUMP_VELOCITY
+		coyote_frames = coyote
 		down_multi = false
 		if velocity.x == 0:
 			animated_sprite_2d.play("Idle")
 		else:
 			animated_sprite_2d.play("Walk")
 	if not is_on_floor():
+		buffer_frames -= 1
+		if coyote_frames > 0:
+			coyote_frames -= 1
 		animated_sprite_2d.play("Jump")
 	
 	#Flip Player
@@ -46,7 +59,8 @@ func _physics_process(delta: float) -> void:
 
 
 	# Handle jump.
-	if Input.is_action_just_pressed("Jump") and is_on_floor():
+	if Input.is_action_just_pressed("Jump") and coyote_frames > 0:
+		coyote_frames = 0
 		velocity.y = JUMP_VELOCITY
 
 	# Get the input direction and handle the movement/deceleration.

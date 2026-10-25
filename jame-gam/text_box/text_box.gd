@@ -5,7 +5,7 @@ extends MarginContainer
 @onready var audio_player: AudioStreamPlayer = $AudioStreamPlayer
 @onready var next_indicator = $NinePatchRect/Control2/NextIndicator
 
-const MAX_WIDTH = 256
+const MAX_WIDTH = 200
 
 var text = ""
 var letter_index = 0
@@ -45,10 +45,12 @@ func display_text(text_to_display: String, speech_sfx: AudioStream):
 		self, "scale", Vector2(1, 1), 0.15
 	).set_trans(Tween.TRANS_BACK)
 	
-	_display_letter()
+	if !cancel_d:
+		_display_letter()
 	
 func _display_letter():
-	label.text += text[letter_index]
+	if !cancel_d:
+		label.text += text[letter_index]
 	letter_index += 1
 	
 	if letter_index >= text.length():
@@ -73,7 +75,19 @@ func _display_letter():
 			await  new_audio_player.finished
 			new_audio_player.queue_free()
 	
-
+var cancel_d = false
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("Jump"):
+		cancel_d = true
+		label.text = ""
+		for i in text.length():
+			print(i)
+			letter_index = i
+			label.text += text[letter_index]
+			if letter_index >= text.length():
+				finished_displaying.emit()
+				next_indicator.visible = true
+				return
 
 func _on_letter_display_timer_timeout() -> void:
 	_display_letter()

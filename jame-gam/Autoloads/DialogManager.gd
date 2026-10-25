@@ -40,8 +40,10 @@ func _unhandled_input(event):
 		is_dialog_active &&
 		can_advance_line
 	):
+		text_box.cancel_d = false
 		text_box.queue_free()
 		
+	
 		current_line_index += 1
 		if current_line_index >= dialog_lines.size():
 			print(current_line_index)
