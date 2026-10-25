@@ -5,7 +5,7 @@ var player_in_range = false
 const lines: Array[String] = [
 	"hey there...",
 	"im your gramma estrana.",
-	"mk go play"
+	"ok goodbye"
 ]
 
 @onready var sfx = preload("res://text_box/speech_sfx.wav")
