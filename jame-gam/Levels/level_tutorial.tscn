@@ -692,8 +692,7 @@ text = "Interact"
 label_settings = SubResource("LabelSettings_0besk")
 
 [node name="Estrana" parent="." unique_id=1080372266 instance=ExtResource("8_6t0p6")]
-visible = false
-position = Vector2(498, -362)
+position = Vector2(377, -367)
 linesagain = Array[String](["You made it!", "I was so excited for you to come over,", "my dear grandchild.", "I want to tell you something important.", "The world above is vast and incredible.", "There are so many things to see, ", "I want you to do what I couldn't.", "Go...", "Go to the surface and reach for the stars!"])
 custompos = Vector2(535, -360)
 

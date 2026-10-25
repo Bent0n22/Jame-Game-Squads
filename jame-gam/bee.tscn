@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bxeg1lwc6esan" path="res://Assets/Sprites/bee-sheet.png" id="2_v5qog"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tsa2i"]
-size = Vector2(11.140144, 6.684086)
+size = Vector2(14.999987, 6.684086)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_q8d8k"]
 atlas = ExtResource("2_v5qog")
@@ -79,7 +79,7 @@ rotates = true
 rotation = -0.0013465881
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatableBody2D" unique_id=1480868625]
-position = Vector2(-0.520319, 0.8295946)
+position = Vector2(-0.50134563, 0.82959497)
 shape = SubResource("RectangleShape2D_tsa2i")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="AnimatableBody2D" unique_id=986786680]
