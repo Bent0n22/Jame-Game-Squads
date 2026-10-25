@@ -16,6 +16,7 @@ var player_in_range = false
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	print(body.name + "ENTERED")
 	
+	
 	if body.name == "CharacterBody2D":
 		player_in_range = true
 		print("Enter")
@@ -26,6 +27,7 @@ func _on_area_2d_body_exited(body: Node2D) -> void:
 		player_in_range = false
 	print(body.name)
 	label.visible = false
+
 
 var can_talk = true
 
