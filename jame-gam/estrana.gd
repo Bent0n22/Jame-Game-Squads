@@ -3,7 +3,7 @@ extends Node2D
 var player_in_range = false
 
 @export var linesagain: Array[String]
-
+@export var custompos: Vector2
 #const lines: Array[String] = [
 #	"hey there...",
 #	"im your gramma estrana.",
@@ -36,4 +36,7 @@ func _on_dialog_finished():
 func _unhandled_input(event):
 	GameController.talking = true
 	if event.is_action_pressed("Interact") and player_in_range and can_talk:
-		DialogManager.start_dialog(global_position, linesagain, sfx)
+		if custompos != Vector2(0,0):
+			DialogManager.start_dialog(custompos, linesagain, sfx)
+		else:
+			DialogManager.start_dialog(global_position, linesagain, sfx)
