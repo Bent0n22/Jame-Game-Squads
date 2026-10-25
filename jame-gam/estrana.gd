@@ -2,16 +2,19 @@ extends Node2D
 
 var player_in_range = false
 
-const lines: Array[String] = [
-	"hey there...",
-	"im your gramma estrana.",
-	"ok goodbye"
-]
+@export var linesagain: Array[String]
+
+#const lines: Array[String] = [
+#	"hey there...",
+#	"im your gramma estrana.",
+#	"ok goodbye"
+#]
 
 @onready var sfx = preload("res://text_box/speech_sfx.wav")
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	print(body.name)
+	print(body.name + "ENTERED")
+	
 	if body.name == "CharacterBody2D":
 		player_in_range = true
 		print("Enter")
@@ -19,7 +22,8 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 func _on_area_2d_body_exited(body: Node2D) -> void:
 	if body.name == "CharacterBody2D":
 		player_in_range = false
-		print("Exit")
+	print(body.name)
+
 var can_talk = true
 
 func _on_dialog_finished():
@@ -30,4 +34,4 @@ func _on_dialog_finished():
 
 func _unhandled_input(event):
 	if event.is_action_pressed("Interact") and player_in_range and can_talk:
-		DialogManager.start_dialog(global_position, lines, sfx)
+		DialogManager.start_dialog(global_position, linesagain, sfx)

@@ -51,5 +51,4 @@ func move_block(is_forwards):
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	$AnimatableBody2D.position = path_follower.position
-	print($AnimatableBody2D.position)
 	pass

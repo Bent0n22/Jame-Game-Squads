@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bi8ngsfl1xft5"]
+
+[ext_resource type="Script" uid="uid://xistfwq3bgqp" path="res://estrana.gd" id="1_vk8ke"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tb2w5"]
+
+[node name="Estrana" type="Node2D" unique_id=1948836131]
+script = ExtResource("1_vk8ke")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=2040033731]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2057182541]
+shape = SubResource("RectangleShape2D_tb2w5")
+debug_color = Color(1, 0.47617447, 0.21435991, 0.41960785)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

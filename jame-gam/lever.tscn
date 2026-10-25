@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dmj7vrkiqjob0"]
 
-[ext_resource type="Script" uid="uid://xistfwq3bgqp" path="res://estrana.gd" id="1_0ohsc"]
+[ext_resource type="Script" uid="uid://c485nhacl7a58" path="res://lever.gd" id="1_0ohsc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tb2w5"]
 

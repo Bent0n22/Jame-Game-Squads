@@ -4,10 +4,10 @@
 [ext_resource type="PackedScene" uid="uid://btj4h3g23u4c7" path="res://ui.tscn" id="2_kekqg"]
 [ext_resource type="PackedScene" uid="uid://dmj7vrkiqjob0" path="res://lever.tscn" id="3_kekqg"]
 [ext_resource type="PackedScene" uid="uid://d7pu6wuxuddx" path="res://changing_object.tscn" id="4_gqnfj"]
-[ext_resource type="Script" uid="uid://csm153i2sdvst" path="res://Scripts/lever.gd" id="4_x7uc3"]
 [ext_resource type="Texture2D" uid="uid://dj0kp72itmvco" path="res://Assets/Sprites/flowery.png" id="5_q0kuf"]
 [ext_resource type="Script" uid="uid://bwkyxktrqs0rk" path="res://Transitioning Stuff/fixed_trans_trigger.gd" id="7_x7uc3"]
 [ext_resource type="PackedScene" uid="uid://k6lg8gwt8gdl" path="res://bee.tscn" id="8_t0axc"]
+[ext_resource type="PackedScene" uid="uid://bi8ngsfl1xft5" path="res://estrana_diaglogue.tscn" id="8_y6xub"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tb2w5"]
 size = Vector2(157, 20)
@@ -28,10 +28,6 @@ position = Vector2(-1, -12)
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1638755620]
 
 [node name="UI" parent="CanvasLayer" unique_id=725529654 instance=ExtResource("2_kekqg")]
-
-[node name="Lever" parent="." unique_id=1764940399 instance=ExtResource("3_kekqg")]
-position = Vector2(51, 30)
-script = ExtResource("4_x7uc3")
 
 [node name="Changing Object" parent="." unique_id=1677729763 instance=ExtResource("4_gqnfj")]
 position = Vector2(87, 44)
@@ -55,10 +51,14 @@ file_to = "res://Levels/level_tutorial.tscn"
 shape = SubResource("RectangleShape2D_t0axc")
 debug_color = Color(0, 0.65055966, 0.103819765, 0.41960785)
 
-[node name="Estrana" parent="." unique_id=2107904517 instance=ExtResource("3_kekqg")]
-position = Vector2(-39, 28)
-
 [node name="Bee" parent="." unique_id=299744515 instance=ExtResource("8_t0axc")]
 position = Vector2(-76, -43)
+
+[node name="lever" parent="." unique_id=1764940399 instance=ExtResource("3_kekqg")]
+position = Vector2(51, 31)
+
+[node name="Estrana" parent="." unique_id=1948836131 instance=ExtResource("8_y6xub")]
+position = Vector2(-45, 28)
+linesagain = Array[String](["OMG HI IM SUCH A BIG FAN", "NOW GO REACH FOR THE STARS", "BITCH", "\";3\""])
 
 [connection signal="body_entered" from="fixed_trans_trigger/Area2D" to="fixed_trans_trigger" method="_on_area_2d_body_entered"]

@@ -1,11 +1,19 @@
 extends Node2D
 
+var player_in_range = false
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	print(body.name)
+	if body.name == "CharacterBody2D":
+		player_in_range = true
+		print("Enter")
 
+func _on_area_2d_body_exited(body: Node2D) -> void:
+	if body.name == "CharacterBody2D":
+		player_in_range = false
+		print("Exit")
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if player_in_range:
+		if Input.is_action_just_pressed("Interact"):
+			GameController.switchLever()
