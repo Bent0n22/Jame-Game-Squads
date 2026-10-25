@@ -96,7 +96,7 @@ mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
 [node name="Pole" type="Sprite2D" parent="." unique_id=1951083991]
-position = Vector2(288, -78)
+position = Vector2(284, -78)
 texture = ExtResource("3_v8fvw")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=972726560]
