@@ -34,7 +34,7 @@ var can_talk = true
 func _on_dialog_finished():
 	
 	
-	
+	$"StaticBody2D/Talk to Grandma".disabled = true
 	can_talk = false
 	GameController.talking = false
 	# Wait one frame (or a tiny fraction of a second) so the current press is ignored

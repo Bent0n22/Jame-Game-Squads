@@ -568,14 +568,14 @@ animations = [{
 "speed": 1.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ewmql"]
+size = Vector2(20, 113.5)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sqm16"]
 size = Vector2(20, 160)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oiiii"]
 size = Vector2(112, 66)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ewmql"]
-size = Vector2(20, 113.5)
 
 [node name="tutorial level" type="Node2D" unique_id=1820815763]
 script = ExtResource("1_v8nge")
@@ -619,6 +619,13 @@ autoplay = "default"
 position = Vector2(424, 22)
 linesagain = Array[String](["NAJM!", "So good to see you", "Especially when I'm in such poor health", "I'm suprised I can see at all!", "Head down this way and meet me in my house."])
 custompos = Vector2(424, 25)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Estrana_L" unique_id=1798955525]
+position = Vector2(1, -47)
+
+[node name="Talk to Grandma" type="CollisionShape2D" parent="Estrana_L/StaticBody2D" unique_id=2115206351]
+position = Vector2(25, 0)
+shape = SubResource("RectangleShape2D_ewmql")
 
 [node name="Estrana" parent="." unique_id=1080372266 instance=ExtResource("8_6t0p6")]
 visible = false
@@ -688,12 +695,6 @@ position = Vector2(504, -416)
 texture = ExtResource("7_u6wkp")
 region_enabled = true
 region_rect = Rect2(16, 0, 112, 128)
-
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1798955525]
-position = Vector2(425, -25)
-
-[node name="Talk to Grandma" type="CollisionShape2D" parent="StaticBody2D" unique_id=2115206351]
-shape = SubResource("RectangleShape2D_ewmql")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=958575022]
 
