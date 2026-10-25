@@ -352,7 +352,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tsa2i"]
-size = Vector2(11.140144, 6.684086)
+size = Vector2(13.399357, 6.684086)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_q8d8k"]
 atlas = ExtResource("5_qu76y")
@@ -550,10 +550,12 @@ rotates = true
 rotation = 0.56337744
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bee/AnimatableBody2D" unique_id=1480868625]
-position = Vector2(-0.520319, 0.8295946)
+position = Vector2(-0.5203247, -0.30004883)
+rotation = 1.5707964
 shape = SubResource("RectangleShape2D_tsa2i")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Bee/AnimatableBody2D" unique_id=986786680]
+rotation = 1.5707964
 sprite_frames = SubResource("SpriteFrames_hoj8b")
 autoplay = "default"
 
@@ -561,7 +563,7 @@ autoplay = "default"
 curve = SubResource("Curve2D_v5qog")
 
 [node name="Follow" type="PathFollow2D" parent="Bee/Path" unique_id=1661702296]
-rotation = 1.072439
+rotates = false
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Bee" unique_id=1884343722]
 root_node = NodePath("../Path/Follow")
@@ -669,13 +671,14 @@ shape = SubResource("RectangleShape2D_tsa2i")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Bee5/AnimatableBody2D" unique_id=2010495970]
 sprite_frames = SubResource("SpriteFrames_hoj8b")
 autoplay = "default"
+flip_h = true
 
 [node name="Path" type="Path2D" parent="Bee5" unique_id=1650639267]
 scale = Vector2(1.0138707, 1)
 curve = SubResource("Curve2D_e4ldh")
 
 [node name="Follow" type="PathFollow2D" parent="Bee5/Path" unique_id=1415648652]
-rotation = -2.654536
+rotates = false
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Bee5" unique_id=1648912175]
 root_node = NodePath("../Path/Follow")
