@@ -6,8 +6,16 @@ var fade_tween: Tween
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.name == "CharacterBody2D":
-		if
+		if fade_tween and fade_tween.is_valid():
+			fade_tween.kill()
 
+		fade_tween = create_tween()
+		fade_tween.tween_property(front, "modulate:a", 0.0, 0.5)
+		
 func _on_body_exited(body: Node2D) -> void:
 	if body.name == "CharacterBody2D":
-		front.visible = true
+		if fade_tween and fade_tween.is_valid():
+			fade_tween.kill()
+
+		fade_tween = create_tween()
+		fade_tween.tween_property(front, "modulate:a", 1.0, 0.5)

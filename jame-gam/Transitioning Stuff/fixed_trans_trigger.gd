@@ -2,7 +2,7 @@ extends Node2D
 
 @export var file_to: String
 @export var pos_to: Vector2
-@onready var estrana: Node2D = $"../Can/Granma Death/Estrana"
+@onready var estrana: Node2D = $"../Granma Death/Estrana"
 
 
 
