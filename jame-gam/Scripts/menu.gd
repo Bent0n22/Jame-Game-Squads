@@ -3,6 +3,7 @@ extends Control
 
 func _on_play_game_pressed() -> void:
 	SceneLoaderScene.transition_to_scene(GameController.tempVars.room)
+	GameController.game_start = true
 
 
 func _on_exit_game_pressed() -> void:

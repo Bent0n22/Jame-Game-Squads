@@ -144,3 +144,5 @@ file_to = "res://credits_and_end_card.tscn"
 stream = ExtResource("10_g4ix3")
 volume_db = -9.123
 autoplay = true
+
+[node name="Timer" type="Timer" parent="." unique_id=562275442]
