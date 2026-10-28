@@ -16,6 +16,8 @@
 [ext_resource type="PackedScene" uid="uid://d1ry6o0iuxkof" path="res://Elements/key.tscn" id="13_515wt"]
 [ext_resource type="Script" uid="uid://cmwrsnavnfc4m" path="res://Scripts/bee.gd" id="15_4hand"]
 [ext_resource type="Texture2D" uid="uid://cjkl0wfwehtyj" path="res://Assets/Sprites/Cloud/Cloud.png" id="16_4hand"]
+[ext_resource type="Texture2D" uid="uid://rrlcuwi54ock" path="res://Assets/Sprites/ThisIsActuallyKeyHoleFrCubedButButNotReallyIDKManNamingFilesIsKindaDifficultLikeItIsBetterButNahNotReally.png" id="17_tos0t"]
+[ext_resource type="Texture2D" uid="uid://dm24bcre73ri5" path="res://Assets/Sprites/key.png" id="18_rertl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_66f1p"]
 texture = ExtResource("3_jsn4h")
@@ -724,3 +726,13 @@ texture = ExtResource("16_4hand")
 [node name="Cloud6" type="Sprite2D" parent="Cloud" unique_id=399269063]
 position = Vector2(1317, -169)
 texture = ExtResource("16_4hand")
+
+[node name="ThisIsActuallyKeyHoleFrCubedButButNotReallyIdkManNamingFilesIsKindaDifficultLikeItIsBetterButNahNotReally" type="Sprite2D" parent="." unique_id=371695649]
+position = Vector2(1908, -55.5)
+scale = Vector2(1, 0.9999999)
+texture = ExtResource("17_tos0t")
+
+[node name="Key3" type="Sprite2D" parent="." unique_id=837554818]
+position = Vector2(1904, -56)
+rotation = -1.5707964
+texture = ExtResource("18_rertl")
