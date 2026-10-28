@@ -583,6 +583,9 @@ font_size = 12
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sqm16"]
 size = Vector2(20, 160)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oiiii"]
+size = Vector2(112, 66)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_v3x7y"]
 atlas = ExtResource("25_2rdke")
 region = Rect2(0, 0, 16, 16)
@@ -630,9 +633,6 @@ animations = [{
 "name": &"default",
 "speed": 1.0
 }]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_oiiii"]
-size = Vector2(112, 66)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2rdke"]
 size = Vector2(20, 81)
@@ -744,7 +744,12 @@ texture = ExtResource("21_kf7vc")
 [node name="Can" type="Area2D" parent="." unique_id=771033426]
 script = ExtResource("22_7fru2")
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Can" unique_id=1296218594]
+position = Vector2(504, -385)
+shape = SubResource("RectangleShape2D_oiiii")
+
 [node name="Granma Death" type="AnimatedSprite2D" parent="Can" unique_id=1566164553]
+z_index = -1
 position = Vector2(512, -360)
 sprite_frames = SubResource("SpriteFrames_0m7x0")
 animation = &"death"
@@ -754,10 +759,6 @@ autoplay = "default"
 position = Vector2(0, -2)
 script = ExtResource("26_kf7vc")
 linesagain = Array[String](["You made it!", "I was so excited for you to come over,", "my dear grandchild.", "I want to tell you something important.", "The world above is vast and incredible.", "There are so many things to see, ", "I want you to do what I couldn't.", "Go...", "Go to the surface and reach for the stars!"])
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Can" unique_id=1296218594]
-position = Vector2(504, -385)
-shape = SubResource("RectangleShape2D_oiiii")
 
 [node name="Front" type="Sprite2D" parent="Can" unique_id=1712735871]
 position = Vector2(504, -416)
