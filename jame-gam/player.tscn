@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://48g65g8fyhuk" path="res://Scripts/character_body_2d.gd" id="1_0e48y"]
 [ext_resource type="Texture2D" uid="uid://3n1j5bsa005q" path="res://Assets/Sprites/Sprite-0005.png" id="2_0hol4"]
-[ext_resource type="Texture2D" uid="uid://b68mqqlmk6vs0" path="res://Assets/Sprites/Sprite-0001.png" id="2_epypp"]
 [ext_resource type="Texture2D" uid="uid://b4n2rlhsa862q" path="res://Assets/Sprites/LittleGuyWalk-Sheet.png" id="4_q6r6c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_epypp"]
@@ -16,8 +15,8 @@ region = Rect2(0, 0, 16, 16)
 atlas = ExtResource("2_0hol4")
 region = Rect2(16, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_rj586"]
-atlas = ExtResource("2_epypp")
+[sub_resource type="AtlasTexture" id="AtlasTexture_i3pqv"]
+atlas = ExtResource("2_0hol4")
 region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4d7sh"]
@@ -43,7 +42,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_rj586")
+"texture": SubResource("AtlasTexture_i3pqv")
 }],
 "loop": 1,
 "name": &"Jump",
@@ -72,8 +71,9 @@ shape = SubResource("RectangleShape2D_epypp")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=1212077977]
 z_index = 2
+position = Vector2(-1, 0)
 sprite_frames = SubResource("SpriteFrames_oiiii")
-animation = &"Walk"
+animation = &"Jump"
 autoplay = "Idle"
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=1880418544]

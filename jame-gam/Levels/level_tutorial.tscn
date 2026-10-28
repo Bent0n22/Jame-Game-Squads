@@ -744,6 +744,8 @@ size = Vector2(9, 81)
 [node name="tutorial level" type="Node2D" unique_id=1820815763]
 script = ExtResource("1_v8nge")
 
+[node name="Lights Cameras Action" type="Node2D" parent="." unique_id=2110775285]
+
 [node name="UI" parent="." unique_id=756997585 instance=ExtResource("1_0xoxh")]
 
 [node name="Background" type="TileMapLayer" parent="." unique_id=99293892]
