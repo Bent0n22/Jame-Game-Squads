@@ -6,6 +6,7 @@ var key_count = 0
 var game_won = false
 var game_start = false
 var time = 0
+var time_into_music = 0
 
 func timeGame(playing, delta):
 	if playing:

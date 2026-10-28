@@ -10,7 +10,9 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	if estrana != null:
 		if body.name == "CharacterBody2D" && estrana.killed_granma == true:
 			GameController.tempVars.temp_pos = pos_to
+			GameController.time_into_music = 0
 			SceneLoaderScene.transition_to_scene(file_to)
 	else:
 		GameController.tempVars.temp_pos = pos_to
+		GameController.time_into_music = 0
 		SceneLoaderScene.transition_to_scene(file_to)

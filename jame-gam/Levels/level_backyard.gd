@@ -1,6 +1,7 @@
 extends Node2D
 
 func _ready() -> void:
+	GameController.time_into_music = 0
 	GameController.tempVars.room = "res://Levels/level_backyard.tscn"
 
 func _process(delta: float) -> void:
