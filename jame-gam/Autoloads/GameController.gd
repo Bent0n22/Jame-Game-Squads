@@ -4,12 +4,26 @@ var talking = false
 var leverStatus = false
 var key_count = 0
 var game_won = false
+var game_start = false
+var time = 0
+
+func timeGame(playing, delta):
+	if playing:
+		time += delta
+
+func endTime():
+	if !game_start:
+		time = 0
 
 func switchLever():
 	if leverStatus:
 		leverStatus = false
 	else:
 		leverStatus = true
+
+func _physics_process(delta: float) -> void:
+	timeGame(game_start, delta)
+	endTime()
 
 func wait(time_in_seconds) -> void:
 	await get_tree().create_timer(time_in_seconds).timeout
