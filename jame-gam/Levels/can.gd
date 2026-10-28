@@ -6,7 +6,7 @@ var fade_tween: Tween
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.name == "CharacterBody2D":
-		if
+		pass
 
 func _on_body_exited(body: Node2D) -> void:
 	if body.name == "CharacterBody2D":
