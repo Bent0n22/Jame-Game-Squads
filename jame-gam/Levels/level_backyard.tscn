@@ -522,7 +522,7 @@ autoplay = "Idle"
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=1045925317]
 limit_left = -160
-limit_right = 1985
+limit_right = 1984
 limit_bottom = 62
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=546475024]

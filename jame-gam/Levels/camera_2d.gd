@@ -2,7 +2,7 @@ extends Camera2D
 
 @export var randomStrength: float = 5.0
 @export  var shakeFade: float = 5.0
-@onready var character_body_2d: LittleMan = $"../.."
+@onready var character_body_2d: CharacterBody2D = $"../.."
 var was_in_air: bool = false
 
 var rng = RandomNumberGenerator.new()
