@@ -32,7 +32,7 @@ func _on_dialog_finished():
 	await get_tree().process_frame 
 	can_talk = true
 
-func _unhandled_input(event):
+func _unhandled_input(_event):
 	if Input.is_action_just_pressed("Interact") && player_in_range && can_talk:
 		if backyardkeys:
 			if GameController.key_count >= 2:

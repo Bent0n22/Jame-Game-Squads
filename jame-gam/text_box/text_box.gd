@@ -76,7 +76,7 @@ func _display_letter():
 			new_audio_player.queue_free()
 	
 var cancel_d = false
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("Jump"):
 		cancel_d = true
 		label.text = ""

@@ -12,7 +12,7 @@ func _ready() -> void:
 	GameController.tempVars.room = "res://Levels/level_sewers.tscn"
 	GameController.leverStatus = false
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if GameController.leverStatus:
 		$GreyGrates.visible = true
 		$BlueGrates.visible = false
