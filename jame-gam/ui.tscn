@@ -25,4 +25,10 @@ texture_normal = ExtResource("2_nltto")
 texture_pressed = ExtResource("3_ibotj")
 texture_hover = ExtResource("4_n5ude")
 
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=754617797]
+offset_left = 242.0
+offset_top = 156.0
+offset_right = 320.0
+offset_bottom = 179.0
+
 [connection signal="pressed" from="CanvasLayer/TextureButton" to="." method="_on_texture_button_pressed"]

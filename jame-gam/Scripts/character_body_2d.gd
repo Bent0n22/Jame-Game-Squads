@@ -1,7 +1,7 @@
 extends CharacterBody2D
 class_name LittleMan
 
-const SPEED = 225.0
+const SPEED = 155.0
 const JUMP_VELOCITY = -335.0
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 const GRAV_MULTI = 1.1
