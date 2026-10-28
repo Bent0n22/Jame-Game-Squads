@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://c0slwkpcbpsm6"]
 
-[ext_resource type="PackedScene" uid="uid://btj4h3g23u4c7" path="res://ui.tscn" id="1_2yfjy"]
+[ext_resource type="PackedScene" uid="uid://btj4h3g23u4c7" path="res://Elements/ui.tscn" id="1_2yfjy"]
 [ext_resource type="Script" uid="uid://dvbyqwtdpmafn" path="res://Levels/level_waterspout.gd" id="1_b5q0m"]
 [ext_resource type="Script" uid="uid://460vine6dtqo" path="res://Levels/water.gd" id="3_f01tw"]
 [ext_resource type="Texture2D" uid="uid://46kq3fcxtpm8" path="res://Assets/Sprites/water_spout_tiles.png" id="4_x2iaj"]
@@ -10,8 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://t8kryynx3gm5" path="res://Assets/Sprites/water_droplet.png" id="7_ps4e7"]
 [ext_resource type="Texture2D" uid="uid://b4n2rlhsa862q" path="res://Assets/Sprites/LittleGuyWalk-Sheet.png" id="8_gyrao"]
 [ext_resource type="Script" uid="uid://ej5fkjga25q5" path="res://Levels/camera_2d.gd" id="8_jltnf"]
-[ext_resource type="PackedScene" uid="uid://bkubcpkvd3sv5" path="res://killzone.tscn" id="10_a77xb"]
-[ext_resource type="PackedScene" uid="uid://c8q1s3cdm7b0s" path="res://trans_trigger_on_interact.tscn" id="12_2ua47"]
+[ext_resource type="PackedScene" uid="uid://bkubcpkvd3sv5" path="res://Elements/killzone.tscn" id="10_a77xb"]
+[ext_resource type="PackedScene" uid="uid://c8q1s3cdm7b0s" path="res://Elements/trans_trigger_on_interact.tscn" id="12_2ua47"]
 [ext_resource type="AudioStream" uid="uid://dutgu61kvpm6r" path="res://Assets/Audio/atlasaudio-tense-594858.mp3" id="13_b5q0m"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f01tw"]

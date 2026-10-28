@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c8q1s3cdm7b0s"]
 
-[ext_resource type="Script" uid="uid://bc6lnev6mo2mr" path="res://trans_trigger_on_interact.gd" id="1_ui6ec"]
+[ext_resource type="Script" uid="uid://bc6lnev6mo2mr" path="res://Scripts/trans_trigger_on_interact.gd" id="1_ui6ec"]
 [ext_resource type="FontFile" uid="uid://b5ei6ytoqn6c0" path="res://Assets/Fonts/augiepixel.ttf" id="2_8ewkm"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7vadr"]

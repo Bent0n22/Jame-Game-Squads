@@ -1,17 +1,17 @@
 [gd_scene format=3 uid="uid://bi8ngsfl1xft5"]
 
-[ext_resource type="Script" uid="uid://xistfwq3bgqp" path="res://estrana.gd" id="1_vk8ke"]
-[ext_resource type="FontFile" uid="uid://b5ei6ytoqn6c0" path="res://Assets/Fonts/augiepixel.ttf" id="2_aw6ia"]
+[ext_resource type="Script" uid="uid://xistfwq3bgqp" path="res://Scripts/estrana.gd" id="1_d5jos"]
+[ext_resource type="FontFile" uid="uid://b5ei6ytoqn6c0" path="res://Assets/Fonts/augiepixel.ttf" id="2_aus0b"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tb2w5"]
 size = Vector2(84, 20)
 
 [sub_resource type="LabelSettings" id="LabelSettings_0besk"]
-font = ExtResource("2_aw6ia")
+font = ExtResource("2_aus0b")
 font_size = 12
 
 [node name="Estrana" type="Node2D" unique_id=1948836131]
-script = ExtResource("1_vk8ke")
+script = ExtResource("1_d5jos")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=2040033731]
 

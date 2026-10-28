@@ -36,7 +36,7 @@ func _on_area_2d_body_exited(body: Node2D) -> void:
 		range = false
 	pass # Replace with function body.
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if range and $Area2D2 != null:
 		if Input.is_action_just_pressed("Interact"):
 			$Area2D2.queue_free()

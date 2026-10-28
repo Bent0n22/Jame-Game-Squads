@@ -2,8 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://cunynritrev2" path="res://Assets/Sprites/LittleMaDeath.png" id="1_c4f4p"]
 [ext_resource type="Texture2D" uid="uid://dehojgt5dyvkm" path="res://Assets/Sprites/LittleMa.png" id="2_v7adp"]
-[ext_resource type="PackedScene" uid="uid://bi8ngsfl1xft5" path="res://estrana_diaglogue.tscn" id="3_wjxnl"]
-[ext_resource type="Script" uid="uid://ygnpg776cqgf" path="res://granma_death.gd" id="4_wjxnl"]
+[ext_resource type="PackedScene" uid="uid://bi8ngsfl1xft5" path="res://Elements/estrana_diaglogue.tscn" id="3_wjxnl"]
+[ext_resource type="Script" uid="uid://ygnpg776cqgf" path="res://Scripts/granma_death.gd" id="4_wjxnl"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_v3x7y"]
 atlas = ExtResource("1_c4f4p")

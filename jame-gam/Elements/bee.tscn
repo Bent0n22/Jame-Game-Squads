@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://k6lg8gwt8gdl"]
 
-[ext_resource type="Script" uid="uid://cmwrsnavnfc4m" path="res://bee.gd" id="1_xww1r"]
+[ext_resource type="Script" uid="uid://cmwrsnavnfc4m" path="res://Scripts/bee.gd" id="1_xww1r"]
 [ext_resource type="Texture2D" uid="uid://bxeg1lwc6esan" path="res://Assets/Sprites/bee-sheet.png" id="2_v5qog"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tsa2i"]
