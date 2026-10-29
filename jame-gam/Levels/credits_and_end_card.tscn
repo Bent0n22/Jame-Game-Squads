@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://ca6vsc85yh3gk" path="res://Assets/Sprites/Little Guy/stargazingexit7.png" id="8_8rbqn"]
 [ext_resource type="Texture2D" uid="uid://dciwowlh33jnb" path="res://Assets/Sprites/Little Guy/stargazingexit8.png" id="9_h83ux"]
 [ext_resource type="FontFile" uid="uid://b5ei6ytoqn6c0" path="res://Assets/Fonts/augiepixel.ttf" id="12_jtwne"]
-[ext_resource type="AudioStream" uid="uid://b8yeotmcpul1k" path="res://Assets/Audio/10 Goodnight and Sweet Dreams (Loopable Version).mp3" id="13_54x8p"]
+[ext_resource type="AudioStream" uid="uid://b8yeotmcpul1k" path="res://Assets/Audio/Goodnight and Sweet Dreams.mp3" id="13_54x8p"]
 
 [sub_resource type="Animation" id="Animation_3j5cw"]
 resource_name = "Credits"

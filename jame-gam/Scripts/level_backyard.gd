@@ -4,7 +4,7 @@ func _ready() -> void:
 	GameController.time_into_music = 0
 	GameController.tempVars.room = "res://Levels/level_backyard.tscn"
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if GameController.key_count == 0:
 		$Key3.visible = false
 		$ThisIsActuallyKeyHoleFrCubedButButNotReallyIdkManNamingFilesIsKindaDifficultLikeItIsBetterButNahNotReally.visible = true

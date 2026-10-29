@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://p58y02pwx2gq" path="res://Elements/player.tscn" id="1_aqufg"]
 [ext_resource type="Texture2D" uid="uid://dd14ghtcw62c0" path="res://Assets/Sprites/Tiles_w_pipe.png" id="1_ic1cm"]
-[ext_resource type="Script" uid="uid://dd4khj2rd8jhl" path="res://Levels/level_sewers.gd" id="1_von8r"]
+[ext_resource type="Script" uid="uid://dd4khj2rd8jhl" path="res://Scripts/level_sewers.gd" id="1_von8r"]
 [ext_resource type="Texture2D" uid="uid://b4117vn6mvfvl" path="res://Assets/Sprites/Rope (For Rep Issues)/Rope1.png" id="2_3vdbj"]
 [ext_resource type="PackedScene" uid="uid://dmj7vrkiqjob0" path="res://Elements/lever.tscn" id="3_7h2xq"]
 [ext_resource type="Texture2D" uid="uid://bt6hsr7cyxvhc" path="res://Assets/Sprites/Rope (For Rep Issues)/Rope2.png" id="3_lp2uq"]
@@ -19,12 +19,12 @@
 [ext_resource type="PackedScene" uid="uid://bkubcpkvd3sv5" path="res://Elements/killzone.tscn" id="13_8cmjj"]
 [ext_resource type="PackedScene" uid="uid://d0d0rnu1mrdia" path="res://audio_stream_player.tscn" id="13_brrmp"]
 [ext_resource type="AudioStream" uid="uid://cpe5ulutw2nir" path="res://Assets/Audio/splash.mp3" id="14_1ak8b"]
+[ext_resource type="Texture2D" uid="uid://b54pxcaqj43xg" path="res://Assets/Sprites/Pipe/Pipe of Despair3.png" id="16_2ddu0"]
 [ext_resource type="PackedScene" uid="uid://c8q1s3cdm7b0s" path="res://Elements/trans_trigger_on_interact.tscn" id="18_lp2uq"]
 [ext_resource type="Texture2D" uid="uid://cwvnqwua2inl5" path="res://Assets/Sprites/Grate Standing/GrateSpriteStanding2.png" id="21_5drew"]
 [ext_resource type="Texture2D" uid="uid://cg6syantu0kje" path="res://Assets/Sprites/Grate Standing/GrateSpriteStanding3.png" id="22_brrmp"]
 [ext_resource type="Texture2D" uid="uid://r3d16frdm0bf" path="res://Assets/Sprites/Grate Standing/GrateSpriteStanding1.png" id="23_2ddu0"]
 [ext_resource type="Texture2D" uid="uid://didxosfixk8im" path="res://Assets/Sprites/Pipe/Pipe of Despair1.png" id="24_2ddu0"]
-[ext_resource type="Texture2D" uid="uid://bhxmqyg8033n1" path="res://Assets/Sprites/Pipe/Pipe of Despair2.png" id="25_5i12g"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vlg1b"]
 texture = ExtResource("1_ic1cm")
@@ -334,7 +334,7 @@ texture = ExtResource("24_2ddu0")
 
 [node name="PipeOfDespair2" type="Sprite2D" parent="PipeOfDespair1" unique_id=1933192575]
 z_index = 2
-texture = ExtResource("25_5i12g")
+texture = ExtResource("16_2ddu0")
 
 [node name="AnimatableBody2D" type="AnimatableBody2D" parent="PipeOfDespair1" unique_id=1652723590]
 position = Vector2(-51, 20)

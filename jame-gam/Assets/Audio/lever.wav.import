@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://4m3ki3guxppw"
-path="res://.godot/imported/snd_wing.wav-61357f0897d0720f4ad45c742accf2b6.sample"
+path="res://.godot/imported/lever.wav-4e5775402837ea19139a0c944120eef4.sample"
 
 [deps]
 
-source_file="res://snd_wing.wav"
-dest_files=["res://.godot/imported/snd_wing.wav-61357f0897d0720f4ad45c742accf2b6.sample"]
+source_file="res://Assets/Audio/lever.wav"
+dest_files=["res://.godot/imported/lever.wav-4e5775402837ea19139a0c944120eef4.sample"]
 
 [params]
 

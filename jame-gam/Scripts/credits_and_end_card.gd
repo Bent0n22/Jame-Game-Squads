@@ -32,7 +32,7 @@ func wait_for_end():
 		swfiii = false
 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if swfi:
 		wait_for_interact()
 	if swfiii:

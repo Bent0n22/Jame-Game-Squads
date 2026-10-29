@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://btj4h3g23u4c7" path="res://Elements/ui.tscn" id="1_0xoxh"]
 [ext_resource type="Texture2D" uid="uid://dd14ghtcw62c0" path="res://Assets/Sprites/Tiles_w_pipe.png" id="1_jou4l"]
-[ext_resource type="Script" uid="uid://dsvtbmjpo7f1g" path="res://Levels/level_tutorial.gd" id="1_v8nge"]
+[ext_resource type="Script" uid="uid://dsvtbmjpo7f1g" path="res://Scripts/level_tutorial.gd" id="1_v8nge"]
 [ext_resource type="PackedScene" uid="uid://p58y02pwx2gq" path="res://Elements/player.tscn" id="2_0xoxh"]
 [ext_resource type="Texture2D" uid="uid://camkg8myiw2l2" path="res://Assets/Sprites/REALTILES.png" id="2_6t0p6"]
 [ext_resource type="Texture2D" uid="uid://didxosfixk8im" path="res://Assets/Sprites/Pipe/Pipe of Despair1.png" id="4_foko4"]
@@ -25,10 +25,10 @@
 [ext_resource type="Texture2D" uid="uid://cwvnqwua2inl5" path="res://Assets/Sprites/Grate Standing/GrateSpriteStanding2.png" id="19_4dx6i"]
 [ext_resource type="Texture2D" uid="uid://r3d16frdm0bf" path="res://Assets/Sprites/Grate Standing/GrateSpriteStanding1.png" id="20_2rdke"]
 [ext_resource type="Texture2D" uid="uid://cg6syantu0kje" path="res://Assets/Sprites/Grate Standing/GrateSpriteStanding3.png" id="21_kf7vc"]
-[ext_resource type="Script" uid="uid://by28brwq7vtic" path="res://Levels/can.gd" id="22_7fru2"]
+[ext_resource type="Script" uid="uid://by28brwq7vtic" path="res://Scripts/can.gd" id="22_7fru2"]
 [ext_resource type="Texture2D" uid="uid://cunynritrev2" path="res://Assets/Sprites/LittleMaDeath.png" id="25_2rdke"]
 [ext_resource type="Script" uid="uid://ygnpg776cqgf" path="res://Scripts/granma_death.gd" id="26_kf7vc"]
-[ext_resource type="AudioStream" uid="uid://dvfc2ey6a4aj0" path="res://Assets/Audio/24 3am _ Towball's Crossing.mp3" id="27_kf7vc"]
+[ext_resource type="AudioStream" uid="uid://dvfc2ey6a4aj0" path="res://Assets/Audio/tutorial and sewers.mp3" id="27_kf7vc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sv282"]
 texture = ExtResource("2_6t0p6")

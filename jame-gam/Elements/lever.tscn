@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c485nhacl7a58" path="res://Scripts/lever.gd" id="1_0ohsc"]
 [ext_resource type="FontFile" uid="uid://b5ei6ytoqn6c0" path="res://Assets/Fonts/augiepixel.ttf" id="2_1btnt"]
-[ext_resource type="AudioStream" uid="uid://4m3ki3guxppw" path="res://snd_wing.wav" id="3_7uavd"]
+[ext_resource type="AudioStream" uid="uid://4m3ki3guxppw" path="res://Assets/Audio/lever.wav" id="3_7uavd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tb2w5"]
 size = Vector2(16, 16)

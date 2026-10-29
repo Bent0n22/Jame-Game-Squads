@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://clly7k0w787ye"]
 
 [ext_resource type="Texture2D" uid="uid://drqso8ilmx4qj" path="res://Assets/Sprites/star background.png" id="1_br5fe"]
-[ext_resource type="Script" uid="uid://dl48ppgxkp38q" path="res://Levels/level_ending.gd" id="1_g4ix3"]
+[ext_resource type="Script" uid="uid://dl48ppgxkp38q" path="res://Scripts/level_roof.gd" id="1_g4ix3"]
 [ext_resource type="Script" uid="uid://b70svut8s22b6" path="res://Scripts/canvas_layer.gd" id="2_br5fe"]
 [ext_resource type="Texture2D" uid="uid://nq0ugl14uoqh" path="res://Assets/Sprites/pole.png" id="3_v8fvw"]
 [ext_resource type="Texture2D" uid="uid://br660qykcdkew" path="res://Assets/Sprites/Roof.png" id="4_gyfd2"]
@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://b4n2rlhsa862q" path="res://Assets/Sprites/LittleGuyWalk-Sheet.png" id="6_iihw5"]
 [ext_resource type="PackedScene" uid="uid://c8q1s3cdm7b0s" path="res://Elements/trans_trigger_on_interact.tscn" id="8_hm481"]
 [ext_resource type="PackedScene" uid="uid://btj4h3g23u4c7" path="res://Elements/ui.tscn" id="9_nr7vr"]
-[ext_resource type="AudioStream" uid="uid://b6rx7t12h0vg6" path="res://Assets/Audio/u_s8g68hg8n6-cricket-on-a-summer-night-_-cricket-sound-341501.mp3" id="10_g4ix3"]
+[ext_resource type="AudioStream" uid="uid://b6rx7t12h0vg6" path="res://Assets/Audio/crickets.mp3" id="10_g4ix3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tpbwa"]
 texture = ExtResource("4_gyfd2")

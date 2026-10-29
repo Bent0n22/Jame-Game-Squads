@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dvfc2ey6a4aj0"
+path="res://.godot/imported/tutorial and sewers.mp3-5bbcb65f5ea422a78804a9a8f47cf9cc.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/tutorial and sewers.mp3"
+dest_files=["res://.godot/imported/tutorial and sewers.mp3-5bbcb65f5ea422a78804a9a8f47cf9cc.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

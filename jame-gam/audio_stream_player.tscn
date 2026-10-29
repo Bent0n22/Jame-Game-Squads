@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://d0d0rnu1mrdia"]
 
-[ext_resource type="AudioStream" uid="uid://dvfc2ey6a4aj0" path="res://Assets/Audio/24 3am _ Towball's Crossing.mp3" id="1_g84o6"]
+[ext_resource type="AudioStream" uid="uid://dvfc2ey6a4aj0" path="res://Assets/Audio/tutorial and sewers.mp3" id="1_g84o6"]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" unique_id=252232337]
 stream = ExtResource("1_g84o6")

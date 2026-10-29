@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://ledai6yc5x1c" path="res://Assets/Sprites/Menu Buttons/Play Button5.png" id="5_kk3ma"]
 [ext_resource type="Texture2D" uid="uid://bf8vj3mm0inhm" path="res://Assets/Sprites/Menu Buttons/Play Button4.png" id="6_ecwwl"]
 [ext_resource type="Texture2D" uid="uid://dt2vms04o3dr2" path="res://Assets/Sprites/Menu Buttons/Play Button6.png" id="7_kk3ma"]
-[ext_resource type="AudioStream" uid="uid://3nr8tghlkks6" path="res://Assets/Audio/11 K.K. Glider_ Bumblebee.mp3" id="9_nrnbx"]
+[ext_resource type="AudioStream" uid="uid://3nr8tghlkks6" path="res://Assets/Audio/menu.mp3" id="9_nrnbx"]
 [ext_resource type="AudioStream" uid="uid://dll0ie1jthj6k" path="res://Assets/Audio/coin.wav" id="11_h1wq0"]
 
 [node name="Menu" type="Control" unique_id=470638115]
