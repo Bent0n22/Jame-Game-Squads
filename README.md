@@ -1,16 +1,25 @@
-# Stargazing
-You are just a little guy. Your gramma has been taking care of you for the past 17 years and has revealed to you that she is ill. Reach for the stars little man!
+STARGAZING
+==========
 
-As you wander around the maps, explore and try interacting with different things. You're a pretty fast little guy so there's that as well!
+Synopsis
+--------
+
+*Stargazing* is a short platformer where you control Najm,
+a young frog on a journey to see the stars up close and fulfill his granma's dying wish.
+Reach for the stars little guy!
 
 Controls
+--------
+* Move
+	* A and D or Left and Right Arrow Keys to move left and right
+	* Space, W, or the Up Arrow Key to jump
+	* E or Z to interact
 
-Move - A and D or left or right arrows
-
-Jump - W or space
-
-Interact - Z or E key
-
-This game was made in collaboration with Nathan, Finn, Paul and Paul. This is an entry to jame gam. 
-
+Credits
+-------
+This game was made in collaboration with Nathan, Finn, Paul and Paul
+It was an entry to the Jame Gam game jam.
 Credits to Towball for music. 
+
+https://boredchef.itch.io/stargazing
+(If you are downloading the game, simply unzip the archive and run 'game.exe')
