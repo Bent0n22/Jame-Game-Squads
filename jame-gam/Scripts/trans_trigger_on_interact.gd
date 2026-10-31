@@ -40,7 +40,7 @@ func _unhandled_input(_event):
 				GameController.time_into_music = 0
 				SceneLoaderScene.transition_to_scene(file_to)
 			else:
-				DialogManager.start_dialog(Vector2(1900, -66), lines, sfx)
+				DialogManager.start_dialog(Vector2(1700, -66), lines, sfx)
 		else:
 			GameController.time_into_music = 0
 			GameController.tempVars.temp_pos = pos_to

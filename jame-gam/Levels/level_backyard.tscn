@@ -441,9 +441,9 @@ point_count = 2
 
 [sub_resource type="Curve2D" id="Curve2D_e4ldh"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -50.28064, -35.34445, 0, 0, 0, 0, -90.379456, -66.39554, 0, 0, 0, 0, -120.34625, -96.7585, 0, 0, 0, 0, -138.18182, -120.35945, 0, 0, 0, 0, -148.66284, -146.28397, 0, 0, 0, 0, -145.89172, -163.52075, 0, 0, 0, 0, -134.40228, -183.37784, 0, 0, 0, 0, -118.428955, -195.53209, 0, 0, 0, 0, -97.82861, -209.4164, 0, 0, 0, 0, -71.91626, -215.05482, 0, 0, 0, 0, -54.429565, -216.69026, 0, 0, 0, 0, -34.70099, -214.47426, 0, 0, -14.015, 116.25, -17.893066, -205.83708)
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -56.950195, -23.045044, 0, 0, 0, 0, -101.27722, -23.52452, 0, 0, 0, 0, -130.93207, 8.240601, 0, 0, 0, 0, -138.22406, 54.66626, 0, 0, 0, 0, -108.836365, 102.51222, 0, 0, 0, 0, -61.033997, 156.47615, 0, 0, -14.015, 116.25, -2.3710327, 204.4608)
 }
-point_count = 14
+point_count = 8
 
 [node name="backyard level" type="Node2D" unique_id=2059810988]
 script = ExtResource("1_8a1dn")
@@ -495,7 +495,7 @@ tile_map_data = PackedByteArray("AAAnAPz/AAADAAYAAAAnAP3/AAADAAcAAAAoAOr/AAAEAAA
 tile_set = SubResource("TileSet_disds")
 
 [node name="trans_trigger_on_interact" parent="." unique_id=1204718714 instance=ExtResource("7_jsn4h")]
-position = Vector2(1695, -66)
+position = Vector2(1692, -66)
 file_to = "res://Levels/level_waterspout.tscn"
 backyardkeys = true
 
@@ -660,7 +660,7 @@ root_node = NodePath("../Path/Follow")
 libraries/ = SubResource("AnimationLibrary_v5qog")
 
 [node name="Bee5" type="Node2D" parent="." unique_id=5276108]
-position = Vector2(679, -204.99998)
+position = Vector2(551, -368)
 rotation = -0.573985
 script = ExtResource("15_4hand")
 time_to_complete_path = 4.5
@@ -678,7 +678,6 @@ one_way_collision = true
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Bee5/AnimatableBody2D" unique_id=2010495970]
 sprite_frames = SubResource("SpriteFrames_hoj8b")
 autoplay = "default"
-flip_h = true
 
 [node name="Path" type="Path2D" parent="Bee5" unique_id=1650639267]
 scale = Vector2(1.0138707, 1)
