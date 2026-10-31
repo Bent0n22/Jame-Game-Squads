@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://dmj7vrkiqjob0" path="res://Elements/lever.tscn" id="3_7h2xq"]
 [ext_resource type="Texture2D" uid="uid://bt6hsr7cyxvhc" path="res://Assets/Sprites/Rope (For Rep Issues)/Rope2.png" id="3_lp2uq"]
 [ext_resource type="Texture2D" uid="uid://bgwnad2qbjt61" path="res://Assets/Sprites/Rope (For Rep Issues)/Rope3.png" id="4_gktoi"]
-[ext_resource type="Texture2D" uid="uid://c3n8qe07teobl" path="res://Assets/Sprites/Fly.png" id="4_hjci1"]
 [ext_resource type="PackedScene" uid="uid://btj4h3g23u4c7" path="res://Elements/ui.tscn" id="4_pyhhk"]
 [ext_resource type="PackedScene" uid="uid://d7pu6wuxuddx" path="res://Elements/changing_object.tscn" id="6_jrfrv"]
 [ext_resource type="Texture2D" uid="uid://doe0xd4mdcapc" path="res://Assets/Sprites/Sewer Grates/SewerGrate1.png" id="7_n3fyd"]
@@ -84,28 +83,6 @@ texture = ExtResource("4_gktoi")
 sources/0 = SubResource("TileSetAtlasSource_von8r")
 sources/1 = SubResource("TileSetAtlasSource_whc7m")
 sources/2 = SubResource("TileSetAtlasSource_bt226")
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_7cgqi"]
-atlas = ExtResource("4_hjci1")
-region = Rect2(0, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_bxyv7"]
-atlas = ExtResource("4_hjci1")
-region = Rect2(16, 0, 16, 16)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_7vadr"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_7cgqi")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_bxyv7")
-}],
-"loop": 1,
-"name": &"default",
-"speed": 5.0
-}]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8cmjj"]
 texture = ExtResource("1_ic1cm")
@@ -188,14 +165,6 @@ tile_set = SubResource("TileSet_tb2w5")
 
 [node name="Player" parent="." unique_id=1870273184 instance=ExtResource("1_aqufg")]
 position = Vector2(-36, 7)
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=327009154]
-position = Vector2(259, -28)
-sprite_frames = SubResource("SpriteFrames_7vadr")
-autoplay = "default"
-
-[node name="Fly" parent="AnimatedSprite2D" unique_id=299744515 instance=ExtResource("8_5i12g")]
-position = Vector2(-102, -23)
 
 [node name="UI" parent="." unique_id=756997585 instance=ExtResource("4_pyhhk")]
 
@@ -816,3 +785,11 @@ texture = ExtResource("23_2ddu0")
 [node name="GrateSpriteStanding10" type="Sprite2D" parent="GreyGrates" unique_id=263412335]
 position = Vector2(230, -121)
 texture = ExtResource("22_brrmp")
+
+[node name="Flys" type="Node2D" parent="." unique_id=1144257296]
+
+[node name="Fly" parent="Flys" unique_id=299744515 instance=ExtResource("8_5i12g")]
+position = Vector2(260, 5)
+
+[node name="Fly2" parent="Flys" unique_id=248707162 instance=ExtResource("8_5i12g")]
+position = Vector2(33, -208)
