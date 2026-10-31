@@ -77,7 +77,7 @@ func _display_letter():
 	
 var cancel_d = false
 func _process(_delta: float) -> void:
-	if Input.is_action_just_pressed("Jump"):
+	if Input.is_action_just_pressed("Interact"):
 		cancel_d = true
 		label.text = ""
 		for i in text.length():

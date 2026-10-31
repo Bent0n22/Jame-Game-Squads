@@ -491,7 +491,7 @@ autoplay = "default"
 [node name="Estrana" parent="AnimatedSprite2D" unique_id=1948836131 instance=ExtResource("11_uyoaw")]
 position = Vector2(16, 0)
 scale = Vector2(-1, 1)
-linesagain = Array[String](["yo, im a bee", "we're happy to help!"])
+linesagain = Array[String](["yo, im a bee", "The house up ahead is locked by two keys", "we'll take you right to them!", "we're happy to help!"])
 
 [node name="UI" parent="." unique_id=756997585 instance=ExtResource("6_2jcde")]
 
