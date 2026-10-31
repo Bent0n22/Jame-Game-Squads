@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://d1ewdp4ccgj5v"]
+
+[ext_resource type="FontFile" uid="uid://b5ei6ytoqn6c0" path="res://Assets/Fonts/augiepixel.ttf" id="1_jbfbe"]
+[ext_resource type="Script" uid="uid://cdvybjw41d83h" path="res://Scripts/easter_egg.gd" id="1_pv1xg"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_7vadr"]
+font = ExtResource("1_jbfbe")
+font_size = 250
+
+[node name="EasterEgg" type="Node2D" unique_id=136087382]
+script = ExtResource("1_pv1xg")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=5130880]
+position = Vector2(160, 90)
+
+[node name="Label" type="Label" parent="." unique_id=1740485618]
+offset_left = 90.0
+offset_top = -14.0
+offset_right = 261.0
+offset_bottom = 226.0
+text = ":3"
+label_settings = SubResource("LabelSettings_7vadr")
+
+[node name="Timer" type="Timer" parent="." unique_id=1190393367]
+wait_time = 5.0
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
