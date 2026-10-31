@@ -30,6 +30,11 @@
 [ext_resource type="Script" uid="uid://ygnpg776cqgf" path="res://Scripts/granma_death.gd" id="26_kf7vc"]
 [ext_resource type="AudioStream" uid="uid://dvfc2ey6a4aj0" path="res://Assets/Audio/tutorial and sewers.mp3" id="27_kf7vc"]
 [ext_resource type="PackedScene" uid="uid://d1ry6o0iuxkof" path="res://Elements/key.tscn" id="30_g0g14"]
+[ext_resource type="Texture2D" uid="uid://1skjtqyartji" path="res://Assets/Sprites/Arrows and Stuff/arrowsandstuff1.png" id="31_u6jfl"]
+[ext_resource type="Texture2D" uid="uid://csrn1sn8i4pyk" path="res://Assets/Sprites/Arrows and Stuff/arrowsandstuff3.png" id="33_ny73l"]
+[ext_resource type="Texture2D" uid="uid://cx14bx8bubj1t" path="res://Assets/Sprites/Arrows and Stuff/arrowsandstuff4.png" id="33_u6jfl"]
+[ext_resource type="Texture2D" uid="uid://nbtt2kl507va" path="res://Assets/Sprites/Interaction Arrows/interactionarrow1.png" id="34_ny73l"]
+[ext_resource type="Texture2D" uid="uid://d0jc2rbuhht2p" path="res://Assets/Sprites/Interaction Arrows/interactionarrow3.png" id="35_otu32"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sv282"]
 texture = ExtResource("2_6t0p6")
@@ -895,6 +900,43 @@ shape = SubResource("RectangleShape2D_v8ptl")
 
 [node name="Key" parent="." unique_id=1957883347 instance=ExtResource("30_g0g14")]
 position = Vector2(0, -540)
+
+[node name="Deco" type="Node2D" parent="." unique_id=1787838606]
+
+[node name="Arrowsandstuff4" type="Sprite2D" parent="Deco" unique_id=16895112]
+position = Vector2(-72, -293)
+rotation = 2.7750735
+texture = ExtResource("33_u6jfl")
+
+[node name="Arrowsandstuff1" type="Sprite2D" parent="Deco" unique_id=465787147]
+position = Vector2(231, -240)
+texture = ExtResource("31_u6jfl")
+
+[node name="Arrowsandstuff3" type="Sprite2D" parent="Deco" unique_id=1202401631]
+position = Vector2(431, -188)
+texture = ExtResource("33_ny73l")
+
+[node name="Interactionarrow1" type="Sprite2D" parent="Deco" unique_id=1845023448]
+position = Vector2(120, -341)
+texture = ExtResource("34_ny73l")
+
+[node name="Interactionarrow2" type="Sprite2D" parent="Deco" unique_id=1938718982]
+position = Vector2(24, -309)
+texture = ExtResource("34_ny73l")
+
+[node name="Interactionarrow3" type="Sprite2D" parent="Deco" unique_id=436631717]
+position = Vector2(31, -229)
+texture = ExtResource("34_ny73l")
+
+[node name="Arrowsandstuff5" type="Sprite2D" parent="Deco" unique_id=1555850484]
+position = Vector2(289, -372)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+texture = ExtResource("33_u6jfl")
+
+[node name="Interactionarrow4" type="Sprite2D" parent="Deco" unique_id=1781362668]
+position = Vector2(838, -442)
+texture = ExtResource("35_otu32")
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_entered" from="Estrana_L/Area2D" to="." method="_on_area_2d_body_entered"]
