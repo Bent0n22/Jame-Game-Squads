@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://chx78won6jrag"]
+
+[ext_resource type="Texture2D" uid="uid://b4n2rlhsa862q" path="res://Assets/Sprites/LittleGuyWalk-Sheet.png" id="1_s1edl"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tb2w5"]
+radius = 3.0
+height = 18.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i0bs4"]
+atlas = ExtResource("1_s1edl")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tb2w5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i0bs4")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Ragdoll" type="Node2D" unique_id=310511031]
+
+[node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=1929042738]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=801605783]
+shape = SubResource("CapsuleShape2D_tb2w5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="RigidBody2D" unique_id=827358301]
+sprite_frames = SubResource("SpriteFrames_tb2w5")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1408088776]
