@@ -20,7 +20,7 @@ func _on_body_entered(body: Node2D) -> void:
 		get_tree().root.add_child(little_guy_ragdoll)
 		get_tree().get_current_scene().get_node("Player").queue_free()
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if stopCamX:
 		#pbody.get_node("Camera2D").offset.x += -pbody.velocity.x * delta
 		pass
