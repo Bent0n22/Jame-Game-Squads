@@ -138,7 +138,7 @@ shape = SubResource("RectangleShape2D_s1xjb")
 
 [node name="trans_trigger_on_interact" parent="." unique_id=1204718714 instance=ExtResource("8_hm481")]
 position = Vector2(271, -63)
-file_to = "/home/aven/Documents/GitHub/Jame-Game-Squads/jame-gam/Levels/credits_and_end_card.tscn"
+file_to = "res://Levels/credits_and_end_card.tscn"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1444178346]
 stream = ExtResource("10_g4ix3")

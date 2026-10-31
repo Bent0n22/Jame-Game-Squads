@@ -735,4 +735,4 @@ texture = ExtResource("18_rertl")
 [node name="trans_trigger_on_interact2" parent="." unique_id=1228552358 instance=ExtResource("7_jsn4h")]
 position = Vector2(941, -284)
 rotation = -1.5707964
-file_to = "/home/aven/Documents/GitHub/Jame-Game-Squads/jame-gam/Levels/sandbox_scene.tscn"
+file_to = "res://Levels/sandbox_scene.tscn"
