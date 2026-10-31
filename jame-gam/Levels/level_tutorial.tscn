@@ -29,6 +29,7 @@
 [ext_resource type="Texture2D" uid="uid://cunynritrev2" path="res://Assets/Sprites/LittleMaDeath.png" id="25_2rdke"]
 [ext_resource type="Script" uid="uid://ygnpg776cqgf" path="res://Scripts/granma_death.gd" id="26_kf7vc"]
 [ext_resource type="AudioStream" uid="uid://dvfc2ey6a4aj0" path="res://Assets/Audio/tutorial and sewers.mp3" id="27_kf7vc"]
+[ext_resource type="PackedScene" uid="uid://d1ry6o0iuxkof" path="res://Elements/key.tscn" id="30_g0g14"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sv282"]
 texture = ExtResource("2_6t0p6")
@@ -891,6 +892,9 @@ polygon = PackedVector2Array(877, -432, 895, -437, 916, -437, 916, -432)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=758127634]
 position = Vector2(911, -474.5)
 shape = SubResource("RectangleShape2D_v8ptl")
+
+[node name="Key" parent="." unique_id=1957883347 instance=ExtResource("30_g0g14")]
+position = Vector2(0, -540)
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_entered" from="Estrana_L/Area2D" to="." method="_on_area_2d_body_entered"]
