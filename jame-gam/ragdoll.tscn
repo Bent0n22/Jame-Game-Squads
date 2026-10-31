@@ -23,6 +23,9 @@ animations = [{
 
 [node name="Ragdoll" type="Node2D" unique_id=310511031]
 
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1978622937]
+limit_bottom = 62
+
 [node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=1929042738]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=801605783]
@@ -30,5 +33,3 @@ shape = SubResource("CapsuleShape2D_tb2w5")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="RigidBody2D" unique_id=827358301]
 sprite_frames = SubResource("SpriteFrames_tb2w5")
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1408088776]
