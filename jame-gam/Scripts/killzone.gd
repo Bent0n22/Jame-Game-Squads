@@ -21,8 +21,11 @@ func _on_body_entered(body: Node2D) -> void:
 		if round(body.velocity.x) == 0:
 			little_guy_ragdoll.get_node("RigidBody2D").add_constant_torque(100)
 			little_guy_ragdoll.get_node("RigidBody2D").scale.x = 1
-#		if get_tree().current_scene.scene_file_path == "res://Levels/level_waterspout.tscn":
-#			little_guy_ragdoll.find_child("Camera2D") = Vector2(1.8,1.8)
+		if get_tree().current_scene.scene_file_path == "res://Levels/level_waterspout.tscn":
+			var level_camera = little_guy_ragdoll.find_child("Camera2D")
+			if level_camera:
+				level_camera.zoom = Vector2(1.8,1.8)
+				level_camera.global_transform.origin.x = 99
 		else:
 			little_guy_ragdoll.get_node("RigidBody2D").scale.x = (body.velocity.x/abs(body.velocity.x))
 		get_tree().get_current_scene().add_child(little_guy_ragdoll)
